@@ -13,16 +13,17 @@
 
 ActiveRecord::Schema.define(:version => 20121102050628) do
 
-  create_table "professor", :force => true do |t|
-    t.string "name"
+  create_table "professors", :force => true do |t|
+    t.string "title"
   end
 
-  create_table "quarter", :force => true do |t|
-    t.string "name"
+  create_table "quarters", :force => true do |t|
+    t.string "title"
   end
 
   create_table "sections", :force => true do |t|
     t.integer  "subject_id"
+    t.integer  "title_id"
     t.integer  "professor_id"
     t.integer  "quarter_id"
     t.integer  "year_id"
@@ -57,11 +58,15 @@ ActiveRecord::Schema.define(:version => 20121102050628) do
   end
 
   create_table "subjects", :force => true do |t|
-    t.string "name"
+    t.string "title"
   end
 
-  create_table "year", :force => true do |t|
-    t.integer "year"
+  create_table "titles", :force => true do |t|
+    t.string "title"
+  end
+
+  create_table "years", :force => true do |t|
+    t.integer "title"
   end
 
 end

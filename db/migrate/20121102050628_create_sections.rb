@@ -2,6 +2,7 @@ class CreateSections < ActiveRecord::Migration
   def change
     create_table :sections do |t|
       t.references :subject
+      t.references :title
       t.references :professor
       t.references :quarter
       t.references :year
@@ -43,19 +44,23 @@ class CreateSections < ActiveRecord::Migration
     end
 
     create_table :subjects do |t|
-      t.string :name
+      t.string :title
     end
 
-    create_table :professor do |t|
-      t.string :name
+    create_table :professors do |t|
+      t.string :title
     end
 
-    create_table :quarter do |t|
-      t.string :name
+    create_table :quarters do |t|
+      t.string :title
     end
 
-    create_table :year do |t|
-      t.integer :year
+    create_table :years do |t|
+      t.integer :title
+    end
+
+    create_table :titles do |t|
+      t.string :title
     end
   end
 end

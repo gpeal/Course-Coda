@@ -4,7 +4,7 @@
 require 'debugger'
 # require 'pg'
 
-task :scrape do
+task :scrape => :environment do
   abort "#{$0} login passwd" if (ENV['USR'].nil? or ENV['PWD'].nil?)
 
   @browser = Watir::Browser.new
@@ -35,7 +35,7 @@ task :scrape do
     wait_until_loaded
     sections = frame.element(:id => 'NW_CT_PV4_DRV$scroll$0').to_subtype.trs.to_a
     wait_until_loaded
-    for j in 1..sections.length - 3 # TODO: CHANGE THIS BACK TO 1
+    for j in 1..sections.length - 1
       frame = @browser.frame(:id => 'ptifrmtgtframe')
       sections = frame.element(:id => 'NW_CT_PV4_DRV$scroll$0').to_subtype.trs.to_a
       scrape_class(sections[j].a)
@@ -48,7 +48,7 @@ task :scrape do
     wait_until_loaded
     frame = @browser.frame(:id => 'ptifrmtgtframe')
     term = frame.span(:id => 'NW_CT_DERIVED_0_NW_CT_TERM_DESCR').text
-    professor = frame.span(:id => 'NW_CT_PV_NAME_NAME').text
+    class_professor = frame.span(:id => 'NW_CT_PV_NAME_NAME').text
     class_subject = frame.span(:id => 'NW_CT_DERIVED_0_NW_CT_DEPARTMENT').text
     class_title = frame.span(:id => 'NW_CT_DERIVED_0_NW_CT_COURSE').text
     instruction = frame.element(:id => 'win0divNW_CT_PV2_DRV_DESCRLONG$0').text.split("\n")
@@ -73,20 +73,20 @@ task :scrape do
       how_much_learned_enroll_count = how_much_learned[2].split(' ')[3]
     end
 
-    challenge_intellecually = frame.element(:id => 'win0divNW_CT_PV2_DRV_DESCRLONG$3').text.split("\n")
-    if challenge_intellecually[0] == "4. Rate the effectiveness of the course in challenging you intellectually."
-      challenge_intellecually_overall = challenge_intellecually[1]
-      challenge_intellecually_breakdown = challenge_intellecually.slice(10..challenge_intellecually.length).join(';')
-      challenge_intellecually_responses = challenge_intellecually[2].split(' ')[0]
-      challenge_intellecually_enroll_count = challenge_intellecually[2].split(' ')[3]
+    challenge = frame.element(:id => 'win0divNW_CT_PV2_DRV_DESCRLONG$3').text.split("\n")
+    if challenge[0] == "4. Rate the effectiveness of the course in challenging you intellectually."
+      challenge_overall = challenge[1]
+      challenge_breakdown = challenge.slice(10..challenge.length).join(';')
+      challenge_responses = challenge[2].split(' ')[0]
+      challenge_enroll_count = challenge[2].split(' ')[3]
     end
 
-    stimulating_interest = frame.element(:id => 'win0divNW_CT_PV2_DRV_DESCRLONG$4').text.split("\n")
-    if stimulating_interest[0] == "5. Rate the effectiveness of the instructor(s) in stimulating your interest in the subject."
-      stimulating_interest_overall = stimulating_interest[1]
-      stimulating_interest_breakdown = stimulating_interest.slice(10..stimulating_interest.length).join(';')
-      stimulating_interest_responses = stimulating_interest[2].split(' ')[0]
-      stimulating_interest_enroll_count = stimulating_interest[2].split(' ')[3]
+    stimulation = frame.element(:id => 'win0divNW_CT_PV2_DRV_DESCRLONG$4').text.split("\n")
+    if stimulation[0] == "5. Rate the effectiveness of the instructor(s) in stimulation your interest in the subject."
+      stimulation_overall = stimulation[1]
+      stimulation_breakdown = stimulation.slice(10..stimulation.length).join(';')
+      stimulation_responses = stimulation[2].split(' ')[0]
+      stimulation_enroll_count = stimulation[2].split(' ')[3]
     end
 
     time = frame.element(:id => 'win0divNW_CT_PV2_DRV_DESCRLONG$5').text.split("\n")
@@ -131,8 +131,42 @@ task :scrape do
     interest_5 = /1 - Very Low \d*\n2 \d*\n3 \d*\n4 \d*\n5 \d*/.match(t)[0].split(' ').last
     interest_6 = /6 - Very High \d*/.match(t)[0].split(' ').last
     interest_breakdown = [interest_1, interest_2, interest_3, interest_4, interest_5, interest_6].join(';')
-    Section.create
-    debugger
+    section = Section.new
+    professor = Professor.find_or_create_by_title(class_professor)
+    section.professor = professor
+    quarter = Quarter.find_or_create_by_title(term.split(' ')[0])
+    section.quarter = quarter
+    year = Year.find_or_create_by_title(term.split(' ')[1])
+    subject = Subject.find_or_create_by_title(class_subject)
+    section.subject = subject
+    title = Title.find_or_create_by_title(class_title)
+    section.title = title
+
+    section.instruction = instruction_overall
+    section.instruction_responses = instruction_responses
+    section.instruction_enroll_count = instruction_enroll_count
+    section.instruction_breakdown = instruction_breakdown
+
+    section.course = rating_overall
+    section.course_responses = rating_responses
+    section.course_enroll_count = rating_enroll_count
+    section.course_breakdown = rating_breakdown
+
+    section.learned = how_much_learned_overall
+    section.learned_responses = how_much_learned_responses
+    section.learned_enroll_count = how_much_learned_enroll_count
+    section.learned_breakdown = how_much_learned_breakdown
+
+    section.challenge = challenge_overall
+    section.challenge_responses = challenge_responses
+    section.challenge_enroll_count = challenge_enroll_count
+    section.challenge_breakdown = challenge_breakdown
+
+    section.stimulation = stimulation_overall
+    section.stimulation_responses = stimulation_responses
+    section.stimulation_enroll_count = stimulation_enroll_count
+    section.stimulation_breakdown = stimulation_breakdown
+    # TODO finish fitting data to model
     frame.link(:id => 'NW_CT_PV_NAME_RETURN_PB').click
     # sleep(1)
     wait_until_loaded
@@ -142,11 +176,14 @@ task :scrape do
     start_time = Time.now
     frame = @browser.frame(:id => 'ptifrmtgtframe')
     waiting_icon = frame.div(:id => 'WAIT_win0')
-    until (waiting_icon.style('display') == 'none')  do
-      sleep 0.1
-      if Time.now - start_time > timeout
-        raise RuntimeError, "Timed out after #{timeout} seconds"
+    begin
+      until (waiting_icon.style('display') == 'none')  do
+        sleep 0.1
+        if Time.now - start_time > timeout
+          raise RuntimeError, "Timed out after #{timeout} seconds"
+        end
       end
+    rescue
     end
   end
 

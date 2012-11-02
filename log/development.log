@@ -217,3 +217,1729 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSections (20121102050628)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.3ms)[0m  DROP TABLE "title"
+PG::Error: ERROR:  table "title" does not exist
+: DROP TABLE "title"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSections (20121102050628)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "sections" ("id" serial primary key, "subject_id" integer, "title_id" integer, "professor_id" integer, "quarter_id" integer, "year_id" integer, "instruction" float, "instruction_breakdown" character varying(255), "instruction_responses" integer, "instruction_enroll_count" integer, "course" float, "course_breakdown" character varying(255), "course_responses" integer, "course_enroll_count" integer, "learned" float, "learned_breakdown" character varying(255), "learned_responses" integer, "learned_enroll_count" integer, "challenge" float, "challenge_breakdown" character varying(255), "challenge_responses" integer, "challenge_enroll_count" integer, "stimulation" float, "stimulation_breakdown" character varying(255), "stimulation_responses" integer, "stimulation_enroll_count" integer, "time_breakdown" character varying(255), "feedback" text, "school_breakdown" character varying(255), "class_breakdown" character varying(255), "reasons_breakdown" character varying(255), "interest_breakdown" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "subjects" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "professor" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "quarter" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "year" ("id" serial primary key, "year" integer) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "title" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121102050628')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36mPK and serial sequence (2.6ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"professor"'::regclass
+[0m
+  [1m[35m (1.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'professor'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"quarter"'::regclass
+[0m
+  [1m[35m (0.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'quarter'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"sections"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'sections'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"subjects"'::regclass
+[0m
+  [1m[35m (0.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'subjects'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"title"'::regclass
+[0m
+  [1m[35m (0.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'title'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"year"'::regclass
+[0m
+  [1m[35m (0.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'year'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+Connecting to database specified by database.yml
+PG::Error: ERROR:  relation "professors" does not exist
+LINE 4:              WHERE a.attrelid = '"professors"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"professors"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+Connecting to database specified by database.yml
+PG::Error: ERROR:  relation "professors" does not exist
+LINE 4:              WHERE a.attrelid = '"professors"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"professors"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+PG::Error: ERROR:  relation "professors" does not exist
+LINE 4:              WHERE a.attrelid = '"professors"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"professors"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+Connecting to database specified by database.yml
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSections (20121102050628)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "sections" ("id" serial primary key, "subject_id" integer, "title_id" integer, "professor_id" integer, "quarter_id" integer, "year_id" integer, "instruction" float, "instruction_breakdown" character varying(255), "instruction_responses" integer, "instruction_enroll_count" integer, "course" float, "course_breakdown" character varying(255), "course_responses" integer, "course_enroll_count" integer, "learned" float, "learned_breakdown" character varying(255), "learned_responses" integer, "learned_enroll_count" integer, "challenge" float, "challenge_breakdown" character varying(255), "challenge_responses" integer, "challenge_enroll_count" integer, "stimulation" float, "stimulation_breakdown" character varying(255), "stimulation_responses" integer, "stimulation_enroll_count" integer, "time_breakdown" character varying(255), "feedback" text, "school_breakdown" character varying(255), "class_breakdown" character varying(255), "reasons_breakdown" character varying(255), "interest_breakdown" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "subjects" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "professor" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "quarter" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "year" ("id" serial primary key, "year" integer) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "title" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121102050628')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36mPK and serial sequence (2.5ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"professor"'::regclass
+[0m
+  [1m[35m (1.4ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'professor'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"quarter"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'quarter'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"sections"'::regclass
+[0m
+  [1m[35m (1.1ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'sections'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"subjects"'::regclass
+[0m
+  [1m[35m (0.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'subjects'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"title"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'title'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"year"'::regclass
+[0m
+  [1m[35m (0.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'year'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSections (20121102050628)
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36mPK and serial sequence (2.2ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"professor"'::regclass
+[0m
+  [1m[35m (1.4ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'professor'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"quarter"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'quarter'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.5ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"sections"'::regclass
+[0m
+  [1m[35m (0.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'sections'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.4ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"subjects"'::regclass
+[0m
+  [1m[35m (0.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'subjects'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"title"'::regclass
+[0m
+  [1m[35m (0.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'title'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.3ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"year"'::regclass
+[0m
+  [1m[35m (0.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'year'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSections (20121102050628)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "sections" ("id" serial primary key, "subject_id" integer, "title_id" integer, "professor_id" integer, "quarter_id" integer, "year_id" integer, "instruction" float, "instruction_breakdown" character varying(255), "instruction_responses" integer, "instruction_enroll_count" integer, "course" float, "course_breakdown" character varying(255), "course_responses" integer, "course_enroll_count" integer, "learned" float, "learned_breakdown" character varying(255), "learned_responses" integer, "learned_enroll_count" integer, "challenge" float, "challenge_breakdown" character varying(255), "challenge_responses" integer, "challenge_enroll_count" integer, "stimulation" float, "stimulation_breakdown" character varying(255), "stimulation_responses" integer, "stimulation_enroll_count" integer, "time_breakdown" character varying(255), "feedback" text, "school_breakdown" character varying(255), "class_breakdown" character varying(255), "reasons_breakdown" character varying(255), "interest_breakdown" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "subjects" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "professors" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "quarters" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "years" ("id" serial primary key, "year" integer) 
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "titles" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121102050628')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36mPK and serial sequence (2.6ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"professors"'::regclass
+[0m
+  [1m[35m (1.5ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'professors'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.6ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"quarters"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'quarters'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.7ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"sections"'::regclass
+[0m
+  [1m[35m (0.9ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'sections'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.5ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"subjects"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'subjects'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.6ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"titles"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'titles'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36mPK and serial sequence (1.5ms)[0m  [1m SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"years"'::regclass
+[0m
+  [1m[35m (0.8ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'years'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.7ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."name" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "professors" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Ming-Yang Kao"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:137)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.3ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."name" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "quarters" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Spring"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:139)
+  [1m[35m (0.3ms)[0m  COMMIT
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSections (20121102050628)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  DROP TABLE "titles"
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "years"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "quarters"
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "professors"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "subjects"
+  [1m[36m (1.5ms)[0m  [1mDROP TABLE "sections"[0m
+  [1m[35m (0.6ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20121102050628'
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSections (20121102050628)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "sections" ("id" serial primary key, "subject_id" integer, "title_id" integer, "professor_id" integer, "quarter_id" integer, "year_id" integer, "instruction" float, "instruction_breakdown" character varying(255), "instruction_responses" integer, "instruction_enroll_count" integer, "course" float, "course_breakdown" character varying(255), "course_responses" integer, "course_enroll_count" integer, "learned" float, "learned_breakdown" character varying(255), "learned_responses" integer, "learned_enroll_count" integer, "challenge" float, "challenge_breakdown" character varying(255), "challenge_responses" integer, "challenge_enroll_count" integer, "stimulation" float, "stimulation_breakdown" character varying(255), "stimulation_responses" integer, "stimulation_enroll_count" integer, "time_breakdown" character varying(255), "feedback" text, "school_breakdown" character varying(255), "class_breakdown" character varying(255), "reasons_breakdown" character varying(255), "interest_breakdown" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "subjects" ("id" serial primary key, "title" character varying(255)) 
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "professors" ("id" serial primary key, "title" character varying(255)) [0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "quarters" ("id" serial primary key, "title" character varying(255)) 
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "years" ("id" serial primary key, "year" integer) [0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "titles" ("id" serial primary key, "title" character varying(255)) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121102050628')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mPK and serial sequence (2.3ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"professors"'::regclass
+
+  [1m[36m (1.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'professors'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.4ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"quarters"'::regclass
+
+  [1m[36m (1.1ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'quarters'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.6ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"sections"'::regclass
+
+  [1m[36m (0.8ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'sections'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.4ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"subjects"'::regclass
+
+  [1m[36m (0.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'subjects'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.4ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"titles"'::regclass
+
+  [1m[36m (0.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'titles'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.3ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"years"'::regclass
+
+  [1m[36m (0.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'years'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.9ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "Ming-Yang Kao"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.4ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "quarters" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "Spring"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.2ms)[0m  COMMIT
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSections (20121102050628)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.5ms)[0m  DROP TABLE "titles"
+  [1m[36m (0.6ms)[0m  [1mDROP TABLE "years"[0m
+  [1m[35m (2.2ms)[0m  DROP TABLE "quarters"
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "professors"[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "subjects"
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "sections"[0m
+  [1m[35m (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20121102050628'
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSections (20121102050628)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "sections" ("id" serial primary key, "subject_id" integer, "title_id" integer, "professor_id" integer, "quarter_id" integer, "year_id" integer, "instruction" float, "instruction_breakdown" character varying(255), "instruction_responses" integer, "instruction_enroll_count" integer, "course" float, "course_breakdown" character varying(255), "course_responses" integer, "course_enroll_count" integer, "learned" float, "learned_breakdown" character varying(255), "learned_responses" integer, "learned_enroll_count" integer, "challenge" float, "challenge_breakdown" character varying(255), "challenge_responses" integer, "challenge_enroll_count" integer, "stimulation" float, "stimulation_breakdown" character varying(255), "stimulation_responses" integer, "stimulation_enroll_count" integer, "time_breakdown" character varying(255), "feedback" text, "school_breakdown" character varying(255), "class_breakdown" character varying(255), "reasons_breakdown" character varying(255), "interest_breakdown" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "subjects" ("id" serial primary key, "title" character varying(255)) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "professors" ("id" serial primary key, "title" character varying(255)) [0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "quarters" ("id" serial primary key, "title" character varying(255)) 
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "years" ("id" serial primary key, "title" integer) [0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "titles" ("id" serial primary key, "title" character varying(255)) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121102050628')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mPK and serial sequence (2.2ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"professors"'::regclass
+
+  [1m[36m (1.4ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'professors'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.3ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"quarters"'::regclass
+
+  [1m[36m (0.6ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'quarters'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.3ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"sections"'::regclass
+
+  [1m[36m (0.6ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'sections'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.7ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"subjects"'::regclass
+
+  [1m[36m (0.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'subjects'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.4ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"titles"'::regclass
+
+  [1m[36m (0.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'titles'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35mPK and serial sequence (1.4ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"years"'::regclass
+
+  [1m[36m (0.7ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'years'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.7ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "Ming-Yang Kao"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.3ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "quarters" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "Spring"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mYear Load (0.4ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.4ms)[0m  [1mINSERT INTO "years" ("title") VALUES ($1) RETURNING "id"[0m  [["title", 2011]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "subjects" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "EECS Electrical Engineering & Computer Science"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.4ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "titles" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "101-0-20 An Introduction to Computer Science for Everyone"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.8ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.4ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.4ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.5ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.8ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.4ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.5ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.7ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mYear Load (0.5ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.4ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.8ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mYear Load (0.4ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.5ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.4ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.8ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.4ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mYear Load (0.4ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.5ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.8ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.5ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.4ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.4ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.5ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Peter Dinda' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"  [["title", "Peter Dinda"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2010 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (4.7ms)[0m  [1mINSERT INTO "years" ("title") VALUES ($1) RETURNING "id"[0m  [["title", 2010]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.5ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.4ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Peter Dinda' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.2ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2009 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "years" ("title") VALUES ($1) RETURNING "id"[0m  [["title", 2009]]
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.2ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.2ms)[0m  COMMIT
+Connecting to database specified by database.yml
+  [1m[36mProfessor Load (0.8ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ming-Yang Kao' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mYear Load (0.3ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.4ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.5ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Peter Dinda' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.2ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2010 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.3ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.3ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Peter Dinda' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.2ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.3ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2009 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Peter Dinda' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.2ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2008 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "years" ("title") VALUES ($1) RETURNING "id"  [["title", 2008]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '101-0-20 An Introduction to Computer Science for Everyone' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Aleksandar Kuzmanovic' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"  [["title", "Aleksandar Kuzmanovic"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.3ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2012 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "years" ("title") VALUES ($1) RETURNING "id"[0m  [["title", 2012]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.3ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "titles" ("title") VALUES ($1) RETURNING "id"  [["title", "110-0-20 Introduction to Computer Programming"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'John Tumblin' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"  [["title", "John Tumblin"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.2ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "quarters" ("title") VALUES ($1) RETURNING "id"  [["title", "Winter"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2012 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.2ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.3ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Lawrence Birnbaum' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "Lawrence Birnbaum"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.3ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Fall' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "quarters" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "Fall"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.3ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.3ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Aleksandar Kuzmanovic' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.3ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.3ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.5ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'John Tumblin' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.5ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Lawrence Birnbaum' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.2ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Fall' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2010 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.2ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.4ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Aleksandar Kuzmanovic' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2010 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.5ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'John Tumblin' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.2ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2010 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.2ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.4ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Lawrence Birnbaum' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.2ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Fall' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2009 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.3ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Aleksandar Kuzmanovic' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.2ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2009 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.2ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.3ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'John Tumblin' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.2ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2009 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.5ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Christopher Riesbeck' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"  [["title", "Christopher Riesbeck"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Fall' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mYear Load (0.3ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2008 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'John Tumblin' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.4ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2008 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.2ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.4ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Christopher Riesbeck' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.2ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2008 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'John Tumblin' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.2ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Spring' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.3ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2007 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "years" ("title") VALUES ($1) RETURNING "id"  [["title", 2007]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-01 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "titles" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "110-0-01 Introduction to Computer Programming"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.4ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Christopher Riesbeck' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.3ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2007 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '110-0-20 Introduction to Computer Programming' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mProfessor Load (0.3ms)[0m  SELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Douglas Downey' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"  [["title", "Douglas Downey"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.2ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.2ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2012 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.3ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '111-0-20 Fundamentals of Computer Programming' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "titles" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "111-0-20 Fundamentals of Computer Programming"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.3ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Ian Horswill' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "professors" ("title") VALUES ($1) RETURNING "id"[0m  [["title", "Ian Horswill"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mQuarter Load (0.3ms)[0m  [1mSELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Fall' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mYear Load (0.2ms)[0m  SELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mTitle Load (0.2ms)[0m  SELECT "titles".* FROM "titles" WHERE "titles"."title" = '111-0-20 Fundamentals of Computer Programming' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mProfessor Load (0.3ms)[0m  [1mSELECT "professors".* FROM "professors" WHERE "professors"."title" = 'Douglas Downey' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:136)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuarter Load (0.3ms)[0m  SELECT "quarters".* FROM "quarters" WHERE "quarters"."title" = 'Winter' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:138)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mYear Load (0.3ms)[0m  [1mSELECT "years".* FROM "years" WHERE "years"."title" = 2011 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."title" = 'EECS Electrical Engineering & Computer Science' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:141)
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mTitle Load (0.2ms)[0m  [1mSELECT "titles".* FROM "titles" WHERE "titles"."title" = '111-0-20 Fundamentals of Computer Programming' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `section_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from scrape_class at /Users/gabriel/Development/CaesarScraper/lib/tasks/scrape.rake:143)
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m

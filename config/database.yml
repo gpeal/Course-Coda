@@ -8,7 +8,7 @@ development:
   host: localhost
   username: caesar
   password: password
-  database: ctec
+  database: ctec_development
   pool: 5
   timeout: 5000
 
@@ -20,7 +20,7 @@ test:
   host: localhost
   username: caesar
   password: password
-  database: ctec
+  database: ctec_test
   pool: 5
   timeout: 5000
 
@@ -29,6 +29,6 @@ production:
   host: localhost
   username: caesar
   password: password
-  database: ctec
+  database: ctec_production
   pool: 5
   timeout: 5000
