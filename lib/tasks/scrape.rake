@@ -38,6 +38,7 @@ task :scrape => :environment do
     for j in 1..sections.length - 1
       frame = @browser.frame(:id => 'ptifrmtgtframe')
       sections = frame.element(:id => 'NW_CT_PV4_DRV$scroll$0').to_subtype.trs.to_a
+      sections[j].a rescue next
       scrape_class(sections[j].a)
     end
     return class_no + 1
@@ -82,7 +83,7 @@ task :scrape => :environment do
     end
 
     stimulation = frame.element(:id => 'win0divNW_CT_PV2_DRV_DESCRLONG$4').text.split("\n")
-    if stimulation[0] == "5. Rate the effectiveness of the instructor(s) in stimulation your interest in the subject."
+    if stimulation[0] == "5. Rate the effectiveness of the instructor(s) in stimulating your interest in the subject."
       stimulation_overall = stimulation[1]
       stimulation_breakdown = stimulation.slice(10..stimulation.length).join(';')
       stimulation_responses = stimulation[2].split(' ')[0]
@@ -96,51 +97,52 @@ task :scrape => :environment do
 
     feedback = frame.element(:id => 'win0divNW_CT_PV3_DRV_DESCRLONG$0').text[120..99999]
     t = frame.element(:id => 'win0divNW_CT_PVS_DRV_DESCRLONG$0').text
-    esp = /Education & SP \d*/.match(t)[0].split(' ').last
-    communication = /Communication \d*/.match(t)[0].split(' ').last
-    gs = /Graduate School \d*/.match(t)[0].split(' ').last
-    kgsm = /KGSM \d*/.match(t)[0].split(' ').last
-    mccormick = /McCormick \d*/.match(t)[0].split(' ').last
-    medill = /Medill \d*/.match(t)[0].split(' ').last
-    music = /Music \d*/.match(t)[0].split(' ').last
-    summer = /Summer \d*/.match(t)[0].split(' ').last
-    scs = /SCS \d*/.match(t)[0].split(' ').last
-    wcas = /WCAS \d*/.match(t)[0].split(' ').last
+    esp = /Education & SP \d*/.match(t)[0].split(' ').last rescue ' '
+    communication = /Communication \d*/.match(t)[0].split(' ').last rescue ' '
+    gs = /Graduate School \d*/.match(t)[0].split(' ').last rescue ' '
+    kgsm = /KGSM \d*/.match(t)[0].split(' ').last rescue ' '
+    mccormick = /McCormick \d*/.match(t)[0].split(' ').last rescue ' '
+    medill = /Medill \d*/.match(t)[0].split(' ').last rescue ' '
+    music = /Music \d*/.match(t)[0].split(' ').last rescue ' '
+    summer = /Summer \d*/.match(t)[0].split(' ').last rescue ' '
+    scs = /SCS \d*/.match(t)[0].split(' ').last rescue ' '
+    wcas = /WCAS \d*/.match(t)[0].split(' ').last rescue ' '
     school_breakdown = [esp, communication, gs, kgsm, mccormick, medill, music, summer, scs, wcas].join(';')
 
-    freshman = /a. Freshman \d*/.match(t)[0].split(' ').last
-    sophomore = /b. Sophomore \d*/.match(t)[0].split(' ').last
-    junior = /c. Junior \d*/.match(t)[0].split(' ').last
-    senior = /d. Senior \d*/.match(t)[0].split(' ').last
-    graduate = /e. Graduate \d*/.match(t)[0].split(' ').last
-    other = /f. Other \d*/.match(t)[0].split(' ').last
+    freshman = /a. Freshman \d*/.match(t)[0].split(' ').last rescue ' '
+    sophomore = /b. Sophomore \d*/.match(t)[0].split(' ').last rescue ' '
+    junior = /c. Junior \d*/.match(t)[0].split(' ').last rescue ' '
+    senior = /d. Senior \d*/.match(t)[0].split(' ').last rescue ' '
+    graduate = /e. Graduate \d*/.match(t)[0].split(' ').last rescue ' '
+    other = /f. Other \d*/.match(t)[0].split(' ').last rescue ' '
     class_breakdown = [freshman, sophomore, junior, senior, graduate, other].join(';')
 
-    distro = /a. Distribution requirement \d*/.match(t)[0].split(' ').last
-    major = /b. Major requirement \d*/.match(t)[0].split(' ').last
-    minor = /c. Minor requirement \d*/.match(t)[0].split(' ').last
-    elective = /d. Elective requirement \d*/.match(t)[0].split(' ').last
-    other = /e. Other requirement \d*/.match(t)[0].split(' ').last
-    no = /f. No requirement \d*/.match(t)[0].split(' ').last
+    distro = /a. Distribution requirement \d*/.match(t)[0].split(' ').last rescue ' '
+    major = /b. Major requirement \d*/.match(t)[0].split(' ').last rescue ' '
+    minor = /c. Minor requirement \d*/.match(t)[0].split(' ').last rescue ' '
+    elective = /d. Elective requirement \d*/.match(t)[0].split(' ').last rescue ' '
+    other = /e. Other requirement \d*/.match(t)[0].split(' ').last rescue ' '
+    no = /No requirement \d*/.match(t)[0].split(' ').last rescue ' '
     reasons_breakdown = [distro, major, minor, elective, other, no].join(';')
 
-    interest_1 = /1 - Very Low \d*/.match(t)[0].split(' ').last
-    interest_2 = /1 - Very Low \d*\n2 \d*/.match(t)[0].split(' ').last
-    interest_3 = /1 - Very Low \d*\n2 \d*\n3 \d*/.match(t)[0].split(' ').last
-    interest_4 = /1 - Very Low \d*\n2 \d*\n3 \d*\n4 \d*/.match(t)[0].split(' ').last
-    interest_5 = /1 - Very Low \d*\n2 \d*\n3 \d*\n4 \d*\n5 \d*/.match(t)[0].split(' ').last
+    interest_1 = /1 - Very Low \d*/.match(t)[0].split(' ').last rescue ' '
+    interest_2 = /1 - Very Low \d*\n2 \d*/.match(t)[0].split(' ').last rescue ' '
+    interest_3 = /1 - Very Low \d*\n2 \d*\n3 \d*/.match(t)[0].split(' ').last rescue ' '
+    interest_4 = /1 - Very Low \d*\n2 \d*\n3 \d*\n4 \d*/.match(t)[0].split(' ').last rescue ' '
+    interest_5 = /1 - Very Low \d*\n2 \d*\n3 \d*\n4 \d*\n5 \d*/.match(t)[0].split(' ').last rescue ' '
     interest_6 = /6 - Very High \d*/.match(t)[0].split(' ').last
     interest_breakdown = [interest_1, interest_2, interest_3, interest_4, interest_5, interest_6].join(';')
     section = Section.new
     professor = Professor.find_or_create_by_title(class_professor)
-    section.professor = professor
+    section.professor_id = professor.id
     quarter = Quarter.find_or_create_by_title(term.split(' ')[0])
-    section.quarter = quarter
+    section.quarter_id = quarter.id
     year = Year.find_or_create_by_title(term.split(' ')[1])
+    section.year_id = year.id
     subject = Subject.find_or_create_by_title(class_subject)
-    section.subject = subject
+    section.subject_id = subject.id
     title = Title.find_or_create_by_title(class_title)
-    section.title = title
+    section.title_id = title.id
 
     section.instruction = instruction_overall
     section.instruction_responses = instruction_responses
@@ -166,6 +168,17 @@ task :scrape => :environment do
     section.stimulation_responses = stimulation_responses
     section.stimulation_enroll_count = stimulation_enroll_count
     section.stimulation_breakdown = stimulation_breakdown
+
+    section.feedback = feedback
+
+    section.time_breakdown = time_breakdown
+    section.school_breakdown = school_breakdown
+    section.class_breakdown = class_breakdown
+    section.reasons_breakdown = reasons_breakdown
+    section.interest_breakdown = interest_breakdown
+    if Section.where(:professor_id => professor.id, :quarter_id => quarter.id, :year_id => year.id, :title_id => title.id).empty?
+      section.save
+    end
     # TODO finish fitting data to model
     frame.link(:id => 'NW_CT_PV_NAME_RETURN_PB').click
     # sleep(1)
