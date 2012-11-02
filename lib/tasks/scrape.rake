@@ -4,12 +4,13 @@
 require 'debugger'
 # require 'pg'
 
-task :scrape => :environment do
-  abort "#{$0} login passwd" if (ENV['USR'].nil? or ENV['PWD'].nil?)
+task :scrape, [:netid, :password] => :environment do |t, args|
+  abort "#{$0} login passwd" if (args[:netid].nil? or args[:password].nil?)
 
   @browser = Watir::Browser.new
 
   def scrape_subject(subject)
+    puts "Scraping #{subject}"
     class_no = 1
     while class_no != -1
       @browser.goto('https://ses.ent.northwestern.edu/psp/caesar/EMPLOYEE/HRMS/c/NWCT.NW_CT_PUBLIC_VIEW.GBL?PORTALPARAM_PTCNAV=NW_CT_PUBLIC_VIEW_GBL&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=ADMN_COURSE_AND_TEACHER_EVALUA&EOPP.SCLabel=&EOPP.SCPTcname=PT_PTPP_SCFNAV_BASEPAGE_SCR&FolderPath=PORTAL_ROOT_OBJECT.PORTAL_BASE_DATA.CO_NAVIGATION_COLLECTIONS.ADMN_COURSE_AND_TEACHER_EVALUA.ADMN_S201206110937428997161778&IsFolder=false')
@@ -202,18 +203,20 @@ task :scrape => :environment do
 
 
   @browser.goto 'http://www.northwestern.edu/caesar/'
-  @browser.text_field(:name => 'userid').set ENV["USR"]
-  @browser.text_field(:name => 'pwd').set ENV["PWD"]
+  @browser.text_field(:name => 'userid').set args[:netid]
+  @browser.text_field(:name => 'pwd').set args[:password]
   @browser.button(:id => 'inputButton').click
   @browser.link(:title => 'Course and Teacher Evaluations published to the Northwestern University Community.').click
   frame = @browser.frame(:id => 'ptifrmtgtframe')
   frame.select_list(:name => 'NW_CT_PB_SRCH_ACAD_CAREER').select('Undergraduate')
   wait_until_loaded
   subjects_list = frame.select_list(:name => 'NW_CT_PB_SRCH_SUBJECT').options
-  #subjects = subjects_list.collect { |s| s.text }
+  subjects = subjects_list.collect { |s| s.text }
   # the first one is the empty string
-  #subjects.drop(1)
-  scrape_subject('EECS - Elect Engineering & Comp Sci')
+  subjects = subjects.drop(1)
+  subjects.each do |subject|
+    scrape_subject(subject)
+  end
 
   puts "Hello World"
 end
