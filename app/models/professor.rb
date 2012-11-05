@@ -1,3 +1,7 @@
 class Professor < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :title
+
+  def to_s
+    title
+  end
 end

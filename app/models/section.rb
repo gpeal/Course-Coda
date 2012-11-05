@@ -6,9 +6,9 @@ class Section < ActiveRecord::Base
   attr_accessible :stimulation, :stimulation_breakdown, :stimulation_responses, :stimulation_enroll_count
   attr_accessible :time_breakdown, :feedback, :school_breakdown, :class_breakdown, :reasons_breakdown, :interest_breakdown
 
-  has_one :professor
-  has_one :quarter
-  has_one :subject
-  has_one :title
-  has_one :year
+  belongs_to :professor
+  belongs_to :quarter
+  belongs_to :subject
+  belongs_to :title
+  belongs_to :year
 end

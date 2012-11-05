@@ -4,14 +4,14 @@
 require 'debugger'
 # require 'pg'
 
-task :scrape, [:netid, :password] => :environment do |t, args|
+task :scrape, [:netid, :password, :department, :starting_class] => :environment do |t, args|
   abort "#{$0} login passwd" if (args[:netid].nil? or args[:password].nil?)
 
   @browser = Watir::Browser.new
 
-  def scrape_subject(subject)
+  def scrape_subject(subject, args)
     puts "Scraping #{subject}"
-    class_no = 1
+    class_no = args[:starting_class].to_i || 1
     while class_no != -1
       @browser.goto('https://ses.ent.northwestern.edu/psp/caesar/EMPLOYEE/HRMS/c/NWCT.NW_CT_PUBLIC_VIEW.GBL?PORTALPARAM_PTCNAV=NW_CT_PUBLIC_VIEW_GBL&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=ADMN_COURSE_AND_TEACHER_EVALUA&EOPP.SCLabel=&EOPP.SCPTcname=PT_PTPP_SCFNAV_BASEPAGE_SCR&FolderPath=PORTAL_ROOT_OBJECT.PORTAL_BASE_DATA.CO_NAVIGATION_COLLECTIONS.ADMN_COURSE_AND_TEACHER_EVALUA.ADMN_S201206110937428997161778&IsFolder=false')
       frame = @browser.frame(:id => 'ptifrmtgtframe')
@@ -23,24 +23,38 @@ task :scrape, [:netid, :password] => :environment do |t, args|
       wait_until_loaded
       frame.button(:name => 'NW_CT_PB_SRCH_SRCH_BTN').click
       wait_until_loaded
-      class_no = scrape_classes(class_no)
+      class_no = scrape_classes(class_no, subject)
     end
   end
 
-  def scrape_classes(class_no)
+  def scrape_classes(class_no, subject)
     frame = @browser.frame(:id => 'ptifrmtgtframe')
     classes = frame.element(:id => 'NW_CT_PV_DRV$scroll$0').to_subtype.trs.to_a
     frame = @browser.frame(:id => 'ptifrmtgtframe')
     classes = frame.element(:id => 'NW_CT_PV_DRV$scroll$0').to_subtype.trs.to_a
-    classes[class_no].a.click
+    begin
+      classes[class_no].a.click
+    rescue
+      puts "DONE"
+      class_no = -1
+      return class_no
+    end
     wait_until_loaded
     sections = frame.element(:id => 'NW_CT_PV4_DRV$scroll$0').to_subtype.trs.to_a
     wait_until_loaded
     for j in 1..sections.length - 1
-      frame = @browser.frame(:id => 'ptifrmtgtframe')
-      sections = frame.element(:id => 'NW_CT_PV4_DRV$scroll$0').to_subtype.trs.to_a
-      sections[j].a rescue next
-      scrape_class(sections[j].a)
+      begin
+        frame = @browser.frame(:id => 'ptifrmtgtframe')
+        sections = frame.element(:id => 'NW_CT_PV4_DRV$scroll$0').to_subtype.trs.to_a
+        sections[j].a
+        if /^\d* \S*\n\S*/.match(sections[j].text)[0].split("\n").last != subject.split(' ').first
+          next
+        end
+        scrape_class(sections[j].a)
+      rescue Exception => e
+        puts "Skipping section #{j}"
+        next
+      end
     end
     return class_no + 1
   end
@@ -95,9 +109,8 @@ task :scrape, [:netid, :password] => :environment do |t, args|
     if time[2] == '6. Estimate the average number of hours per week you spent on this course outside of class and lab time.'
       time_breakdown = time.slice(9..14)
     end
-
-    feedback = frame.element(:id => 'win0divNW_CT_PV3_DRV_DESCRLONG$0').text[120..99999]
-    t = frame.element(:id => 'win0divNW_CT_PVS_DRV_DESCRLONG$0').text
+    feedback = frame.element(:id => 'win0divNW_CT_PV3_DRV_DESCRLONG$0').text[120..99999] rescue ' '
+    t = frame.element(:id => 'win0divNW_CT_PVS_DRV_DESCRLONG$0').text rescue ' '
     esp = /Education & SP \d*/.match(t)[0].split(' ').last rescue ' '
     communication = /Communication \d*/.match(t)[0].split(' ').last rescue ' '
     gs = /Graduate School \d*/.match(t)[0].split(' ').last rescue ' '
@@ -179,6 +192,9 @@ task :scrape, [:netid, :password] => :environment do |t, args|
     section.interest_breakdown = interest_breakdown
     if Section.where(:professor_id => professor.id, :quarter_id => quarter.id, :year_id => year.id, :title_id => title.id).empty?
       section.save
+      puts section.subject.to_s +  " " + section.title.to_s + " " + section.quarter.to_s + " " + section.year.to_s + " " + section.professor.to_s
+    else
+      puts section.subject.to_s +  " " + section.title.to_s + " " + section.quarter.to_s + " " + section.year.to_s + " " + section.professor.to_s + " DUPLICATE"
     end
     # TODO finish fitting data to model
     frame.link(:id => 'NW_CT_PV_NAME_RETURN_PB').click
@@ -213,10 +229,19 @@ task :scrape, [:netid, :password] => :environment do |t, args|
   subjects_list = frame.select_list(:name => 'NW_CT_PB_SRCH_SUBJECT').options
   subjects = subjects_list.collect { |s| s.text }
   # the first one is the empty string
-  subjects = subjects.drop(1)
-  subjects.each do |subject|
-    scrape_subject(subject)
+  # subjects = subjects.drop(1)
+  # debugger
+  # subjects.each do |subject|
+  #   scrape_subject(subject)
+  # end
+
+  subject_index = nil
+  subjects.each_with_index { |subject, index| subject_index = index unless subject.match(/#{args[:department]}* - /).nil? }
+  if subject_index.nil?
+    abort "Invalid subject"
   end
+
+  scrape_subject(subjects[subject_index], args)
 
   puts "Hello World"
 end
