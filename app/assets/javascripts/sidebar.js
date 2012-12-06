@@ -9,7 +9,7 @@ $(document).ready(function() {
         minimumInputLength: 2,
         multiple: true,
         ajax: {
-          url: location.origin + '/api/v1/query.json',
+          url: location.origin + '/api/v1/professors/search.json',
           dataType: 'json',
           type: 'POST',
           quietMillis: 100,
