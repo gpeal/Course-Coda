@@ -67,6 +67,9 @@ function loadData(data) {
 
     courseSeries = [];
     instructionSeries = [];
+    learnedSeries = [];
+    challengedSeries = [];
+    stimulatedSeries = [];
     var keys = Object.keys(organizedSections);
     for(var section_id in keys) {
       var section_name = keys[section_id];
@@ -78,13 +81,31 @@ function loadData(data) {
       instructionSeries_tmp.name = section_name;
       instructionSeries_tmp.data = [];
 
+      var learnedSeries_tmp = {};
+      learnedSeries_tmp.name = section_name;
+      learnedSeries_tmp.data = [];
+
+      var challengedSeries_tmp = {};
+      challengedSeries_tmp.name = section_name;
+      challengedSeries_tmp.data = [];
+
+      var stimulatedSeries_tmp = {};
+      stimulatedSeries_tmp.name = section_name;
+      stimulatedSeries_tmp.data = [];
+
       for(var j in organizedSections[section_name]) {
         var section = organizedSections[section_name][j].section
         courseSeries_tmp.data.push([quarterName(section), section.course]);
         instructionSeries_tmp.data.push([quarterName(section), section.instruction]);
+        learnedSeries_tmp.data.push([quarterName(section), section.learned]);
+        challengedSeries_tmp.data.push([quarterName(section), section.challenge]);
+        stimulatedSeries_tmp.data.push([quarterName(section), section.stimulation]);
       }
       courseSeries.push(courseSeries_tmp);
       instructionSeries.push(instructionSeries_tmp);
+      learnedSeries.push(learnedSeries_tmp);
+      challengedSeries.push(challengedSeries_tmp);
+      stimulatedSeries.push(stimulatedSeries_tmp);
     }
   }
 
@@ -92,6 +113,12 @@ function loadData(data) {
   refreshChart('instruction', 'chart-instruction', instructionSeries, 'Instruction Rating', quarters, 'Score');
   // you have to manually set the size of all charts after the first
   charts.instruction.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+  refreshChart('learned', 'chart-learned', learnedSeries, 'Amount Learned', quarters, 'Score');
+  charts.learned.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+  refreshChart('challenged', 'chart-challenged', challengedSeries, 'Amount Challenged', quarters, 'Score');
+  charts.challenged.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+  refreshChart('stimulated', 'chart-stimulated', stimulatedSeries, 'Amount Stimulated', quarters, 'Score');
+  charts.stimulated.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
 }
 
 function sectionName(section) {
