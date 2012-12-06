@@ -1,8 +1,13 @@
 $(document).ready(function() {
    $("#e9").select2({
-        minimumInputLength: 1,
+        formatSelection: function(item) {
+          return item.title;
+        },
+        formatResult: function(item) {
+          return item.title;
+        },
+        minimumInputLength: 2,
         multiple: true,
-        placeholder: "Start Typing",
         ajax: {
           url: location.origin + "/api/v1/query.json",
           dataType: 'json',
@@ -14,8 +19,8 @@ $(document).ready(function() {
               };
           },
           results: function (data, page) {
-              return {results: data.movies, more: more};
+              return {results: data.map(function(item) { return item.professor}), more: null};
           }
-      },
+        }
     });
 });

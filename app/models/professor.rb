@@ -32,4 +32,22 @@ class Professor < ActiveRecord::Base
   def self.find_by_name name
     professor = Professor.where('title LIKE ?', "%#{name}%").first
   end
+
+  def self.search name
+    @professors_hash ||= {}
+    if @names_l.nil?
+      @names_l = []
+     Professor.all.each do |p|
+        @professors_hash[p.to_s.downcase] ||= p
+        @names_l << p.to_s.downcase
+      end
+    end
+
+    professors = []
+    name.downcase!
+    @names_l.grep(/#{name.downcase}/).each do |name|
+      professors << @professors_hash[name]
+    end
+    return professors
+  end
 end

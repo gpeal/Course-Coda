@@ -1,3 +1,3 @@
-collection @sections
+collection @professors
 
-extends 'api/v1/sections/show'
+extends 'api/v1/professors/show'
