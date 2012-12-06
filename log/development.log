@@ -1,0 +1,4659 @@
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:39:19 -0600
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Compiled twitter-bootstrap-static/bootstrap.css  (69ms)  (pid 75833)
+Compiled twitter-bootstrap-static/fontawesome.css  (39ms)  (pid 75833)
+Compiled bootstrap_and_overrides.css  (165ms)  (pid 75833)
+Compiled application.css  (176ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 75833)
+Compiled twitter/bootstrap.js  (210ms)  (pid 75833)
+Compiled bootstrap.js  (118ms)  (pid 75833)
+Compiled application.js  (352ms)  (pid 75833)
+Completed 200 OK in 660ms (Views: 659.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /application.css - 200 OK (61ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /api/v1/search.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (10ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (5ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /home.css - 200 OK (3ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /select2.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /jquery.js - 200 OK (41ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:20 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /twitter/bootstrap.js - 200 OK (23ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /api/v1/search.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /home.js - 200 OK (2ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /select2.js - 200 OK (2ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:39:21 -0600
+Served asset /application.js - 200 OK (71ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /api/v1/search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /api/v1/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /sidebar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:40:04 -0600
+Served asset /fontawesome-webfont.woff - 304 Not Modified (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /api/v1/search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /api/v1/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /sidebar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:40:09 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Compiled home.css  (16ms)  (pid 75833)
+Compiled application.css  (2ms)  (pid 75833)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /application.css - 200 OK (23ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /home.css - 200 OK (5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:42:54 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled home.css  (4ms)  (pid 75833)
+Compiled application.css  (2ms)  (pid 75833)
+Completed 200 OK in 49ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /application.css - 200 OK (24ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /home.css - 200 OK (6ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:03 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:45:04 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:45:05 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:21 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:45:22 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:45:29 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /api/v1/search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /api/v1/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /sidebar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:47:09 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Compiled home.css  (5ms)  (pid 75833)
+Compiled application.css  (2ms)  (pid 75833)
+Completed 200 OK in 49ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /api/v1/search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /home.css - 200 OK (4ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /api/v1/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /sidebar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:48:12 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:48:13 -0600
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 13:48:16 -0600
+Served asset /spinner.gif - 304 Not Modified (1ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:48:17 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mi"}
+  [1m[36mProfessor Load (4.0ms)[0m  [1mSELECT "professors".* FROM "professors" [0m
+  Rendered api/v1/search/query.json.rabl (235.1ms)
+Completed 200 OK in 521ms (Views: 239.3ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:48:17 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (88.2ms)
+Completed 200 OK in 94ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:48:17 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.6ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 13:48:18 -0600
+Served asset /select2x2.png - 304 Not Modified (1ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:48:20 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"test"}
+  Rendered api/v1/search/query.json.rabl (1.9ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:48:24 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"tes"}
+  Rendered api/v1/search/query.json.rabl (8.9ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:48:24 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"te"}
+  Rendered api/v1/search/query.json.rabl (235.0ms)
+Completed 200 OK in 241ms (Views: 238.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled sidebar.js  (0ms)  (pid 75833)
+Compiled application.js  (9ms)  (pid 75833)
+Completed 200 OK in 114ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /application.js - 200 OK (29ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:51:39 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled sidebar.js  (0ms)  (pid 75833)
+Compiled application.js  (9ms)  (pid 75833)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:04 -0600
+Served asset /application.js - 200 OK (28ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:52:05 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled sidebar.js  (0ms)  (pid 75833)
+Compiled application.js  (9ms)  (pid 75833)
+Completed 200 OK in 107ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /sidebar.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /application.js - 200 OK (34ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:52:14 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 13:52:15 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:20 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (90.3ms)
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:20 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.5ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 13:52:21 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:27 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (14.6ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:27 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (1.7ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:52:38 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 13:52:39 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:41 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (37.2ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:41 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.6ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 13:52:41 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:43 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (15.1ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:52:43 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pard"}
+  Rendered api/v1/search/query.json.rabl (2.7ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 13:52:59 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 13:53:00 -0600
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 13:53:06 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 13:53:16 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:53:17 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"oa"}
+  Rendered api/v1/search/query.json.rabl (26.6ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:53:18 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (15.2ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 13:53:19 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (1.8ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 13:53:20 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled sidebar.js  (0ms)  (pid 75833)
+Compiled application.js  (11ms)  (pid 75833)
+Completed 200 OK in 113ms (Views: 112.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:01 -0600
+Served asset /application.js - 200 OK (30ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:00:06 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:00:07 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:00:07 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"in"}
+  Rendered api/v1/search/query.json.rabl (533.1ms)
+Completed 200 OK in 539ms (Views: 536.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:00:08 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ing"}
+  Rendered api/v1/search/query.json.rabl (119.5ms)
+Completed 200 OK in 126ms (Views: 123.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:00:09 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:00:17 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:17 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:00:18 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:00:19 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:00:20 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (37.8ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:00:20 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.4ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:00:21 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 64ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:25 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:00:26 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Compiled sidebar.js  (0ms)  (pid 75833)
+Compiled application.js  (10ms)  (pid 75833)
+Completed 200 OK in 109ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:13 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /application.js - 200 OK (75ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:01:14 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:01:41 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:01:42 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (15.8ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:01:42 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (1.7ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:01:43 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started GET "/undefined/" for 127.0.0.1 at 2012-12-06 14:01:43 -0600
+
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/gabriel/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/undefined/" for 127.0.0.1 at 2012-12-06 14:01:55 -0600
+
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/gabriel/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:56 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:57 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:57 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:57 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:01:57 -0600
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:01:57 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:02:01 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:02 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (58.4ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:03 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (1.9ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:05 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mi"}
+  Rendered api/v1/search/query.json.rabl (224.5ms)
+Completed 200 OK in 231ms (Views: 227.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:05 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (38.4ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:05 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.7ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:02:08 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:02:23 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Compiled sidebar.js  (0ms)  (pid 75833)
+Compiled application.js  (9ms)  (pid 75833)
+Completed 200 OK in 122ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined/" for 127.0.0.1 at 2012-12-06 14:02:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/gabriel/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /application.js - 200 OK (28ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:02:25 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:02:26 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:27 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (15.5ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:27 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (1.7ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:29 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo‘"}
+  Rendered api/v1/search/query.json.rabl (0.3ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:30 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"Par"}
+  Rendered api/v1/search/query.json.rabl (14.5ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:30 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"Pard"}
+  Rendered api/v1/search/query.json.rabl (2.6ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:31 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"Pardo"}
+  Rendered api/v1/search/query.json.rabl (1.8ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:35 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ma"}
+  Rendered api/v1/search/query.json.rabl (478.9ms)
+Completed 200 OK in 485ms (Views: 482.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:35 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mad"}
+  Rendered api/v1/search/query.json.rabl (7.0ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:35 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"madd"}
+  Rendered api/v1/search/query.json.rabl (1.7ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:02:36 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:38 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pa"}
+  Rendered api/v1/search/query.json.rabl (109.6ms)
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:39 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (15.1ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:39 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pard"}
+  Rendered api/v1/search/query.json.rabl (3.3ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:40 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (1.8ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:41 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"br"}
+  Rendered api/v1/search/query.json.rabl (197.9ms)
+Completed 200 OK in 205ms (Views: 201.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:41 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"bry"}
+  Rendered api/v1/search/query.json.rabl (4.6ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:47 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"hor"}
+  Rendered api/v1/search/query.json.rabl (15.4ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:02:47 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"hors"}
+  Rendered api/v1/search/query.json.rabl (3.0ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:03:42 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled sidebar.js  (0ms)  (pid 75833)
+Compiled application.js  (9ms)  (pid 75833)
+Completed 200 OK in 118ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined/" for 127.0.0.1 at 2012-12-06 14:03:43 -0600
+
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/gabriel/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/gabriel/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /twitter/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /sidebar.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /application.js - 200 OK (31ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:03:45 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:03:46 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:47 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (59.0ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:47 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (2.0ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:48 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (37.2ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:48 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.2ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:03:49 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:51 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ka"}
+  Rendered api/v1/search/query.json.rabl (119.1ms)
+Completed 200 OK in 126ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:51 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"kao"}
+  Rendered api/v1/search/query.json.rabl (1.9ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:53 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ka"}
+  Rendered api/v1/search/query.json.rabl (165.6ms)
+Completed 200 OK in 172ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:54 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ka"}
+  Rendered api/v1/search/query.json.rabl (124.9ms)
+Completed 200 OK in 131ms (Views: 128.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:55 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"kao"}
+  Rendered api/v1/search/query.json.rabl (1.7ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:58 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mi"}
+  Rendered api/v1/search/query.json.rabl (274.6ms)
+Completed 200 OK in 281ms (Views: 278.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:58 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (43.1ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:03:58 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.4ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:04:13 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (37.3ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:04:14 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.4ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:05:24 -0600
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 111ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /api/v1/search.css - 200 OK (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (5ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /home.css - 200 OK (2ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /select2.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /jquery.js - 200 OK (42ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /jquery_ujs.js - 200 OK (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /twitter/bootstrap.js - 200 OK (21ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /api/v1/search.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /select2.js - 200 OK (2ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:05:25 -0600
+Served asset /application.js - 200 OK (76ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:05:26 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (3ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:05:26 -0600
+Served asset /spinner.gif - 200 OK (1ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:27 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  [1m[36mProfessor Load (3.0ms)[0m  [1mSELECT "professors".* FROM "professors" [0m
+  Rendered api/v1/search/query.json.rabl (22.2ms)
+Completed 200 OK in 246ms (Views: 26.4ms | ActiveRecord: 44.1ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:28 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pardo"}
+  Rendered api/v1/search/query.json.rabl (2.0ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:05:29 -0600
+Served asset /select2x2.png - 200 OK (1ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:30 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.6ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:32 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"chi"}
+  Rendered api/v1/search/query.json.rabl (25.8ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:32 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"chin"}
+  Rendered api/v1/search/query.json.rabl (5.4ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:33 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"chin "}
+  Rendered api/v1/search/query.json.rabl (2.5ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:33 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"chin mi"}
+  Rendered api/v1/search/query.json.rabl (46.8ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:34 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"chin "}
+  Rendered api/v1/search/query.json.rabl (2.8ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:35 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (37.5ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:36 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.5ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:05:40 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"kao"}
+  Rendered api/v1/search/query.json.rabl (1.8ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:06:32 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"kao"}
+  Rendered api/v1/search/query.json.rabl (2.0ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled sidebar.js  (0ms)  (pid 76320)
+Compiled application.js  (9ms)  (pid 76320)
+Completed 200 OK in 108ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:06:49 -0600
+Served asset /application.js - 200 OK (33ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:06:50 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:06:50 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:06:51 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"bry"}
+  Rendered api/v1/search/query.json.rabl (4.5ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:06:51 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"bryan"}
+  Rendered api/v1/search/query.json.rabl (3.5ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:06:52 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:06:53 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mi"}
+  Rendered api/v1/search/query.json.rabl (268.8ms)
+Completed 200 OK in 275ms (Views: 272.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:06:53 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ming"}
+  Rendered api/v1/search/query.json.rabl (5.4ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?80,1," for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Processing by HomeController#index as HTML
+  Parameters: {"80,1,"=>nil}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:07:15 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:07:34 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:07:35 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"bry"}
+  Rendered api/v1/search/query.json.rabl (4.7ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:07:36 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:07:36 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mn"}
+  Rendered api/v1/search/query.json.rabl (2.7ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:07:37 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mng"}
+  Rendered api/v1/search/query.json.rabl (0.3ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:07:37 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"mn"}
+  Rendered api/v1/search/query.json.rabl (2.7ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:07:38 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (37.7ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?80,1," for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Processing by HomeController#index as HTML
+  Parameters: {"80,1,"=>nil}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled sidebar.js  (0ms)  (pid 76320)
+Compiled application.js  (54ms)  (pid 76320)
+Completed 200 OK in 112ms (Views: 111.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /sidebar.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /application.js - 200 OK (80ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:08:03 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:08:04 -0600
+Served asset /spinner.gif - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:08:05 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (15.2ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:08:06 -0600
+Served asset /select2x2.png - 200 OK (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:08:07 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"ma"}
+  Rendered api/v1/search/query.json.rabl (428.2ms)
+Completed 200 OK in 435ms (Views: 431.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:08:07 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"min"}
+  Rendered api/v1/search/query.json.rabl (43.0ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?p=80,1," for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Processing by HomeController#index as HTML
+  Parameters: {"p"=>"80,1,"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /api/v1/search.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /bootstrap_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /select2.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /twitter/bootstrap.js - 200 OK (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /api/v1/search.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /select2.js - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /sidebar.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:16 -0600
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2012-12-06 14:08:17 -0600
+Served asset /fontawesome-webfont.woff - 200 OK (0ms)
+
+
+Started GET "/?p=80,1," for 127.0.0.1 at 2012-12-06 14:08:58 -0600
+Processing by HomeController#index as HTML
+  Parameters: {"p"=>"80,1,"}
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Compiled sidebar.js  (0ms)  (pid 76320)
+Compiled application.js  (9ms)  (pid 76320)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /api/v1/search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /api/v1/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /sidebar.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:08:59 -0600
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2012-12-06 14:09:00 -0600
+Served asset /spinner.gif - 304 Not Modified (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:09:00 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"par"}
+  Rendered api/v1/search/query.json.rabl (14.9ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:09:01 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"pard"}
+  Rendered api/v1/search/query.json.rabl (2.7ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/select2x2.png" for 127.0.0.1 at 2012-12-06 14:09:01 -0600
+Served asset /select2x2.png - 304 Not Modified (0ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:09:02 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"kao"}
+  Rendered api/v1/search/query.json.rabl (1.7ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?p=80,1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Processing by HomeController#index as HTML
+  Parameters: {"p"=>"80,1"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /api/v1/search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /api/v1/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /sidebar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:03 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/api/v1/query.json" for 127.0.0.1 at 2012-12-06 14:09:08 -0600
+Processing by Api::V1::SearchController#query as JSON
+  Parameters: {"q"=>"hor"}
+  Rendered api/v1/search/query.json.rabl (15.1ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?p=8" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Processing by HomeController#index as HTML
+  Parameters: {"p"=>"8"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api/v1/search.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /api/v1/search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/api/v1/search.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /api/v1/search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sidebar.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /sidebar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 14:09:09 -0600
+Served asset /application.js - 304 Not Modified (1ms)

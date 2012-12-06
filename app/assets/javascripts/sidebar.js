@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   $("#e9").select2({
+   $('#search-professor').select2({
         formatSelection: function(item) {
           return item.title;
         },
@@ -9,7 +9,7 @@ $(document).ready(function() {
         minimumInputLength: 2,
         multiple: true,
         ajax: {
-          url: location.origin + "/api/v1/query.json",
+          url: location.origin + '/api/v1/query.json',
           dataType: 'json',
           type: 'POST',
           quietMillis: 100,
@@ -23,4 +23,21 @@ $(document).ready(function() {
           }
         }
     });
+
+   $('#search-button').bind('click', search);
 });
+
+
+function search() {
+  queryString = '/?';
+  professors = $('#search-professor').select2('data');
+  if(professors.length > 0) {
+    queryString += 'p='
+    for(var i = 0; i < professors.length; i++) {
+      queryString += professors[i].id + ',';
+    }
+    queryString = queryString.slice(0, -1);
+  }
+
+  window.location = location.origin + queryString;
+}
