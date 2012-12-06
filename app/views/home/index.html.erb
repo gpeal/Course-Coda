@@ -1,3 +1,16 @@
 <div class="hero-unit" id="hero-main">
-  <div id="chart-course"></div>
+  <div class="tabbable"> <!-- Only required for left/right tabs -->
+    <ul class="nav nav-tabs">
+      <li class="tab-link active"><a href="#tab1" data-toggle="tab">Course</a></li>
+      <li><a class="tab-link" href="#tab2" data-toggle="tab">Instruction</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+        <div class="data-chart" id="chart-course"></div>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <div class="data-chart" id="chart-instruction"></div>
+      </div>
+    </div>
+  </div>
 </div>

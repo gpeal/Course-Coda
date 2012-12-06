@@ -5,41 +5,39 @@ var quarters = [];
 
 $(document).ready(function() {
   /**
-       * Highcharts plugin for setting a lower opacity for other series than the one that is hovered
-       * in the legend
-       */
-      (function (Highcharts) {
-          var each = Highcharts.each;
+   * Highcharts plugin for setting a lower opacity for other series than the one that is hovered
+   * in the legend
+   */
+  (function (Highcharts) {
+    var each = Highcharts.each;
 
-          Highcharts.wrap(Highcharts.Legend.prototype, 'renderItem', function (proceed, item) {
+    Highcharts.wrap(Highcharts.Legend.prototype, 'renderItem', function (proceed, item) {
 
-              proceed.call(this, item);
+      proceed.call(this, item);
 
+      var series = this.chart.series,
+      element = item.legendGroup.element;
 
-              var series = this.chart.series,
-                  element = item.legendGroup.element;
-
-              element.onmouseover = function () {
-                 each(series, function (seriesItem) {
-                      if (seriesItem !== item) {
-                          each(['group', 'markerGroup'], function (group) {
-                              seriesItem[group].attr('opacity', 0.25);
-                          });
-                      }
-                  });
-              }
-              element.onmouseout = function () {
-                 each(series, function (seriesItem) {
-                      if (seriesItem !== item) {
-                          each(['group', 'markerGroup'], function (group) {
-                              seriesItem[group].attr('opacity', 1);
-                          });
-                      }
-                  });
-              }
-
-          });
-      }(Highcharts));
+      element.onmouseover = function () {
+        each(series, function (seriesItem) {
+          if (seriesItem !== item) {
+            each(['group', 'markerGroup'], function (group) {
+              seriesItem[group].attr('opacity', 0.25);
+            });
+          }
+        });
+      }
+      element.onmouseout = function () {
+        each(series, function (seriesItem) {
+          if (seriesItem !== item) {
+            each(['group', 'markerGroup'], function (group) {
+              seriesItem[group].attr('opacity', 1);
+            });
+          }
+        });
+      }
+    });
+  }(Highcharts));
 
   requestData();
 });
@@ -68,21 +66,32 @@ function loadData(data) {
     }
 
     courseSeries = [];
+    instructionSeries = [];
     var keys = Object.keys(organizedSections);
     for(var section_id in keys) {
       var section_name = keys[section_id];
       var courseSeries_tmp = {};
       courseSeries_tmp.name = section_name;
       courseSeries_tmp.data = [];
+
+      var instructionSeries_tmp = {};
+      instructionSeries_tmp.name = section_name;
+      instructionSeries_tmp.data = [];
+
       for(var j in organizedSections[section_name]) {
         var section = organizedSections[section_name][j].section
         courseSeries_tmp.data.push([quarterName(section), section.course]);
+        instructionSeries_tmp.data.push([quarterName(section), section.instruction]);
       }
       courseSeries.push(courseSeries_tmp);
+      instructionSeries.push(instructionSeries_tmp);
     }
   }
 
-  refreshChart(charts.course, 'chart-course', courseSeries, 'Course Rating', quarters, 'Score');
+  refreshChart('course', 'chart-course', courseSeries, 'Course Rating', quarters, 'Score');
+  refreshChart('instruction', 'chart-instruction', instructionSeries, 'Instruction Rating', quarters, 'Score');
+  // you have to manually set the size of all charts after the first
+  charts.instruction.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
 }
 
 function sectionName(section) {
@@ -93,12 +102,13 @@ function quarterName(section) {
   return [section.quarter.title, section.year.title].join(' ');
 }
 
-function refreshChart(chart, id, series, title, categories, yTitle) {
-  chart = new Highcharts.Chart({
+function refreshChart(name, id, series, title, categories, yTitle) {
+  charts[name] = new Highcharts.Chart({
     chart: {
       renderTo: id,
       type: 'spline'
     },
+    reflow: false,
     credits: {
       enabled: false
     },
