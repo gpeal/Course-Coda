@@ -19,10 +19,12 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'rabl'
 end
 
 group :development do
-  gem 'debugger'
+  gem 'pry-debugger'
 end
 
 gem 'jquery-rails'
