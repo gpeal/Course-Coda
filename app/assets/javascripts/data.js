@@ -1,35 +1,9 @@
 var charts = {}
 var sectionData = undefined;
 var organizedSections = {};
+var quarters = [];
 
 $(document).ready(function() {
-  charts.course = new Highcharts.Chart({
-    chart: {
-      renderTo: 'container',
-      type: 'spline'
-    },
-    credits: {
-      enabled: false
-    },
-    title: {
-      text: 'Course Rating'
-    },
-    xAxis: {
-      categories: ['Apples', 'Bananas', 'Oranges']
-    },
-    yAxis: {
-      title: {
-      text: 'Score'
-    }
-    },
-    series: [{
-      name: 'Jane',
-      data: [1, 0, 4]
-      }, {
-      name: 'John',
-      data: [5, 7, 3]
-    }]
-  });
   requestData();
 });
 
@@ -43,7 +17,7 @@ function requestData() {
 }
 
 function loadData(data) {
-  sectionData = data;
+  var sectionData = data;
   for(var i = 0; i < sectionData.length; i++) {
     var organizedSection = organizedSections[sectionName(sectionData[i].section)];
     if(organizedSection === undefined) {
@@ -51,9 +25,57 @@ function loadData(data) {
     }
 
     organizedSections[sectionName(sectionData[i].section)].push(sectionData[i]);
+
+    if($.inArray(quarterName(sectionData[i].section), quarters) === -1) {
+      quarters.push(quarterName(sectionData[i].section));
+    }
+
+    courseSeries = [];
+    var keys = Object.keys(organizedSections);
+    for(var section_id in keys) {
+      var section_name = keys[section_id];
+      var series = {};
+      series.name = section_name;
+      series.data = [];
+      for(var j in organizedSections[section_name]) {
+        var section = organizedSections[section_name][j].section
+        series.data.push([quarterName(section), section.course]);
+      }
+      courseSeries.push(series);
+    }
   }
+
+  refreshChart(charts.course, courseSeries, 'Course Rating', quarters, 'Score');
 }
 
 function sectionName(section) {
   return [section.professor.title, section.subject.title.split(' ')[0], section.title.title].join(' ');
+}
+
+function quarterName(section) {
+  return [section.quarter.title, section.year.title].join(' ');
+}
+
+function refreshChart(chart, series, title, categories, yTitle) {
+  chart = new Highcharts.Chart({
+    chart: {
+      renderTo: 'container',
+      type: 'spline'
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: title
+    },
+    xAxis: {
+      categories: categories
+    },
+    yAxis: {
+      title: {
+      text: yTitle
+    }
+    },
+    series: series
+  });
 }
