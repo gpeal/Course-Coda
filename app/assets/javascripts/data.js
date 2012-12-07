@@ -130,10 +130,33 @@ function quarterName(section) {
 }
 
 function refreshChart(name, id, series, title, categories, yTitle) {
+  // fill in non existent quarters with null data
+  new_series = [];
+  data_idx = 0;
+  for(var s_i in series) {
+    new_series[s_i] = { name: series[s_i].name, data: [] }
+    var s_categories = series[s_i].data.map(function(d) { return d[0] });
+    for(var c_i in categories) {
+      var s_c_i = s_categories.indexOf(categories[c_i])
+      if(s_c_i !== -1) {
+        new_series[s_i].data.push([categories[c_i], series[s_i].data[s_c_i][1]])
+      }
+      else {
+        new_series[s_i].data.push([categories[c_i], null])
+      }
+    }
+  }
+  series = new_series
+
   charts[name] = new Highcharts.Chart({
     chart: {
       renderTo: id,
       type: 'spline'
+    },
+    plotOptions: {
+        spline: {
+            connectNulls: true
+        }
     },
     reflow: false,
     credits: {
@@ -143,7 +166,8 @@ function refreshChart(name, id, series, title, categories, yTitle) {
       text: title
     },
     xAxis: {
-      categories: categories
+      categories: categories,
+      max: null
     },
     yAxis: {
       title: {
