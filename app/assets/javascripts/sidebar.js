@@ -8,6 +8,7 @@ $(document).ready(function() {
         },
         minimumInputLength: 2,
         multiple: true,
+        placeholder: 'Professor',
         ajax: {
           url: location.origin + '/api/v1/professors/search.json',
           dataType: 'json',

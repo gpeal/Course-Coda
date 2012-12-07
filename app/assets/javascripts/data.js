@@ -109,15 +109,17 @@ function loadData(data) {
     }
   }
 
-  refreshChart('course', 'chart-course', courseSeries, 'Course Rating', quarters, 'Score');
-  refreshChart('instruction', 'chart-instruction', instructionSeries, 'Instruction Rating', quarters, 'Score');
+  yRange = findRange([courseSeries, instructionSeries, learnedSeries, challengedSeries, stimulatedSeries]);
+  // draw the charts
+  refreshChart('course', 'chart-course', courseSeries, quarters, yRange);
+  refreshChart('instruction', 'chart-instruction', instructionSeries, quarters, yRange);
   // you have to manually set the size of all charts after the first
   charts.instruction.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('learned', 'chart-learned', learnedSeries, 'Amount Learned', quarters, 'Score');
+  refreshChart('learned', 'chart-learned', learnedSeries, quarters, yRange);
   charts.learned.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('challenged', 'chart-challenged', challengedSeries, 'Amount Challenged', quarters, 'Score');
+  refreshChart('challenged', 'chart-challenged', challengedSeries, quarters, yRange);
   charts.challenged.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('stimulated', 'chart-stimulated', stimulatedSeries, 'Amount Stimulated', quarters, 'Score');
+  refreshChart('stimulated', 'chart-stimulated', stimulatedSeries, quarters, yRange);
   charts.stimulated.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
 }
 
@@ -129,29 +131,48 @@ function quarterName(section) {
   return [section.quarter.title, section.year.title].join(' ');
 }
 
-function refreshChart(name, id, series, title, categories, yTitle) {
+function findRange(series) {
+  var minDataValue = 7;
+  var maxDataValue = -1;
+  for(var i in series) {
+    for(var j in series[i]) {
+      for(var k in series[i][j].data) {
+        var dataValue = series[i][j].data[k][1];
+        if(dataValue < minDataValue) {
+          minDataValue = dataValue;
+        }
+        if(dataValue > maxDataValue) {
+          maxDataValue = dataValue
+        }
+      }
+    }
+  }
+  return [minDataValue, maxDataValue];
+}
+
+function refreshChart(name, id, series, categories, yRange) {
   // fill in non existent quarters with null data
-  new_series = [];
-  data_idx = 0;
+  var newSeries = [];
   for(var s_i in series) {
-    new_series[s_i] = { name: series[s_i].name, data: [] }
+    newSeries[s_i] = { name: series[s_i].name, data: [] }
     var s_categories = series[s_i].data.map(function(d) { return d[0] });
     for(var c_i in categories) {
       var s_c_i = s_categories.indexOf(categories[c_i])
       if(s_c_i !== -1) {
-        new_series[s_i].data.push([categories[c_i], series[s_i].data[s_c_i][1]])
+        newSeries[s_i].data.push([categories[c_i], series[s_i].data[s_c_i][1]])
       }
       else {
-        new_series[s_i].data.push([categories[c_i], null])
+        newSeries[s_i].data.push([categories[c_i], null])
       }
     }
   }
-  series = new_series
+  series = newSeries
 
   charts[name] = new Highcharts.Chart({
     chart: {
       renderTo: id,
-      type: 'spline'
+      type: 'spline',
+      reflow: true
     },
     plotOptions: {
         spline: {
@@ -163,7 +184,7 @@ function refreshChart(name, id, series, title, categories, yTitle) {
       enabled: false
     },
     title: {
-      text: title
+      text: ' '
     },
     xAxis: {
       categories: categories,
@@ -171,8 +192,10 @@ function refreshChart(name, id, series, title, categories, yTitle) {
     },
     yAxis: {
       title: {
-      text: yTitle
-    }
+        text: 'Rating'
+      },
+      min: yRange[0] * 0.9 < 1 ? 1 : yRange[0] * 0.9,
+      max: yRange[1] * 1.1 > 6 ? 6 : yRange[1] * 1.1
     },
     series: series
   });
