@@ -1,7 +1,7 @@
 # require 'rubygems'
 # require 'watir'
 # require 'open-uri'
-require 'debugger'
+# require 'debugger'
 # require 'pg'
 
 task :scrape, [:netid, :password, :department, :starting_class] => :environment do |t, args|

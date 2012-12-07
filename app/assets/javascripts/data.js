@@ -172,7 +172,8 @@ function refreshChart(name, id, series, categories, yRange) {
     chart: {
       renderTo: id,
       type: 'spline',
-      reflow: true
+      reflow: true,
+      zoomType: 'y'
     },
     plotOptions: {
         spline: {
