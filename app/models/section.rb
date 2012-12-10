@@ -72,4 +72,22 @@ class Section < ActiveRecord::Base
     end
     return feedback
   end
+
+  def self.find_by_query_params params
+    sections = []
+    if params[:p].nil?
+      professors = []
+    else
+      if params[:p].include?(',')
+        professors = params[:p].split(',')
+      else
+        professors = [params[:p]]
+      end
+      professors.collect! {|p_id| Professor.find(p_id)}
+      professors.each do |p|
+        sections.concat(p.sections)
+      end
+    end
+    return sections
+  end
 end
