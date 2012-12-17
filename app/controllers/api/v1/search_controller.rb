@@ -3,11 +3,16 @@ class Api::V1::SearchController < ApplicationController
 
   def search
     @sections = Section.find_by_query_params params
-    #sort the sections by time (helps on the client side javascript end of things)
-    seasons_hash = {'Winter' => 0, 'Spring' => 1, 'Summer' => 2, 'Fall' => 3}
-    @sections.sort_by! {|s| [s.year.title, seasons_hash[s.quarter.to_s]]}
+
+    first_year = @sections[0].year unless @sections.empty?
+    first_quarter = @sections[0].quarter unless @sections.empty?
+    @sections.each do |section|
+      first_year = section.year if section.year < first_year
+      first_quarter = section.quarter if (section.year <= first_year &&
+                                          section.quarter < first_quarter)
+    end
     respond_to do |format|
-      format.json {render :json => @sections}
+      format.json {render :json => {:sections => @sections, :xRange => {:firstQuarter => first_quarter, :firstYear => first_year}}}
     end
   end
 end

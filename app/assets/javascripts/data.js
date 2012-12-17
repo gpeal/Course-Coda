@@ -53,7 +53,7 @@ function requestData() {
 }
 
 function loadData(data) {
-  var sectionData = data;
+  var sectionData = data.sections;
   for(var i = 0; i < sectionData.length; i++) {
     var organizedSection = organizedSections[sectionName(sectionData[i])];
     if(organizedSection === undefined) {
@@ -96,16 +96,21 @@ function loadData(data) {
 
   yRange = findRange(ratingSeries);
   // draw the charts
-  refreshChart('course', 'chart-course', ratingSeries['course'], quarters, yRange);
-  refreshChart('instruction', 'chart-instruction', ratingSeries['instruction'], quarters, yRange);
-  // you have to manually set the size of all charts after the first
-  charts.instruction.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('learned', 'chart-learned', ratingSeries['learned'], quarters, yRange);
-  charts.learned.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('challenged', 'chart-challenged', ratingSeries['challenged'], quarters, yRange);
-  charts.challenged.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('stimulated', 'chart-stimulated', ratingSeries['stimulated'], quarters, yRange);
-  charts.stimulated.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+
+  ratings.forEach(function(rating) {
+    refreshChart(rating, 'chart-' + rating, ratingSeries[rating], quarters, yRange);
+    charts[rating].setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+  })
+  // refreshChart('course', 'chart-course', ratingSeries['course'], quarters, yRange);
+  // refreshChart('instruction', 'chart-instruction', ratingSeries['instruction'], quarters, yRange);
+  // // you have to manually set the size of all charts after the first
+  // charts.instruction.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+  // refreshChart('learned', 'chart-learned', ratingSeries['learned'], quarters, yRange);
+  // charts.learned.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+  // refreshChart('challenged', 'chart-challenged', ratingSeries['challenged'], quarters, yRange);
+  // charts.challenged.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+  // refreshChart('stimulated', 'chart-stimulated', ratingSeries['stimulated'], quarters, yRange);
+  // charts.stimulated.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
 }
 
 function sectionName(section) {
