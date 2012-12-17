@@ -94,6 +94,10 @@ class Section < ActiveRecord::Base
         sections.concat(p.sections)
       end
     end
+
+    if sections.count > 1
+      raise Exceptions::TooManySections
+    end
     return sections
   end
 end

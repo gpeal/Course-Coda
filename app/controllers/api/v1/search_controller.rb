@@ -2,8 +2,12 @@ class Api::V1::SearchController < ApplicationController
   respond_to :json
 
   def search
-    @sections = Section.find_by_query_params params
-
+    begin
+      @sections = Section.find_by_query_params params
+    rescue Exceptions::TooManySections
+      redirect_to root_url + '?p=1', :alert => 'Search returned too many sections. Try narrowing your search terms.'
+      return
+    end
     first_year = @sections[0].year unless @sections.nil?
     first_quarter = @sections[0].quarter unless @sections.nil?
     @sections.each do |section|
