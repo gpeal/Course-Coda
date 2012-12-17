@@ -1,7 +1,6 @@
 var charts = {}
 var sectionData = undefined;
 var organizedSections = {};
-var quarters = [];
 
 $(document).ready(function() {
   /**
@@ -54,6 +53,7 @@ function requestData() {
 
 function loadData(data) {
   var sectionData = data.sections;
+
   for(var i = 0; i < sectionData.length; i++) {
     var organizedSection = organizedSections[sectionName(sectionData[i])];
     if(organizedSection === undefined) {
@@ -61,10 +61,6 @@ function loadData(data) {
     }
 
     organizedSections[sectionName(sectionData[i])].push(sectionData[i]);
-
-    if($.inArray(quarterName(sectionData[i]), quarters) === -1) {
-      quarters.push(quarterName(sectionData[i]));
-    }
 
     var ratings = ['course', 'instruction', 'learned', 'challenged', 'stimulated']
     var ratingSeries = {}
@@ -82,9 +78,9 @@ function loadData(data) {
 
       for(var j in organizedSections[name]) {
         var section = organizedSections[name][j]
-
+        var sectionShortQuarterName = shortSectionTerm(section);
         ratings.forEach(function(rating) {
-          seriesTmp[rating].data.push([quarterName(section), section[rating]]);
+          seriesTmp[rating].data.push([sectionShortQuarterName, section[rating]]);
         });
       }
 
@@ -94,27 +90,74 @@ function loadData(data) {
     });
   }
 
-  yRange = findRange(ratingSeries);
+
+  var terms = generateTerms(data.xRange.firstQuarter.title, parseInt(data.xRange.firstYear.title));
+  var yRange = findRange(ratingSeries);
   // draw the charts
 
   ratings.forEach(function(rating) {
-    refreshChart(rating, 'chart-' + rating, ratingSeries[rating], quarters, yRange);
+    refreshChart(rating, 'chart-' + rating, ratingSeries[rating], terms, yRange);
     charts[rating].setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
   })
-  // refreshChart('course', 'chart-course', ratingSeries['course'], quarters, yRange);
-  // refreshChart('instruction', 'chart-instruction', ratingSeries['instruction'], quarters, yRange);
-  // // you have to manually set the size of all charts after the first
-  // charts.instruction.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  // refreshChart('learned', 'chart-learned', ratingSeries['learned'], quarters, yRange);
-  // charts.learned.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  // refreshChart('challenged', 'chart-challenged', ratingSeries['challenged'], quarters, yRange);
-  // charts.challenged.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  // refreshChart('stimulated', 'chart-stimulated', ratingSeries['stimulated'], quarters, yRange);
-  // charts.stimulated.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
+}
+
+function generateTerms(firstQuarter, firstYear) {
+  var quarterNames = ['W', 'S', 'SU', 'F'];
+  var terms = []
+  // intentionally uses fall through switch
+  switch(firstQuarter.title) {
+    case quarterNames[0]:
+      terms.push(quarterNames[0] + shortenYear(firstYear.title));
+    case quarterNames[1]:
+      terms.push(quarterNames[1] + shortenYear(firstYear.title));
+    case quarterNames[2]:
+      terms.push(quarterNames[2] + shortenYear(firstYear.title));
+    case quarterNames[3]:
+      terms.push(quarterNames[3] + shortenYear(firstYear.title));
+  }
+  for(var year = firstYear + 1; year <= 2012; year++) {
+    terms.push(quarterNames[0] + shortenYear(year));
+    terms.push(quarterNames[1] + shortenYear(year));
+    terms.push(quarterNames[2] + shortenYear(year));
+    terms.push(quarterNames[3] + shortenYear(year));
+  }
+  return terms;
+}
+
+function shortenYear(year) {
+  year = parseInt(year);
+  year -= 2000;
+  year = '' + year;
+  if(year.length === 1)
+    prefix = '0';
+  else if(year.length === 2)
+    prefix = '1';
+  return prefix + year;
 }
 
 function sectionName(section) {
   return [section.professor.title, section.subject.title.split(' ')[0], section.title.title].join(' ');
+}
+
+function shortSectionTerm(section) {
+  var year = section.year.title;
+  year = shortenYear(year);
+  var quarter = section.quarter.title.toLowerCase();
+  switch(quarter) {
+    case 'winter':
+      quarter = 'W';
+      break;
+    case 'spring':
+      quarter = 'S';
+      break;
+    case 'summer':
+      quarter = 'SU';
+      break;
+    case 'fall':
+      quarter = 'F';
+      break;
+    }
+    return quarter + year;
 }
 
 function quarterName(section) {
@@ -148,7 +191,7 @@ function refreshChart(name, id, series, categories, yRange) {
       renderTo: id,
       type: 'spline',
       reflow: true,
-      zoomType: 'y'
+      zoomType: 'xy'
     },
     plotOptions: {
         spline: {
