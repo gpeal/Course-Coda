@@ -20,7 +20,7 @@ $(document).ready(function() {
               };
           },
           results: function (data, page) {
-              return {results: data.map(function(item) { return item.professor}), more: null};
+              return {results: data.map(function(item) { return item}), more: null};
           }
         }
     });

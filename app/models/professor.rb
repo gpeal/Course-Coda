@@ -29,6 +29,11 @@ class Professor < ActiveRecord::Base
     return sum / enroll_count
   end
 
+  # def as_json(options={})
+  #   self.include_root_in_json = false
+  #   super(:only => [:id, :title])
+  # end
+
   def self.find_by_name name
     professor = Professor.where('title LIKE ?', "%#{name}%").first
   end

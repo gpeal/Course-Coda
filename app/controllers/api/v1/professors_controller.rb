@@ -3,5 +3,8 @@ class Api::V1::ProfessorsController < ApplicationController
 
   def search
     @professors = Professor.search(params[:q])
+    # binding.pry
+
+    render :json => @professors
   end
 end

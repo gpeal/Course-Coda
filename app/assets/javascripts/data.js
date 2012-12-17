@@ -45,6 +45,7 @@ $(document).ready(function() {
 function requestData() {
   $.ajax({
     url: 'api/v1/search.json',
+    dataType: 'json',
     type: 'POST',
     data: location.search.slice(1),
     success: loadData
@@ -54,15 +55,15 @@ function requestData() {
 function loadData(data) {
   var sectionData = data;
   for(var i = 0; i < sectionData.length; i++) {
-    var organizedSection = organizedSections[sectionName(sectionData[i].section)];
+    var organizedSection = organizedSections[sectionName(sectionData[i])];
     if(organizedSection === undefined) {
-      organizedSections[sectionName(sectionData[i].section)] = []
+      organizedSections[sectionName(sectionData[i])] = []
     }
 
-    organizedSections[sectionName(sectionData[i].section)].push(sectionData[i]);
+    organizedSections[sectionName(sectionData[i])].push(sectionData[i]);
 
-    if($.inArray(quarterName(sectionData[i].section), quarters) === -1) {
-      quarters.push(quarterName(sectionData[i].section));
+    if($.inArray(quarterName(sectionData[i]), quarters) === -1) {
+      quarters.push(quarterName(sectionData[i]));
     }
 
     courseSeries = [];
@@ -94,7 +95,7 @@ function loadData(data) {
       stimulatedSeries_tmp.data = [];
 
       for(var j in organizedSections[section_name]) {
-        var section = organizedSections[section_name][j].section
+        var section = organizedSections[section_name][j]
         courseSeries_tmp.data.push([quarterName(section), section.course]);
         instructionSeries_tmp.data.push([quarterName(section), section.instruction]);
         learnedSeries_tmp.data.push([quarterName(section), section.learned]);

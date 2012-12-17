@@ -24,6 +24,12 @@ class Section < ActiveRecord::Base
     subject.abbrev
   end
 
+  def as_json(options={})
+    super(:only => [:instruction, :course, :learned, :chappenge, :stimulation],
+          :include => [:professor, :quarter, :subject, :title, :year]
+    )
+  end
+
   def self.find_all name
     subject_abbrev = name.split(' ')[0]
     course_num = name.split(' ')[1]
