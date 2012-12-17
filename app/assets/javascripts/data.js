@@ -131,7 +131,7 @@ function shortenYear(year) {
   if(year.length === 1)
     prefix = '0';
   else if(year.length === 2)
-    prefix = '1';
+    prefix = '';
   return prefix + year;
 }
 
