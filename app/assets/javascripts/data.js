@@ -66,61 +66,45 @@ function loadData(data) {
       quarters.push(quarterName(sectionData[i]));
     }
 
-    courseSeries = [];
-    instructionSeries = [];
-    learnedSeries = [];
-    challengedSeries = [];
-    stimulatedSeries = [];
-    var keys = Object.keys(organizedSections);
-    for(var section_id in keys) {
-      var section_name = keys[section_id];
-      var courseSeries_tmp = {};
-      courseSeries_tmp.name = section_name;
-      courseSeries_tmp.data = [];
+    var ratings = ['course', 'instruction', 'learned', 'challenged', 'stimulated']
+    var ratingSeries = {}
+    ratings.forEach(function(rating) {
+      ratingSeries[rating] = [];
+    });
+    Object.keys(organizedSections).forEach(function(name) {
+      var seriesTmp = {};
 
-      var instructionSeries_tmp = {};
-      instructionSeries_tmp.name = section_name;
-      instructionSeries_tmp.data = [];
+      ratings.forEach(function(rating) {
+        seriesTmp[rating] = {};
+        seriesTmp[rating].name = name;
+        seriesTmp[rating].data = [];
+      });
 
-      var learnedSeries_tmp = {};
-      learnedSeries_tmp.name = section_name;
-      learnedSeries_tmp.data = [];
+      for(var j in organizedSections[name]) {
+        var section = organizedSections[name][j]
 
-      var challengedSeries_tmp = {};
-      challengedSeries_tmp.name = section_name;
-      challengedSeries_tmp.data = [];
-
-      var stimulatedSeries_tmp = {};
-      stimulatedSeries_tmp.name = section_name;
-      stimulatedSeries_tmp.data = [];
-
-      for(var j in organizedSections[section_name]) {
-        var section = organizedSections[section_name][j]
-        courseSeries_tmp.data.push([quarterName(section), section.course]);
-        instructionSeries_tmp.data.push([quarterName(section), section.instruction]);
-        learnedSeries_tmp.data.push([quarterName(section), section.learned]);
-        challengedSeries_tmp.data.push([quarterName(section), section.challenge]);
-        stimulatedSeries_tmp.data.push([quarterName(section), section.stimulation]);
+        ratings.forEach(function(rating) {
+          seriesTmp[rating].data.push([quarterName(section), section[rating]]);
+        });
       }
-      courseSeries.push(courseSeries_tmp);
-      instructionSeries.push(instructionSeries_tmp);
-      learnedSeries.push(learnedSeries_tmp);
-      challengedSeries.push(challengedSeries_tmp);
-      stimulatedSeries.push(stimulatedSeries_tmp);
-    }
+
+      ratings.forEach(function(rating) {
+        ratingSeries[rating].push(seriesTmp[rating]);
+      });
+    });
   }
 
-  yRange = findRange([courseSeries, instructionSeries, learnedSeries, challengedSeries, stimulatedSeries]);
+  yRange = findRange(ratingSeries);
   // draw the charts
-  refreshChart('course', 'chart-course', courseSeries, quarters, yRange);
-  refreshChart('instruction', 'chart-instruction', instructionSeries, quarters, yRange);
+  refreshChart('course', 'chart-course', ratingSeries['course'], quarters, yRange);
+  refreshChart('instruction', 'chart-instruction', ratingSeries['instruction'], quarters, yRange);
   // you have to manually set the size of all charts after the first
   charts.instruction.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('learned', 'chart-learned', learnedSeries, quarters, yRange);
+  refreshChart('learned', 'chart-learned', ratingSeries['learned'], quarters, yRange);
   charts.learned.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('challenged', 'chart-challenged', challengedSeries, quarters, yRange);
+  refreshChart('challenged', 'chart-challenged', ratingSeries['challenged'], quarters, yRange);
   charts.challenged.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
-  refreshChart('stimulated', 'chart-stimulated', stimulatedSeries, quarters, yRange);
+  refreshChart('stimulated', 'chart-stimulated', ratingSeries['stimulated'], quarters, yRange);
   charts.stimulated.setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
 }
 
@@ -133,22 +117,7 @@ function quarterName(section) {
 }
 
 function findRange(series) {
-  var minDataValue = 7;
-  var maxDataValue = -1;
-  for(var i in series) {
-    for(var j in series[i]) {
-      for(var k in series[i][j].data) {
-        var dataValue = series[i][j].data[k][1];
-        if(dataValue < minDataValue) {
-          minDataValue = dataValue;
-        }
-        if(dataValue > maxDataValue) {
-          maxDataValue = dataValue
-        }
-      }
-    }
-  }
-  return [minDataValue, maxDataValue];
+  return [0.8, 6.2];
 }
 
 function refreshChart(name, id, series, categories, yRange) {

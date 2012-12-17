@@ -2,8 +2,8 @@ class Section < ActiveRecord::Base
   attr_accessible :instruction, :instruction_breakdown,  :instruction_responses, :instruction_enroll_count
   attr_accessible :course, :course_breakdown, :course_responses, :course_enroll_count
   attr_accessible :learned, :learned_breakdown, :learned_responses, :learned_enroll_count
-  attr_accessible :challenge, :challenge_breakdown, :challenge_responses, :challenge_enroll_count
-  attr_accessible :stimulation, :stimulation_breakdown, :stimulation_responses, :stimulation_enroll_count
+  attr_accessible :challenged, :challenged_breakdown, :challenged_responses, :challenged_enroll_count
+  attr_accessible :stimulated, :stimulated_breakdown, :stimulated_responses, :stimulated_enroll_count
   attr_accessible :time_breakdown, :feedback, :school_breakdown, :class_breakdown, :reasons_breakdown, :interest_breakdown
 
   belongs_to :professor
@@ -25,7 +25,7 @@ class Section < ActiveRecord::Base
   end
 
   def as_json(options={})
-    super(:only => [:instruction, :course, :learned, :chappenge, :stimulation],
+    super(:only => [:instruction, :course, :learned, :challenged, :stimulated],
           :include => [:professor, :quarter, :subject, :title, :year]
     )
   end

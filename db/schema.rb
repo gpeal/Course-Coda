@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121102050628) do
+ActiveRecord::Schema.define(:version => 20121217034004) do
 
   create_table "professors", :force => true do |t|
     t.string "title"
@@ -39,14 +39,14 @@ ActiveRecord::Schema.define(:version => 20121102050628) do
     t.string   "learned_breakdown"
     t.integer  "learned_responses"
     t.integer  "learned_enroll_count"
-    t.float    "challenge"
-    t.string   "challenge_breakdown"
-    t.integer  "challenge_responses"
-    t.integer  "challenge_enroll_count"
-    t.float    "stimulation"
-    t.string   "stimulation_breakdown"
-    t.integer  "stimulation_responses"
-    t.integer  "stimulation_enroll_count"
+    t.float    "challenged"
+    t.string   "challenged_breakdown"
+    t.integer  "challenged_responses"
+    t.integer  "challenged_enroll_count"
+    t.float    "stimulated"
+    t.string   "stimulated_breakdown"
+    t.integer  "stimulated_responses"
+    t.integer  "stimulated_enroll_count"
     t.string   "time_breakdown"
     t.text     "feedback"
     t.string   "school_breakdown"
