@@ -102,7 +102,7 @@ function loadData(data) {
 }
 
 function generateTerms(firstQuarter, firstYear) {
-  var quarterNames = ['W', 'S', 'SU', 'F'];
+  var quarterNames = ['W', 'S', 'Su', 'F'];
   var terms = []
   // intentionally uses fall through switch
   switch(firstQuarter.title) {
@@ -151,7 +151,7 @@ function shortSectionTerm(section) {
       quarter = 'S';
       break;
     case 'summer':
-      quarter = 'SU';
+      quarter = 'Su';
       break;
     case 'fall':
       quarter = 'F';
