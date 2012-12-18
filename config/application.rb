@@ -60,3 +60,5 @@ module CaesarScraper
     config.assets.version = '1.0'
   end
 end
+
+REDIS_CONFIG = YAML.load_file(Rails.root.join('config', 'redis.yml'))[Rails.env]

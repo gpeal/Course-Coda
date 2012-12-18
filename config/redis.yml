@@ -1,0 +1,8 @@
+development:
+  url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+
+test:
+  url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+
+production:
+  url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497

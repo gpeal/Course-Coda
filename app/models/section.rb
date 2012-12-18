@@ -88,21 +88,9 @@ class Section < ActiveRecord::Base
   end
 
   def self.search title
-    @sections ||= {}
-    if @titles_l.nil?
-      @titles_l = []
-     Section.all.each do |s|
-        @sections[s.to_s.downcase] ||= s
-        @titles_l << s.to_s.downcase
-      end
-    end
-
-    sections = []
-    title.downcase!
-    @titles_l.grep(/#{title.downcase}/).each do |title|
-      sections << @sections[title]
-    end
-    return sections
+    keys = REDIS.keys("SECTION *#{title}*")
+    ids = keys.collect {|key| REDIS.get(key)}
+    ids.collect {|id| find(id)}
   end
 
   def self.find_by_query_params params

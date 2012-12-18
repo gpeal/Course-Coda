@@ -39,20 +39,8 @@ class Professor < ActiveRecord::Base
   end
 
   def self.search name
-    @professors_hash ||= {}
-    if @names_l.nil?
-      @names_l = []
-     Professor.all.each do |p|
-        @professors_hash[p.to_s.downcase] ||= p
-        @names_l << p.to_s.downcase
-      end
-    end
-
-    professors = []
-    name.downcase!
-    @names_l.grep(/#{name.downcase}/).each do |name|
-      professors << @professors_hash[name]
-    end
-    return professors
+    keys = REDIS.keys("PROFESSOR *#{name}*")
+    ids = keys.collect {|key| REDIS.get(key)}
+    ids.collect {|id| find(id)}
   end
 end
