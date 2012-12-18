@@ -9,7 +9,7 @@ $(document).ready(function() {
 function search() {
   var queryString = '/?';
   queryString = queryString.concat(select2ToQueryParams('search-professor', 'p'));
-  queryString = queryString.concat(select2ToQueryParams('search-title', 's'));
+  queryString = queryString.concat(select2ToQueryParams('search-title', 't'));
 
   window.location = location.origin + queryString;
 }

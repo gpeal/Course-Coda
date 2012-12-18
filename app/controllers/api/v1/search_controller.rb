@@ -19,6 +19,6 @@ class Api::V1::SearchController < ApplicationController
                                           section.quarter < first_quarter)
     end
 
-    render :json => {:sections => @sections, :xRange => {:firstQuarter => first_quarter, :firstYear => first_year}}, :alert => 'test'
+    render :json => {:sections => @sections, :xRange => {:firstQuarter => first_quarter, :firstYear => first_year}}
   end
 end

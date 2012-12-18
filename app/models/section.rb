@@ -25,12 +25,11 @@ class Section < ActiveRecord::Base
   end
 
   def as_json(options={})
-    # binding.pry
-    if options == {}
+    if options.member?(:only) or options.member?(:except) or options.member?(:include)
+      return super(options)
+    else
       return super(:only => [:instruction, :course, :learned, :challenged, :stimulated],
                                :include => [:professor, :quarter, :subject, :title, :year])
-    else
-      return super(options)
     end
   end
 
@@ -103,9 +102,25 @@ class Section < ActiveRecord::Base
       else
         professors = [params[:p]]
       end
-      professors.collect! {|p_id| Professor.find(p_id)}
+      professors.collect!(&:to_i)
+      professors = Professor.find(professors)
       professors.each do |p|
         sections.concat(p.sections)
+      end
+    end
+
+    if params[:t].nil?
+      titles = []
+    else
+      if params[:t].include?(',')
+        titles = params[:t].split(',')
+      else
+        titles = [params[:t]]
+      end
+      titles.collect!(&:to_i)
+      titles = Title.find(titles)
+      titles.each do |t|
+        sections.concat(t.sections)
       end
     end
 
