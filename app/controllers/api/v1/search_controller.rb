@@ -3,7 +3,7 @@ class Api::V1::SearchController < ApplicationController
 
   def search
     @sections = Section.find_by_query_params params
-    if @sections.count > 20
+    if @sections.count > 200
       render :json => {:error => 'Search yielded too many sections. Try narrowing your search options.'}
       return
     elsif @sections.empty?

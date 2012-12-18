@@ -93,37 +93,25 @@ class Section < ActiveRecord::Base
   end
 
   def self.find_by_query_params params
-    sections = []
-    if params[:p].nil?
-      professors = []
-    else
-      if params[:p].include?(',')
-        professors = params[:p].split(',')
-      else
-        professors = [params[:p]]
-      end
-      professors.collect!(&:to_i)
-      professors = Professor.find(professors)
-      professors.each do |p|
-        sections.concat(p.sections)
+    sections = {}
+    unless params[:p].nil?
+      professor_ids = params[:p].split(',')
+      sections[:p] = Section.where("professor_id in (#{professor_ids.join(',')})")
+    end
+    unless params[:t].nil?
+      title_ids = params[:t].split(',')
+      sections[:t] = Section.where("title_id in (#{title_ids.join(',')})")
+    end
+
+    sections_union = []
+    unless sections.empty?
+      sections_union = sections[sections.keys.first]
+      sections.keys.each do |key|
+        sections_union = sections_union & sections[key]
       end
     end
 
-    if params[:t].nil?
-      titles = []
-    else
-      if params[:t].include?(',')
-        titles = params[:t].split(',')
-      else
-        titles = [params[:t]]
-      end
-      titles.collect!(&:to_i)
-      titles = Title.find(titles)
-      titles.each do |t|
-        sections.concat(t.sections)
-      end
-    end
 
-    return sections
+    return sections_union
   end
 end

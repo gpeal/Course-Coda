@@ -8,8 +8,14 @@ $(document).ready(function() {
 
 function search() {
   var queryString = '/?';
-  queryString = queryString.concat(select2ToQueryParams('search-professor', 'p'));
-  queryString = queryString.concat(select2ToQueryParams('search-title', 't'));
+  pParams = select2ToQueryParams('search-professor', 'p');
+  if(pParams != '')
+    queryString = queryString.concat(pParams, '&');
+  tParams = select2ToQueryParams('search-title', 't');
+  if(tParams != '')
+    queryString = queryString.concat(tParams, '&');
+
+  queryString = queryString.slice(0, -1);
 
   window.location = location.origin + queryString;
 }
