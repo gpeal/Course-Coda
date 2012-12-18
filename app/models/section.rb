@@ -95,9 +95,6 @@ class Section < ActiveRecord::Base
       end
     end
 
-    if sections.count > 1
-      raise Exceptions::TooManySections
-    end
     return sections
   end
 end

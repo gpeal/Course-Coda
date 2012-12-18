@@ -52,6 +52,15 @@ function requestData() {
 }
 
 function loadData(data) {
+  if(data['info']) {
+    bootstrap_alert.info(data['info']);
+    return
+  }
+  else if(data['error']) {
+    bootstrap_alert.error(data['error']);
+    return
+  }
+
   var sectionData = data.sections;
 
   for(var i = 0; i < sectionData.length; i++) {
