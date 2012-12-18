@@ -1,29 +1,6 @@
 $(document).ready(function() {
-   $('#search-professor').select2({
-        formatSelection: function(item) {
-          return item.title;
-        },
-        formatResult: function(item) {
-          return item.title;
-        },
-        minimumInputLength: 2,
-        multiple: true,
-        placeholder: 'Professor',
-        ajax: {
-          url: location.origin + '/api/v1/professors/search.json',
-          dataType: 'json',
-          type: 'POST',
-          quietMillis: 100,
-          data: function (term, page) {
-              return {
-                  q: term, //search term
-              };
-          },
-          results: function (data, page) {
-              return {results: data.map(function(item) { return item}), more: null};
-          }
-        }
-    });
+  setupSelect2('search-professor', '/api/v1/professors/search.json', 'Professor', 'title');
+  setupSelect2('search-section-name', '/api/v1/sections/search.json', 'Section', 'to_s');
 
    $('#search-button').bind('click', search);
 });
@@ -41,4 +18,32 @@ function search() {
   }
 
   window.location = location.origin + queryString;
+}
+
+function setupSelect2(id, url, placeholder, titleProperty) {
+  $('#' + id).select2({
+       formatSelection: function(item) {
+         return item[titleProperty];
+       },
+       formatResult: function(item) {
+         return item[titleProperty];
+       },
+       minimumInputLength: 2,
+       multiple: true,
+       placeholder: placeholder,
+       ajax: {
+         url: location.origin + url,
+         dataType: 'json',
+         type: 'POST',
+         quietMillis: 100,
+         data: function (term, page) {
+             return {
+                 q: term, //search term
+             };
+         },
+         results: function (data, page) {
+             return {results: data.map(function(item) { return item}), more: null};
+         }
+       }
+   });
 }
