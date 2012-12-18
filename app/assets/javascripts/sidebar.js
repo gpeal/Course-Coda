@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  setupSelect2('search-professor', '/api/v1/professors/search.json', 'Professor', 'title');
-  setupSelect2('search-section-name', '/api/v1/sections/search.json', 'Section', 'to_s');
+  setupSelect2('search-professor', '/api/v1/professors/search.json', 'Professor', 'title', 100);
+  setupSelect2('search-title', '/api/v1/titles/search.json', 'Course Title', 'to_s', 1000);
 
    $('#search-button').bind('click', search);
 });
@@ -9,7 +9,7 @@ $(document).ready(function() {
 function search() {
   var queryString = '/?';
   queryString = queryString.concat(select2ToQueryParams('search-professor', 'p'));
-  queryString = queryString.concat(select2ToQueryParams('search-section-name', 's'));
+  queryString = queryString.concat(select2ToQueryParams('search-title', 's'));
 
   window.location = location.origin + queryString;
 }
@@ -27,7 +27,7 @@ function select2ToQueryParams(id, queryParamId) {
   return queryString;
 }
 
-function setupSelect2(id, url, placeholder, titleProperty) {
+function setupSelect2(id, url, placeholder, titleProperty, quietMillis) {
   $('#' + id).select2({
        formatSelection: function(item) {
          return item[titleProperty];
@@ -42,7 +42,7 @@ function setupSelect2(id, url, placeholder, titleProperty) {
          url: location.origin + url,
          dataType: 'json',
          type: 'POST',
-         quietMillis: 100,
+         quietMillis: quietMillis,
          data: function (term, page) {
              return {
                  q: term, //search term

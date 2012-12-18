@@ -10,6 +10,10 @@ CaesarScraper::Application.routes.draw do
       namespace :sections do
         post 'search'
       end
+
+      namespace :titles do
+        post 'search'
+      end
     end
   end
 
