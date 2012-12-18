@@ -7,17 +7,24 @@ $(document).ready(function() {
 
 
 function search() {
-  queryString = '/?';
-  professors = $('#search-professor').select2('data');
+  var queryString = '/?';
+  queryString = queryString.concat(select2ToQueryParams('search-professor', 'p'));
+  queryString = queryString.concat(select2ToQueryParams('search-section-name', 's'));
+
+  window.location = location.origin + queryString;
+}
+
+function select2ToQueryParams(id, queryParamId) {
+  var queryString = '';
+  professors = $('#' + id).select2('data');
   if(professors.length > 0) {
-    queryString += 'p='
+    queryString += queryParamId + '='
     for(var i = 0; i < professors.length; i++) {
       queryString += professors[i].id + ',';
     }
     queryString = queryString.slice(0, -1);
   }
-
-  window.location = location.origin + queryString;
+  return queryString;
 }
 
 function setupSelect2(id, url, placeholder, titleProperty) {
