@@ -2,6 +2,7 @@ class Subject < ActiveRecord::Base
   attr_accessible :title
 
   has_many :sections
+  has_many :professors, :through => :sections
 
   def to_s
     title
