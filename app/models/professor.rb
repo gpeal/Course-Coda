@@ -39,7 +39,7 @@ class Professor < ActiveRecord::Base
   end
 
   def self.search name
-    keys = REDIS.keys("PROFESSOR *#{name}*")
+    keys = REDIS.keys("PROFESSOR *#{name.split(' ').join('*')}*")
     ids = keys.collect {|key| key[-5..-1].to_i}
     find(ids)
   end

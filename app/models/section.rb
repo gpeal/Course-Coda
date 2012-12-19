@@ -87,7 +87,7 @@ class Section < ActiveRecord::Base
   end
 
   def self.search title
-    keys = REDIS.keys("SECTION *#{title}*")
+    keys = REDIS.keys("SECTION *#{title.split(' ').join('*')}*")
     ids = keys.collect {|key| REDIS.get(key)}
     ids.collect {|id| find(id)}
   end
