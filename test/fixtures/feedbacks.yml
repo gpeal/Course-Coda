@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  feedback: 
+  section_id: 
+  sentiment: false
+
+two:
+  feedback: 
+  section_id: 
+  sentiment: false
