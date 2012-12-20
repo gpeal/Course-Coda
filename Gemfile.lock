@@ -114,6 +114,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redis (3.0.2)
+    ruby-progressbar (1.0.2)
     rubyzip (0.9.9)
     sass (3.2.1)
     sass-rails (3.2.5)
@@ -155,6 +156,7 @@ DEPENDENCIES
   pry-debugger
   rails (= 3.2.8)
   redis
+  ruby-progressbar
   sass-rails (~> 3.2.3)
   twitter-bootstrap-rails!
   uglifier (>= 1.0.3)

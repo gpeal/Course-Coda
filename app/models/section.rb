@@ -5,6 +5,7 @@ class Section < ActiveRecord::Base
   attr_accessible :challenged, :challenged_breakdown, :challenged_responses, :challenged_enroll_count
   attr_accessible :stimulated, :stimulated_breakdown, :stimulated_responses, :stimulated_enroll_count
   attr_accessible :time_breakdown, :feedback, :school_breakdown, :class_breakdown, :reasons_breakdown, :interest_breakdown
+  attr_accessible :title_id
 
   belongs_to :professor
   belongs_to :quarter

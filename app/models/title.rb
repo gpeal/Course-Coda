@@ -1,5 +1,5 @@
 class Title < ActiveRecord::Base
-  attr_accessible :title
+  attr_accessible :title, :title_id
 
   has_many :sections
   has_many :subjects, :through => :sections
@@ -13,11 +13,23 @@ class Title < ActiveRecord::Base
   end
 
   def course_num
-    title.match(/\d\d\d-/)[0].split('-')[0]
+    title.match(/[0-9A-Z]*/)[0]
   end
 
   def course_num_2
-    title.match(/\d\d\d-\d/)[0]
+    title.match(/[0-9A-Z]*-[0-9A-Z]*/)[0]
+  end
+
+  def course_num_3
+    title.match(/[0-9A-Z]*-[0-9A-Z]*-[0-9A-Z]*/)[0] rescue binding.pry
+  end
+
+  def third_course_num
+    third_course_num.split('-')[2]
+  end
+
+  def name
+    title.sub(course_num_3 + ' ', '')
   end
 
   def subject_abbrev

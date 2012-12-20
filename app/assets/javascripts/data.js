@@ -114,15 +114,15 @@ function generateTerms(firstQuarter, firstYear) {
   var quarterNames = ['W', 'S', 'Su', 'F'];
   var terms = []
   // intentionally uses fall through switch
-  switch(firstQuarter.title) {
-    case quarterNames[0]:
-      terms.push(quarterNames[0] + shortenYear(firstYear.title));
-    case quarterNames[1]:
-      terms.push(quarterNames[1] + shortenYear(firstYear.title));
-    case quarterNames[2]:
-      terms.push(quarterNames[2] + shortenYear(firstYear.title));
-    case quarterNames[3]:
-      terms.push(quarterNames[3] + shortenYear(firstYear.title));
+  switch(firstQuarter) {
+    case 'Winter':
+      terms.push(quarterNames[0] + shortenYear(firstYear));
+    case 'Spring':
+      terms.push(quarterNames[1] + shortenYear(firstYear));
+    case 'Summer':
+      terms.push(quarterNames[2] + shortenYear(firstYear));
+    case 'Fall':
+      terms.push(quarterNames[3] + shortenYear(firstYear));
   }
   for(var year = firstYear + 1; year <= 2012; year++) {
     terms.push(quarterNames[0] + shortenYear(year));
