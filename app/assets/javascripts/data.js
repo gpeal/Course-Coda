@@ -71,7 +71,7 @@ function loadData(data) {
 
     organizedSections[sectionName(sectionData[i])].push(sectionData[i]);
 
-    var ratings = ['course', 'instruction', 'learned', 'challenged', 'stimulated']
+    var ratings = ['course', 'instruction', 'learned', 'challenged', 'stimulated', 'hours']
     var ratingSeries = {}
     ratings.forEach(function(rating) {
       ratingSeries[rating] = [];
@@ -101,10 +101,13 @@ function loadData(data) {
 
 
   var terms = generateTerms(data.xRange.firstQuarter.title, parseInt(data.xRange.firstYear.title));
-  var yRange = findRange(ratingSeries);
   // draw the charts
 
   ratings.forEach(function(rating) {
+    if(rating == 'hours')
+      yRange = [0.8, 25];
+    else
+      yRange = [1, 6];
     refreshChart(rating, 'chart-' + rating, ratingSeries[rating], terms, yRange);
     charts[rating].setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
   })
@@ -175,10 +178,6 @@ function quarterName(section) {
   return [section.quarter.title, section.year.title].join(' ');
 }
 
-function findRange(series) {
-  return [0.8, 6.2];
-}
-
 function refreshChart(name, id, series, categories, yRange) {
   // fill in non existent quarters with null data
   var newSeries = [];
@@ -224,8 +223,8 @@ function refreshChart(name, id, series, categories, yRange) {
       title: {
         text: 'Rating'
       },
-      min: yRange[0] * 0.9 < 1 ? 1 : yRange[0] * 0.9,
-      max: yRange[1] * 1.1 > 6 ? 6 : yRange[1] * 1.1
+      min: yRange[0],
+      max: yRange[1]
     },
     series: series
   });

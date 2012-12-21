@@ -25,12 +25,18 @@ class Section < ActiveRecord::Base
     subject.abbrev
   end
 
+  def hours
+    hours = time_breakdown.scan(/\d+/)
+    hours[0].to_f / 100 * 2 + hours[1].to_f / 100 * 6 + hours[2].to_f / 100 * 10 + hours[3].to_f / 100 * 14 + hours[4].to_f / 100 * 18 + hours[5].to_f / 100 * 25
+  end
+
   def as_json(options={})
     if options.member?(:only) or options.member?(:except) or options.member?(:include)
       return super(options)
     else
       return super(:only => [:id, :instruction, :course, :learned, :challenged, :stimulated],
-                               :include => [:professor, :quarter, :subject, :title, :year])
+                               :include => [:professor, :quarter, :subject, :title, :year],
+                               :methods => [:hours])
     end
   end
 
