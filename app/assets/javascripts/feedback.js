@@ -1,10 +1,9 @@
 $(document).ready(function() {
-  var select = $('#feedback-section-select');
-  select.select2({
+  $('#feedback-section-select').select2({
     placeholder: 'Choose a section', // this is actually done in the first call to formatSelection
     formatSelection: formatSelection
   });
-  select.bind('change', feedbackSectionSelected);
+  $('#feedback-section-select').on('change', feedbackSectionSelected);
 });
 
 function populateFeedbackSelect(sections) {
@@ -25,16 +24,14 @@ function formatSelection(item) {
   return $(item.element).parent()[0].label + ' ' + item.text
 }
 
-function feedbackSectionSelected(item) {
-  function requestData() {
-    $.ajax({
-      url: 'api/v1/feedback.json',
-      dataType: 'json',
-      type: 'POST',
-      data: 's=' + item.id,
-      success: loadFeedbackData
-    });
-  }
+function feedbackSectionSelected(e) {
+  $.ajax({
+    url: 'api/v1/feedback/search.json',
+    dataType: 'json',
+    type: 'POST',
+    data: 's=' + e.val,
+    success: loadFeedbackData
+  });
 }
 
 function loadFeedbackData(data) {

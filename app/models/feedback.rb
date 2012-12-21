@@ -4,4 +4,11 @@ class Feedback < ActiveRecord::Base
 
   belongs_to :section
 
+  def as_json(options={})
+    if options.member?(:only) or options.member?(:except) or options.member?(:include)
+      return super(options)
+    else
+      return super(:only => [:id, :feedback])
+    end
+  end
 end
