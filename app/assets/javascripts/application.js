@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
 //= require twitter/bootstrap
 //= require ./highcharts.js
 //= require ./highcharts-more.js
