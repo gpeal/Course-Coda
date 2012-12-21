@@ -10,9 +10,25 @@ function populateFeedbackSelect(sections) {
   var select = $('#feedback-section-select');
   Object.keys(sections).forEach(function(key) {
     select.append('<optgroup label="' + key + '"></optgroup>');
-    var optgroup = $('#feedback-section-select optgroup');
+    var optgroup = $('#feedback-section-select optgroup:last');
+
+    sections[key].sort(function(a,b) {
+      if(a.year.title < b.year.title)
+        return -1;
+      else if(a.year.title > b.year.title)
+        return 1;
+      quarterHash = {
+        Winter: 0,
+        Spring: 1,
+        Summer: 2,
+        Fall: 3
+      }
+      return quarterHash[a.quarter.title] - quarterHash[b.quarter.title];
+    });
+
     sections[key].forEach(function(section) {
       optgroup.append('<option value="' + section.id + '">' + section.quarter.title + ' ' + section.year.title + '</option>');
+      console.log('adding to optgroup: ' + optgroup.label);
     })
   });
 }
