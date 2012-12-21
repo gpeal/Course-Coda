@@ -11,4 +11,8 @@ class Feedback < ActiveRecord::Base
       return super(:only => [:id, :feedback])
     end
   end
+
+  def <=>(other)
+    return other.feedback.length <=> self.feedback.length
+  end
 end

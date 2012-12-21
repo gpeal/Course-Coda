@@ -35,5 +35,9 @@ function feedbackSectionSelected(e) {
 }
 
 function loadFeedbackData(data) {
-
+  var tableBody = $('#feedback-table > tbody:last')
+  tableBody.find('tr').remove();
+  data.forEach(function(feedback) {
+    tableBody.append('<tr><td>' + feedback.feedback + '</td></tr>');
+  });
 }
