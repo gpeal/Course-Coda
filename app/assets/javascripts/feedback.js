@@ -26,10 +26,9 @@ function formatSelection(item) {
 
 function feedbackSectionSelected(e) {
   $.ajax({
-    url: 'api/v1/feedback/search.json',
+    url: 'api/v1/feedback/' + e.val + '.json',
     dataType: 'json',
     type: 'POST',
-    data: 's=' + e.val,
     success: loadFeedbackData
   });
 }

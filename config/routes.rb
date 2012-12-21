@@ -2,22 +2,14 @@ CaesarScraper::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      post 'search', :to => 'search#search'
-      namespace :professors do
-        post 'search'
-      end
+      match 'search' => 'search#search', :via => :post, :format => :json
+      match 'professors/search' => 'professors#search', :via => :post, :format => :json
 
-      namespace :sections do
-        post 'search'
-      end
+      match 'sections/search' => 'sections#search', :via => :post, :format => :json
 
-      namespace :titles do
-        post 'search'
-      end
+      match 'titles/search' => 'titles#search', :via => :post, :format => :json
 
-      namespace :feedback do
-        post 'search'
-      end
+      match 'feedback/:id' => 'feedback#show', :via => :post, :format => :json
     end
   end
 
