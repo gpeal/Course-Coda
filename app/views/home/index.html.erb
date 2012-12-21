@@ -6,6 +6,7 @@
       <li><a class="tab-link" href="#tab3" data-toggle="tab">Amount Learned</a></li>
       <li><a class="tab-link" href="#tab4" data-toggle="tab">Amount Stimulated</a></li>
       <li><a class="tab-link" href="#tab5" data-toggle="tab">Amount Challenged</a></li>
+      <li><a class="tab-link" href="#tab6" data-toggle="tab">Feedback</a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="tab1">
@@ -22,6 +23,9 @@
       </div>
       <div class="tab-pane" id="tab5">
         <div class="data-chart" id="chart-stimulated"></div>
+      </div>
+      <div class="tab-pane" id="tab6">
+        <%= render :partial => 'feedback_tab', :locals => {:sections => @sections} %>
       </div>
     </div>
   </div>

@@ -29,7 +29,7 @@ class Section < ActiveRecord::Base
     if options.member?(:only) or options.member?(:except) or options.member?(:include)
       return super(options)
     else
-      return super(:only => [:instruction, :course, :learned, :challenged, :stimulated],
+      return super(:only => [:id, :instruction, :course, :learned, :challenged, :stimulated],
                                :include => [:professor, :quarter, :subject, :title, :year])
     end
   end

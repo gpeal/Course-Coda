@@ -108,6 +108,8 @@ function loadData(data) {
     refreshChart(rating, 'chart-' + rating, ratingSeries[rating], terms, yRange);
     charts[rating].setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")));
   })
+
+  populateFeedbackSelect(organizedSections);
 }
 
 function generateTerms(firstQuarter, firstYear) {
