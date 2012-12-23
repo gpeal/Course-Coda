@@ -28,15 +28,20 @@ class Api::V1::SearchController < ApplicationController
       overview[key][:hours].push(section.hours)
     end
 
+    overview_arr = []
     overview.keys.each do |key|
-      overview[key][:instruction] = overview[key][:instruction].inject{ |sum, el| sum + el }.to_f / overview[key][:instruction].size
-      overview[key][:course] = overview[key][:course].inject{ |sum, el| sum + el }.to_f / overview[key][:course].size
-      overview[key][:learned] = overview[key][:learned].inject{ |sum, el| sum + el }.to_f / overview[key][:learned].size
-      overview[key][:stimulated] = overview[key][:stimulated].inject{ |sum, el| sum + el }.to_f / overview[key][:stimulated].size
-      overview[key][:challenged] = overview[key][:challenged].inject{ |sum, el| sum + el }.to_f / overview[key][:challenged].size
-      overview[key][:hours] = overview[key][:hours].inject{ |sum, el| sum + el }.to_f / overview[key][:hours].size
+      overview_arr.push({
+        professor: overview[key][:professor],
+        title: overview[key][:title],
+        instruction: (overview[key][:instruction].inject{ |sum, el| sum + el }.to_f / overview[key][:instruction].size).round(2),
+        course: (overview[key][:course].inject{ |sum, el| sum + el }.to_f / overview[key][:course].size).round(2),
+        learned: (overview[key][:learned].inject{ |sum, el| sum + el }.to_f / overview[key][:learned].size).round(2),
+        stimulated: (overview[key][:stimulated].inject{ |sum, el| sum + el }.to_f / overview[key][:stimulated].size).round(2),
+        challenged: (overview[key][:challenged].inject{ |sum, el| sum + el }.to_f / overview[key][:challenged].size).round(2),
+        hours: (overview[key][:hours].inject{ |sum, el| sum + el }.to_f / overview[key][:hours].size).round(2)
+      })
     end
 
-    render :json => {:sections => @sections, :xRange => {:firstQuarter => first_quarter, :firstYear => first_year}, :overview => overview}
+    render :json => {:sections => @sections, :xRange => {:firstQuarter => first_quarter, :firstYear => first_year}, :overview => overview_arr}
   end
 end

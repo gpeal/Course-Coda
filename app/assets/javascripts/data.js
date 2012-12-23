@@ -61,6 +61,8 @@ function loadData(data) {
     return
   }
 
+  loadOverviewData(data.overview);
+
   var sectionData = data.sections;
 
   for(var i = 0; i < sectionData.length; i++) {

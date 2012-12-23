@@ -45,3 +45,12 @@ body {
 .search-li {
   margin-bottom: 20px;
 }
+
+#overview-table th {
+  font-size: 14px;
+  min-width: 100px;
+}
+
+.grid-pager input {
+  box-sizing: initial !important;
+}
