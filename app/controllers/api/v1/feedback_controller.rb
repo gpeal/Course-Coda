@@ -1,4 +1,4 @@
-class FeedbackController < ApplicationController
+class Api::V1::FeedbackController < ApplicationController
 
   def show
     @feedback = Feedback.where(section_id: params[:id]).sort!
