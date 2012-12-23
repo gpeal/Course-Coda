@@ -45,6 +45,23 @@ function loadOverviewData(data) {
     data: data
   });
   $('#overview-table').datagrid({dataSource: dataSource});
+  // color code the values based on how good they are
+  // $('#overview-table').bind('loaded', function() {
+  //   tds = $('#overview-table td');
+  //   for(var i = 0; i < tds.size(); i++) {
+  //     var td = tds[i];
+  //     var value = td.innerText;
+  //     if(!isNaN(value)) {
+  //       td.style.fontWeight = "bold";
+  //       if(value < 4)
+  //         td.style.color = 'red';
+  //       else if(value < 5)
+  //         td.style.color = 'orange';
+  //       else
+  //         td.style.color = 'green';
+  //     }
+  //   }
+  // })
 }
 
 var StaticDataSource = function (options) {

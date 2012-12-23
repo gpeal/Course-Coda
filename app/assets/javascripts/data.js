@@ -1,6 +1,7 @@
 var charts = {}
 var sectionData = undefined;
 var organizedSections = {};
+var requireResize = {course: false, instruction: false, learned: false, stimulated: false, challenged: false, hours: false}
 
 $(document).ready(function() {
   /**
@@ -115,6 +116,22 @@ function loadData(data) {
   })
 
   populateFeedbackSelect(organizedSections);
+
+  $(window).bind('resize', function() {
+    requireResize['course'] = true;
+    requireResize['instruction'] = true;
+    requireResize['learned'] = true;
+    requireResize['challenged'] = true;
+    requireResize['stimulated'] = true;
+    requireResize['hours'] = true;
+  });
+
+  $('#course-tab-link').bind('click', {rating: 'course'}, resizeChart);
+  $('#instruction-tab-link').bind('click', {rating: 'instruction'}, resizeChart);
+  $('#learned-tab-link').bind('click', {rating: 'learned'}, resizeChart);
+  $('#challenged-tab-link').bind('click', {rating: 'challenged'}, resizeChart);
+  $('#stimulated-tab-link').bind('click', {rating: 'stimulated'}, resizeChart);
+  $('#hours-tab-link').bind('click', {rating: 'hours'}, resizeChart);
 }
 
 function generateTerms(firstQuarter, firstYear) {
@@ -178,6 +195,15 @@ function shortSectionTerm(section) {
 
 function quarterName(section) {
   return [section.quarter.title, section.year.title].join(' ');
+}
+
+function resizeChart(e) {
+  var rating = e.data.rating;
+  if(!requireResize[rating])
+    return
+  console.log('resizing: ' + rating);
+  charts[rating].setSize(parseInt($(".tab-content:first").css("width")), parseInt($(".tab-content:first").css("height")), {duration: 0});
+  requireResize[rating] = false;
 }
 
 function refreshChart(name, id, series, categories, yRange) {
