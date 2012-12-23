@@ -18,7 +18,7 @@ body {
 
 #hero-main {
   height: $hero-height;
-  padding-top: 40px;
+  padding: 20px;
 }
 
 .data-chart {
@@ -31,7 +31,8 @@ body {
 }
 
 .tab-content {
-  height: $hero-height - 30px;
+  height: $hero-height - 50px;
+  /*overflow: scoll;*/
 }
 
 .select2-container {
@@ -48,9 +49,16 @@ body {
 
 #overview-table th {
   font-size: 14px;
-  min-width: 100px;
+  min-width: 90px;
 }
 
 .grid-pager input {
   box-sizing: initial !important;
+}
+
+.tab-link {
+  font-size: 18px;
+  a {
+    padding: 7px !important;
+  }
 }
