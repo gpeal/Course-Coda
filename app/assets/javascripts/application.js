@@ -13,8 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require ./highcharts.js
-//= require ./highcharts-more.js
-//= require ./fuelux_loader
-//= require ./fuelux_datasource
-//= require_tree .
+//= require_tree ./global
