@@ -23,9 +23,29 @@
             Logged in as <a href="#" class="navbar-link">Gabriel Peal</a>
           </p>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li class="dropdown">
+              <a role="button" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Courses by department
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <% subjects.each do |s| %>
+                  <li><a href=<%= "/courses/#{s.id}" %>><%= s.name %></a></li>
+                <% end %>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a role="button" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Professors by department
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <% subjects.each do |s| %>
+                  <li><a href=<%= "/professors/#{s.id}" %>><%= s.name %></a></li>
+                <% end %>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -38,23 +58,7 @@
 
   <div class="container-fluid">
     <div class="row-fluid">
-      <div class="span3">
-        <div class="well sidebar-nav">
-          <ul class="nav nav-list">
-            <li class="nav-header">Search</li>
-            <li><input type="hidden" id="search-professor" class="search-li"/></li>
-            <li><input type="hidden" id="search-title" class="search-li"/></li>
-            <li id="search-li">
-              <button class="btn btn-primary" id="search-button">
-                <i class="icon-search"></i>Search
-              </button>
-            </li>
-          </ul>
-        </div><!--/.well -->
-      </div><!--/span-->
-      <div class="span9">
-        <%= yield %>
-      </div>
+      <%= yield %>
     </div>
     <hr>
 

@@ -1,39 +1,55 @@
-<div class="hero-unit" id="hero-main">
-  <div class="tabbable"> <!-- Only required for left/right tabs -->
-    <ul class="nav nav-tabs">
-      <li class="tab-link active"><a href="#tab1" id="overview-tab-link" data-toggle="tab">Overview</a></li>
-      <li class="tab-link"><a href="#tab2" id="course-tab-link" data-toggle="tab">Course</a></li>
-      <li class="tab-link"><a href="#tab3" id="instruction-tab-link" data-toggle="tab">Instruction</a></li>
-      <li class="tab-link"><a href="#tab4" id="learned-tab-link" data-toggle="tab">Amount Learned</a></li>
-      <li class="tab-link"><a href="#tab5" id="stimulated-tab-link" data-toggle="tab">Amount Stimulated</a></li>
-      <li class="tab-link"><a href="#tab6" id="challenged-tab-link" data-toggle="tab">Amount Challenged</a></li>
-      <li class="tab-link"><a href="#tab7" id="hours-tab-link" data-toggle="tab">Time Spent</a></li>
-      <li class="tab-link"><a href="#tab8" id="feedback-tab-link" data-toggle="tab">Feedback</a></li>
+<div class="span3">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Search</li>
+      <li><input type="hidden" id="search-professor" class="search-li"/></li>
+      <li><input type="hidden" id="search-title" class="search-li"/></li>
+      <li id="search-li">
+        <button class="btn btn-primary" id="search-button">
+          <i class="icon-search"></i>Search
+        </button>
+      </li>
     </ul>
-    <div class="tab-content">
-      <div class="tab-pane active" id="tab1">
-        <%= render :partial => 'overview_tab', :locals => {:sections => @sections} %>
-      </div>
-      <div class="tab-pane" id="tab2">
-        <div class="data-chart" id="chart-course"></div>
-      </div>
-      <div class="tab-pane" id="tab3">
-        <div class="data-chart" id="chart-instruction"></div>
-      </div>
-      <div class="tab-pane" id="tab4">
-        <div class="data-chart" id="chart-learned"></div>
-      </div>
-      <div class="tab-pane" id="tab5">
-        <div class="data-chart" id="chart-challenged"></div>
-      </div>
-      <div class="tab-pane" id="tab6">
-        <div class="data-chart" id="chart-stimulated"></div>
-      </div>
-      <div class="tab-pane" id="tab7">
-        <div class="data-chart" id="chart-hours"></div>
-      </div>
-      <div class="tab-pane" id="tab8">
-        <%= render :partial => 'feedback_tab', :locals => {:sections => @sections} %>
+  </div><!--/.well -->
+</div><!--/span-->
+<div class="span9">
+  <div class="hero-unit" id="hero-main">
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+      <ul class="nav nav-tabs">
+        <li class="tab-link active"><a href="#tab1" id="overview-tab-link" data-toggle="tab">Overview</a></li>
+        <li class="tab-link"><a href="#tab2" id="course-tab-link" data-toggle="tab">Course</a></li>
+        <li class="tab-link"><a href="#tab3" id="instruction-tab-link" data-toggle="tab">Instruction</a></li>
+        <li class="tab-link"><a href="#tab4" id="learned-tab-link" data-toggle="tab">Amount Learned</a></li>
+        <li class="tab-link"><a href="#tab5" id="stimulated-tab-link" data-toggle="tab">Amount Stimulated</a></li>
+        <li class="tab-link"><a href="#tab6" id="challenged-tab-link" data-toggle="tab">Amount Challenged</a></li>
+        <li class="tab-link"><a href="#tab7" id="hours-tab-link" data-toggle="tab">Time Spent</a></li>
+        <li class="tab-link"><a href="#tab8" id="feedback-tab-link" data-toggle="tab">Feedback</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+          <%= render :partial => 'overview_tab', :locals => {:sections => @sections} %>
+        </div>
+        <div class="tab-pane" id="tab2">
+          <div class="data-chart" id="chart-course"></div>
+        </div>
+        <div class="tab-pane" id="tab3">
+          <div class="data-chart" id="chart-instruction"></div>
+        </div>
+        <div class="tab-pane" id="tab4">
+          <div class="data-chart" id="chart-learned"></div>
+        </div>
+        <div class="tab-pane" id="tab5">
+          <div class="data-chart" id="chart-challenged"></div>
+        </div>
+        <div class="tab-pane" id="tab6">
+          <div class="data-chart" id="chart-stimulated"></div>
+        </div>
+        <div class="tab-pane" id="tab7">
+          <div class="data-chart" id="chart-hours"></div>
+        </div>
+        <div class="tab-pane" id="tab8">
+          <%= render :partial => 'feedback_tab', :locals => {:sections => @sections} %>
+        </div>
       </div>
     </div>
   </div>

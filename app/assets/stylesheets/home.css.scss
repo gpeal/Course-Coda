@@ -31,7 +31,7 @@ body {
 }
 
 .tab-content {
-  height: $hero-height - 50px;
+  height: $hero-height - 85px;
   /*overflow: scoll;*/
 }
 
@@ -61,4 +61,10 @@ body {
   a {
     padding: 7px !important;
   }
+}
+
+.dropdown-menu {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

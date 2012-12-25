@@ -3,6 +3,7 @@ class Subject < ActiveRecord::Base
 
   has_many :sections
   has_many :professors, :through => :sections
+  has_many :titles, :through => :sections
 
   def to_s
     title
@@ -31,7 +32,11 @@ class Subject < ActiveRecord::Base
   end
 
   def abbrev
-    title.split(' ').first
+    title.split(' ')[0]
+  end
+
+  def name
+    title[title.index(' ') + 1..-1]
   end
 
   def self.find_by_abbrev abbrev
