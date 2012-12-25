@@ -13,7 +13,6 @@
     root.StaticDataSource = factory();
   }
 }(this, function () {
-  console.log('StaticDataSource');
   var StaticDataSource = function (options) {
     this._formatter = options.formatter;
     this._columns = options.columns;

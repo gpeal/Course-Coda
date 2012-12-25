@@ -32,7 +32,7 @@
               </a>
               <ul class="dropdown-menu" role="menu">
                 <% subjects.each do |s| %>
-                  <li><a href=<%= "/courses/#{s.id}" %>><%= s.name %></a></li>
+                  <li><a href=<%= "/courses?s=#{s.id}" %>><%= s.name %></a></li>
                 <% end %>
               </ul>
             </li>
@@ -43,7 +43,7 @@
               </a>
               <ul class="dropdown-menu" role="menu">
                 <% subjects.each do |s| %>
-                  <li><a href=<%= "/professors/#{s.id}" %>><%= s.name %></a></li>
+                  <li><a href=<%= "/professors?s=#{s.id}" %>><%= s.name %></a></li>
                 <% end %>
               </ul>
             </li>

@@ -20,16 +20,12 @@ class Title < ActiveRecord::Base
     title.match(/[0-9A-Z]*-[0-9A-Z]*/)[0]
   end
 
-  def course_num_3
-    title.match(/[0-9A-Z]*-[0-9A-Z]*-[0-9A-Z]*/)[0] rescue binding.pry
-  end
-
   def third_course_num
     third_course_num.split('-')[2]
   end
 
   def name
-    title.sub(course_num_3 + ' ', '')
+    title.sub(course_num_2 + ' ', '')
   end
 
   def subject_abbrev
@@ -54,6 +50,60 @@ class Title < ActiveRecord::Base
     overview[:challenged] = (overview[:challenged].inject{ |sum, el| sum + el }.to_f / overview[:challenged].size).round(2)
     overview[:hours] = (overview[:hours].inject{ |sum, el| sum + el }.to_f / overview[:hours].size).round(2)
     overview
+  end
+
+  def average_instruction
+    average = []
+
+    sections.each do |section|
+      average.push(section.instruction)
+    end
+    (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
+  end
+
+  def average_course
+    average = []
+
+    sections.each do |section|
+      average.push(section.course)
+    end
+    (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
+  end
+
+  def average_learned
+    average = []
+
+    sections.each do |section|
+      average.push(section.learned)
+    end
+    (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
+  end
+
+  def average_stimulated
+    average = []
+
+    sections.each do |section|
+      average.push(section.stimulated)
+    end
+    (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
+  end
+
+  def average_challenged
+    average = []
+
+    sections.each do |section|
+      average.push(section.challenged)
+    end
+    (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
+  end
+
+  def average_hours
+    average = []
+
+    sections.each do |section|
+      average.push(section.hours)
+    end
+    (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
   end
 
   def self.search name

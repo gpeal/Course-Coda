@@ -8,12 +8,14 @@ CaesarScraper::Application.routes.draw do
       match 'sections/search' => 'sections#search', :via => :post, :format => :json
 
       match 'titles/search' => 'titles#search', :via => :post, :format => :json
+      match 'subjects/course' => 'titles#show', :via => :post, :format => :json
 
       match 'feedback/:id' => 'feedback#show', :via => :post, :format => :json
+
     end
   end
 
-  match 'courses/:id' => 'titles#show', :via => :get
+  match 'courses' => 'titles#show', :via => :get
 
   root :to => 'home#index'
 end
