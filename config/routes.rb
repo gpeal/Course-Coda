@@ -4,6 +4,7 @@ CaesarScraper::Application.routes.draw do
     namespace :v1 do
       match 'search' => 'search#search', :via => :post, :format => :json
       match 'professors/search' => 'professors#search', :via => :post, :format => :json
+      match 'subjects/professor' => 'professors#show', :via => :post, :format => :json
 
       match 'sections/search' => 'sections#search', :via => :post, :format => :json
 
@@ -16,6 +17,7 @@ CaesarScraper::Application.routes.draw do
   end
 
   match 'courses' => 'titles#show', :via => :get
+  match 'professors' => 'professors#show', :via => :get
 
   root :to => 'home#index'
 end
