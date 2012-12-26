@@ -45,7 +45,7 @@ function setupSelect2(id, url, placeholder, titleProperty, quietMillis) {
        multiple: true,
        placeholder: placeholder,
        ajax: {
-         url: location.origin + url,
+         url: url,
          dataType: 'json',
          type: 'POST',
          quietMillis: quietMillis,

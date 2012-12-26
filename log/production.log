@@ -1268,3 +1268,395 @@ ActionView::Template::Error (courses/courses.js isn't precompiled):
   app/views/titles/show.html.erb:1:in `_app_views_titles_show_html_erb___1122015438964942797_70199245890340'
 
 
+Compiled jquery.js  (8ms)  (pid 46475)
+Compiled jquery_ujs.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap.js  (162ms)  (pid 46475)
+Compiled global/bootstrap.js  (77ms)  (pid 46475)
+Compiled global/feedback.js  (104ms)  (pid 46475)
+Compiled global/fuelux_datasource.js  (0ms)  (pid 46475)
+Compiled global/fuelux_loader.js  (0ms)  (pid 46475)
+Compiled global/global.js  (0ms)  (pid 46475)
+Compiled global/home.js  (59ms)  (pid 46475)
+Compiled global/nav.js  (0ms)  (pid 46475)
+Compiled global/overview.js  (0ms)  (pid 46475)
+Compiled global/select2.js  (1ms)  (pid 46475)
+Compiled global/titles.js  (65ms)  (pid 46475)
+Compiled global/underscore.js  (0ms)  (pid 46475)
+Compiled application.js  (656ms)  (pid 46475)
+Compiled courses/courses.js  (0ms)  (pid 46475)
+Compiled home/data.js  (0ms)  (pid 46475)
+Compiled home/feedback.js  (0ms)  (pid 46475)
+Compiled home/highcharts.js  (4ms)  (pid 46475)
+Compiled home/sidebar.js  (0ms)  (pid 46475)
+Compiled api/v1/professors.css  (14ms)  (pid 46475)
+Compiled api/v1/search.css  (1ms)  (pid 46475)
+Compiled api/v1/sections.css  (2ms)  (pid 46475)
+Compiled api/v1/titles.css  (2ms)  (pid 46475)
+Compiled twitter-bootstrap-static/bootstrap.css  (113ms)  (pid 46475)
+Compiled twitter-bootstrap-static/fontawesome.css  (42ms)  (pid 46475)
+Compiled bootstrap_and_overrides.css  (177ms)  (pid 46475)
+Compiled feedback.css  (2ms)  (pid 46475)
+Compiled fuelux.css  (0ms)  (pid 46475)
+Compiled home.css  (15ms)  (pid 46475)
+Compiled professors.css  (1ms)  (pid 46475)
+Compiled select2.css  (0ms)  (pid 46475)
+Compiled titles.css  (1ms)  (pid 46475)
+Compiled application.css  (298ms)  (pid 46475)
+Compiled jquery.js  (8ms)  (pid 46475)
+Compiled jquery_ujs.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 46475)
+Compiled twitter/bootstrap.js  (169ms)  (pid 46475)
+Compiled global/bootstrap.js  (71ms)  (pid 46475)
+Compiled global/feedback.js  (61ms)  (pid 46475)
+Compiled global/fuelux_datasource.js  (0ms)  (pid 46475)
+Compiled global/fuelux_loader.js  (0ms)  (pid 46475)
+Compiled global/global.js  (0ms)  (pid 46475)
+Compiled global/home.js  (68ms)  (pid 46475)
+Compiled global/nav.js  (0ms)  (pid 46475)
+Compiled global/overview.js  (0ms)  (pid 46475)
+Compiled global/select2.js  (1ms)  (pid 46475)
+Compiled global/titles.js  (91ms)  (pid 46475)
+Compiled global/underscore.js  (0ms)  (pid 46475)
+Compiled application.js  (600ms)  (pid 46475)
+Compiled courses/courses.js  (0ms)  (pid 46475)
+Compiled home/data.js  (0ms)  (pid 46475)
+Compiled home/feedback.js  (0ms)  (pid 46475)
+Compiled home/highcharts.js  (4ms)  (pid 46475)
+Compiled home/sidebar.js  (0ms)  (pid 46475)
+Compiled api/v1/professors.css  (10ms)  (pid 46475)
+Compiled api/v1/search.css  (1ms)  (pid 46475)
+Compiled api/v1/sections.css  (2ms)  (pid 46475)
+Compiled api/v1/titles.css  (1ms)  (pid 46475)
+Compiled twitter-bootstrap-static/bootstrap.css  (112ms)  (pid 46475)
+Compiled twitter-bootstrap-static/fontawesome.css  (7ms)  (pid 46475)
+Compiled bootstrap_and_overrides.css  (136ms)  (pid 46475)
+Compiled feedback.css  (1ms)  (pid 46475)
+Compiled fuelux.css  (1ms)  (pid 46475)
+Compiled home.css  (17ms)  (pid 46475)
+Compiled professors.css  (1ms)  (pid 46475)
+Compiled select2.css  (0ms)  (pid 46475)
+Compiled titles.css  (1ms)  (pid 46475)
+Compiled application.css  (253ms)  (pid 46475)
+Connecting to database specified by database.yml
+
+
+Started GET "/courses?s=28" for 127.0.0.1 at 2012-12-25 20:43:56 -0500
+Processing by TitlesController#show as HTML
+  Parameters: {"s"=>"28"}
+  Rendered titles/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 90ms (Views: 80.0ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/api/v1/subjects/course.json" for 127.0.0.1 at 2012-12-25 20:43:56 -0500
+Processing by Api::V1::TitlesController#show as JSON
+  Parameters: {"s"=>"28"}
+Completed 200 OK in 551ms (Views: 0.2ms | ActiveRecord: 363.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-25 20:53:57 -0500
+Processing by HomeController#index as HTML
+  Rendered home/_overview_tab.html.erb (0.5ms)
+  Rendered home/_feedback_tab.html.erb (0.3ms)
+  Rendered home/index.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/search.json" for 127.0.0.1 at 2012-12-25 20:53:57 -0500
+Processing by Api::V1::SearchController#search as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2012-12-25 20:53:57 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-25 20:55:12 -0500
+Processing by HomeController#index as HTML
+  Rendered home/_overview_tab.html.erb (0.0ms)
+  Rendered home/_feedback_tab.html.erb (0.0ms)
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/search.json" for 127.0.0.1 at 2012-12-25 20:55:13 -0500
+Processing by Api::V1::SearchController#search as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2012-12-25 20:55:13 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+
+Started POST "/undefined/api/v1/professors/search.json" for 127.0.0.1 at 2012-12-25 20:55:14 -0500
+
+ActionController::RoutingError (No route matches [POST] "/undefined/api/v1/professors/search.json"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:143:in `pass'
+  rack-cache (1.2) lib/rack/cache/context.rb:155:in `invalidate'
+  rack-cache (1.2) lib/rack/cache/context.rb:71:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+
+Started POST "/undefined/api/v1/professors/search.json" for 127.0.0.1 at 2012-12-25 20:55:14 -0500
+
+ActionController::RoutingError (No route matches [POST] "/undefined/api/v1/professors/search.json"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:143:in `pass'
+  rack-cache (1.2) lib/rack/cache/context.rb:155:in `invalidate'
+  rack-cache (1.2) lib/rack/cache/context.rb:71:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+
+Started POST "/undefined/api/v1/professors/search.json" for 127.0.0.1 at 2012-12-25 20:55:25 -0500
+
+ActionController::RoutingError (No route matches [POST] "/undefined/api/v1/professors/search.json"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:143:in `pass'
+  rack-cache (1.2) lib/rack/cache/context.rb:155:in `invalidate'
+  rack-cache (1.2) lib/rack/cache/context.rb:71:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+
+Started POST "/undefined/api/v1/professors/search.json" for 127.0.0.1 at 2012-12-25 20:55:26 -0500
+
+ActionController::RoutingError (No route matches [POST] "/undefined/api/v1/professors/search.json"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:143:in `pass'
+  rack-cache (1.2) lib/rack/cache/context.rb:155:in `invalidate'
+  rack-cache (1.2) lib/rack/cache/context.rb:71:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
