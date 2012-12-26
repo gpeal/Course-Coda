@@ -26,7 +26,7 @@ class Section < ActiveRecord::Base
   end
 
   def hours
-    hours = time_breakdown.scan(/\d+/)
+    hours = time_breakdown.scan(/\d+/) rescue [0, 100, 0, 0, 0, 0]
     hours[0].to_f / 100 * 2 + hours[1].to_f / 100 * 6 + hours[2].to_f / 100 * 10 + hours[3].to_f / 100 * 14 + hours[4].to_f / 100 * 18 + hours[5].to_f / 100 * 25
   end
 
