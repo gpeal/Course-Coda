@@ -17,7 +17,7 @@ function search() {
 
   queryString = queryString.slice(0, -1);
 
-  window.location = location.origin + queryString;
+  window.location =  queryString;
 }
 
 function select2ToQueryParams(id, queryParamId) {
