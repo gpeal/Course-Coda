@@ -50,9 +50,19 @@ function feedbackSectionSelected(e) {
 }
 
 function loadFeedbackData(data) {
-  var tableBody = $('#feedback-table > tbody:last')
+  var keywords = data.keywords;
+  var tableBody = $('#keywords-table > tbody:last')
+  var td = $('#keywords-table td:first');
+  td.text('');
+  keywords.forEach(function(keyword) {
+    td.append(keyword + ', ');
+  });
+
+
+  var feedback = data.feedback
+  tableBody = $('#feedback-table > tbody:last')
   tableBody.find('tr').remove();
-  data.forEach(function(feedback) {
-    tableBody.append('<tr><td>' + feedback.feedback + '</td></tr>');
+  feedback.forEach(function(feedback) {
+    tableBody.append('<tr><td><span>' + feedback.feedback + '</span></td></tr>');
   });
 }

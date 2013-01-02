@@ -69,3 +69,17 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.label {
+    float: left;
+    padding: 1px 3px 2px;
+    font-size: 9.75px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: #bfbfbf;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}

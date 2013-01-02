@@ -65,3 +65,4 @@ module CaesarScraper
 end
 
 REDIS_CONFIG = YAML.load_file(Rails.root.join('config', 'redis.yml'))[Rails.env]
+ALCHEMY_CONFIG = YAML.load_file(Rails.root.join('config', 'alchemy.yml'))[Rails.env]

@@ -10,6 +10,8 @@ gem 'pg'
 gem 'watir'
 gem 'redis'
 
+# for alchemy
+gem 'xml-simple'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

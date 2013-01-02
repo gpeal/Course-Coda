@@ -151,6 +151,7 @@ GEM
       watir-webdriver
     watir-webdriver (0.6.1)
       selenium-webdriver (>= 2.18.0)
+    xml-simple (1.1.2)
 
 PLATFORMS
   ruby
@@ -168,3 +169,4 @@ DEPENDENCIES
   twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
   watir
+  xml-simple
