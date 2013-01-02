@@ -40,7 +40,7 @@ class Feedback < ActiveRecord::Base
     if result.nil?
       text = where(section_id: section_id).collect(&:feedback).join(' ')
       result = ALCHEMY.TextGetTextSentiment(text, AlchemyAPI::OutputMode::JSON)
-      # REDIS.set(key, result)
+      REDIS.set(key, result)
     end
     result = JSON.parse(result)
     score = (result['docSentiment']['score'].to_f * 100).to_i

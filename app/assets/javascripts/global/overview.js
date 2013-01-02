@@ -42,6 +42,11 @@ function loadOverviewData(data) {
       sortable: true
     },
     {
+      property: 'sentiment',
+      label: 'Average Sentiment',
+      sortable: true
+    },
+    {
       property: 'responses',
       label: 'Responses',
       sortable: true

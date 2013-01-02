@@ -60,6 +60,7 @@ class Section < ActiveRecord::Base
                        stimulated_enroll_count: 0,
                        challenged: [],
                        challenged_enroll_count: 0,
+                       sentiment: [],
                        hours: []} if averages[key].nil?
 
       averages[key][:instruction].push(section.instruction * section.instruction_enroll_count)
@@ -77,7 +78,10 @@ class Section < ActiveRecord::Base
       averages[key][:challenged].push(section.challenged * section.challenged_enroll_count)
       averages[key][:challenged_enroll_count] += section.challenged_enroll_count
 
+      averages[key][:sentiment].push(Feedback.sentiment(section.id) * section.instruction_enroll_count)
+
       averages[key][:hours].push(section.hours * section.instruction_enroll_count)
+
     end
 
     averages_arr = []
@@ -90,6 +94,7 @@ class Section < ActiveRecord::Base
         learned: (averages[key][:learned].inject{ |sum, el| sum + el }.to_f / averages[key][:learned_enroll_count]).round(2),
         stimulated: (averages[key][:stimulated].inject{ |sum, el| sum + el }.to_f / averages[key][:stimulated_enroll_count]).round(2),
         challenged: (averages[key][:challenged].inject{ |sum, el| sum + el }.to_f / averages[key][:challenged_enroll_count]).round(2),
+        sentiment: (averages[key][:sentiment].inject{ |sum, el| sum + el }.to_f / averages[key][:instruction_enroll_count]).round(2),
         hours: (averages[key][:hours].inject{ |sum, el| sum + el }.to_f / averages[key][:instruction_enroll_count]).round(2),
         responses: averages[key][:instruction_enroll_count]
       })
