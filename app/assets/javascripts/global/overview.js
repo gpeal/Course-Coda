@@ -40,6 +40,11 @@ function loadOverviewData(data) {
       property: 'hours',
       label: 'Average Hours/Week',
       sortable: true
+    },
+    {
+      property: 'responses',
+      label: 'Responses',
+      sortable: true
     }
     ],
     data: data

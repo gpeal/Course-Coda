@@ -19,13 +19,18 @@ class Api::V1::SearchController < ApplicationController
       first_quarter = section.quarter if (section.year <= first_year &&
                                           section.quarter < first_quarter)
       key = "#{section.professor.to_s} #{section.to_s}"
-      overview[key] = {professor: section.professor.to_s, title: section.title.to_s, instruction: [], course: [], learned: [], stimulated: [], challenged: [], hours: []} if overview[key].nil?
-      overview[key][:instruction].push(section.instruction)
-      overview[key][:course].push(section.course)
-      overview[key][:learned].push(section.learned)
-      overview[key][:stimulated].push(section.stimulated)
-      overview[key][:challenged].push(section.challenged)
-      overview[key][:hours].push(section.hours)
+      overview[key] = {professor: section.professor.to_s, title: section.title.to_s, instruction: [], instruction_enroll_count: 0, course: [], course_enroll_count: 0, learned: [], learned_enroll_count: 0, stimulated: [], stimulated_enroll_count: 0, challenged: [], challenged_enroll_count: 0, hours: []} if overview[key].nil?
+      overview[key][:instruction].push(section.instruction * section.instruction_enroll_count)
+      overview[key][:instruction_enroll_count] += section.instruction_enroll_count
+      overview[key][:course].push(section.course * section.course_enroll_count)
+      overview[key][:course_enroll_count] += section.course_enroll_count
+      overview[key][:learned].push(section.learned * section.learned_enroll_count)
+      overview[key][:learned_enroll_count] += section.learned_enroll_count
+      overview[key][:stimulated].push(section.stimulated * section.stimulated_enroll_count)
+      overview[key][:stimulated_enroll_count] += section.stimulated_enroll_count
+      overview[key][:challenged].push(section.challenged * section.challenged_enroll_count)
+      overview[key][:challenged_enroll_count] += section.challenged_enroll_count
+      overview[key][:hours].push(section.hours * section.instruction_enroll_count)
     end
 
     overview_arr = []
@@ -33,12 +38,13 @@ class Api::V1::SearchController < ApplicationController
       overview_arr.push({
         professor: overview[key][:professor],
         title: overview[key][:title],
-        instruction: (overview[key][:instruction].inject{ |sum, el| sum + el }.to_f / overview[key][:instruction].size).round(2),
-        course: (overview[key][:course].inject{ |sum, el| sum + el }.to_f / overview[key][:course].size).round(2),
-        learned: (overview[key][:learned].inject{ |sum, el| sum + el }.to_f / overview[key][:learned].size).round(2),
-        stimulated: (overview[key][:stimulated].inject{ |sum, el| sum + el }.to_f / overview[key][:stimulated].size).round(2),
-        challenged: (overview[key][:challenged].inject{ |sum, el| sum + el }.to_f / overview[key][:challenged].size).round(2),
-        hours: (overview[key][:hours].inject{ |sum, el| sum + el }.to_f / overview[key][:hours].size).round(2)
+        instruction: (overview[key][:instruction].inject{ |sum, el| sum + el }.to_f / overview[key][:instruction_enroll_count]).round(2),
+        course: (overview[key][:course].inject{ |sum, el| sum + el }.to_f / overview[key][:course_enroll_count]).round(2),
+        learned: (overview[key][:learned].inject{ |sum, el| sum + el }.to_f / overview[key][:learned_enroll_count]).round(2),
+        stimulated: (overview[key][:stimulated].inject{ |sum, el| sum + el }.to_f / overview[key][:stimulated_enroll_count]).round(2),
+        challenged: (overview[key][:challenged].inject{ |sum, el| sum + el }.to_f / overview[key][:challenged_enroll_count]).round(2),
+        hours: (overview[key][:hours].inject{ |sum, el| sum + el }.to_f / overview[key][:instruction_enroll_count]).round(2),
+        responses: overview[key][:instruction_enroll_count]
       })
     end
 

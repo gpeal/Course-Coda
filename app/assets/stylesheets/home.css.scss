@@ -49,17 +49,18 @@ body {
 
 #overview-table th {
   font-size: 14px;
-  min-width: 90px;
+  min-width: 80px;
 }
 
 .grid-pager input {
   box-sizing: initial !important;
+  height: 100% !important;
 }
 
 .tab-link {
-  font-size: 18px;
+  font-size: 16px;
   a {
-    padding: 7px !important;
+    padding: 6px !important;
   }
 }
 
