@@ -9,6 +9,6 @@ class Api::V1::ProfessorsController < ApplicationController
 
   def show
     @professors = Subject.find(params[:s]).professors.uniq!
-    render :json => @professors.to_json({:methods => [:title, :average_course, :average_instruction, :average_learned, :average_challenged, :average_stimulated, :average_hours]})
+    render :json => @professors.to_json({:methods => [:title, :average_course, :average_instruction, :average_learned, :average_challenged, :average_stimulated, :average_hours, :enrollment_count]})
   end
 end

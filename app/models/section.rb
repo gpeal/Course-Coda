@@ -44,6 +44,63 @@ class Section < ActiveRecord::Base
     "#{subject.abbrev} #{title.to_s}"
   end
 
+  def self.averages sections
+    averages = {}
+    sections.each do |section|
+      key = "#{section.professor.to_s} #{section.to_s}"
+      averages[key] = {professor: section.professor.to_s,
+                       title: section.title.to_s,
+                       instruction: [],
+                       instruction_enroll_count: 0,
+                       course: [],
+                       course_enroll_count: 0,
+                       learned: [],
+                       learned_enroll_count: 0,
+                       stimulated: [],
+                       stimulated_enroll_count: 0,
+                       challenged: [],
+                       challenged_enroll_count: 0,
+                       hours: []} if averages[key].nil?
+
+      averages[key][:instruction].push(section.instruction * section.instruction_enroll_count)
+      averages[key][:instruction_enroll_count] += section.instruction_enroll_count
+
+      averages[key][:course].push(section.course * section.course_enroll_count)
+      averages[key][:course_enroll_count] += section.course_enroll_count
+
+      averages[key][:learned].push(section.learned * section.learned_enroll_count)
+      averages[key][:learned_enroll_count] += section.learned_enroll_count
+
+      averages[key][:stimulated].push(section.stimulated * section.stimulated_enroll_count)
+      averages[key][:stimulated_enroll_count] += section.stimulated_enroll_count
+
+      averages[key][:challenged].push(section.challenged * section.challenged_enroll_count)
+      averages[key][:challenged_enroll_count] += section.challenged_enroll_count
+
+      averages[key][:hours].push(section.hours * section.instruction_enroll_count)
+    end
+
+    averages_arr = []
+    averages.keys.each do |key|
+      averages_arr.push({
+        professor: averages[key][:professor],
+        title: averages[key][:title],
+        instruction: (averages[key][:instruction].inject{ |sum, el| sum + el }.to_f / averages[key][:instruction_enroll_count]).round(2),
+        course: (averages[key][:course].inject{ |sum, el| sum + el }.to_f / averages[key][:course_enroll_count]).round(2),
+        learned: (averages[key][:learned].inject{ |sum, el| sum + el }.to_f / averages[key][:learned_enroll_count]).round(2),
+        stimulated: (averages[key][:stimulated].inject{ |sum, el| sum + el }.to_f / averages[key][:stimulated_enroll_count]).round(2),
+        challenged: (averages[key][:challenged].inject{ |sum, el| sum + el }.to_f / averages[key][:challenged_enroll_count]).round(2),
+        hours: (averages[key][:hours].inject{ |sum, el| sum + el }.to_f / averages[key][:instruction_enroll_count]).round(2),
+        responses: averages[key][:instruction_enroll_count]
+      })
+    end
+    averages_arr
+  end
+
+  def self.average type, sections
+
+  end
+
   def self.find_all name
     subject_abbrev = name.split(' ')[0]
     course_num = name.split(' ')[1]

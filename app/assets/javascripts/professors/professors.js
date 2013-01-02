@@ -49,6 +49,11 @@ function loadData(data) {
       property: 'average_hours',
       label: 'Average Hours/Week',
       sortable: true
+    },
+    {
+      property: 'enrollment_count',
+      label: 'Responses',
+      sortable: true
     }
     ],
     data: data

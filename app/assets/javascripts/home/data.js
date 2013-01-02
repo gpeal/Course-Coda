@@ -62,7 +62,7 @@ function loadData(data) {
     return
   }
 
-  loadOverviewData(data.overview);
+  loadOverviewData(data.averages);
 
   var sectionData = data.sections;
 
