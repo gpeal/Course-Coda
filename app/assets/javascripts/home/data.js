@@ -53,7 +53,7 @@ function requestData() {
 }
 
 function loadData(data) {
-  if(data['info']) {
+  if(data['info'] && !(location.pathname === '/' && location.search === '')) {
     bootstrap_alert.info(data['info']);
     return
   }
