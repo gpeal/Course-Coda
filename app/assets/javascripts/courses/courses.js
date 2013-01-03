@@ -13,6 +13,9 @@ function requestData() {
 }
 
 function loadData(data) {
+  $('#loading').css('display', 'none');
+  $('#courses-table').css('display', 'block');
+
   var dataSource = new StaticDataSource({
     columns: [
     {

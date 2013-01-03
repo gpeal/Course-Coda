@@ -2,8 +2,15 @@
   <%= javascript_include_tag 'courses/courses' %>
 <% end %>
 
-<div class="fuelux">
-  <table id="courses-table" class="table table-bordered datagrid">
+<ul class="bokeh" id="loading">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<div class="fuelux" id="courses-table">
+  <table class="table table-bordered datagrid">
    <thead>
    <tr>
     <th>

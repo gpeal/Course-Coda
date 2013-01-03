@@ -13,6 +13,9 @@ function requestData() {
 }
 
 function loadData(data) {
+  $('#loading').css('display', 'none');
+  $('#professors-table').css('display', 'block');
+
   var dataSource = new StaticDataSource({
     columns: [
     {
@@ -58,5 +61,5 @@ function loadData(data) {
     ],
     data: data
   });
-  $('#courses-table').datagrid({dataSource: dataSource});
+  $('#professors-table').datagrid({dataSource: dataSource});
 }
