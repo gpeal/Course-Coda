@@ -3,6 +3,7 @@
   <%= javascript_include_tag "home/feedback.js" %>
   <%= javascript_include_tag "home/highcharts.js" %>
   <%= javascript_include_tag "home/sidebar.js" %>
+  <%= javascript_include_tag "home/charts.js" %>
 <% end %>
 
 <div class="span3">
@@ -21,7 +22,13 @@
 </div><!--/span-->
 <div class="span9">
   <div class="hero-unit" id="hero-main">
-    <div class="tabbable"> <!-- Only required for left/right tabs -->
+    <ul class="bokeh" id="loading">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="tabbable" id="tab-container"> <!-- Only required for left/right tabs -->
       <ul class="nav nav-tabs">
         <li class="tab-link active"><a href="#tab1" id="overview-tab-link" data-toggle="tab">Overview</a></li>
         <li class="tab-link"><a href="#tab2" id="course-tab-link" data-toggle="tab">Course</a></li>

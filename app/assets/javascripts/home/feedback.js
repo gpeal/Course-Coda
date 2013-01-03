@@ -28,7 +28,6 @@ function populateFeedbackSelect(sections) {
 
     sections[key].forEach(function(section) {
       optgroup.append('<option value="' + section.id + '">' + section.quarter.title + ' ' + section.year.title + '</option>');
-      console.log('adding to optgroup: ' + optgroup.label);
     })
   });
 }
