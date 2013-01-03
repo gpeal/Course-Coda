@@ -40,6 +40,7 @@ function formatSelection(item) {
 }
 
 function feedbackSectionSelected(e) {
+  $('#feedback-holder').css('display', 'none');
   $.ajax({
     url: 'api/v1/feedback/' + e.val + '.json',
     dataType: 'json',
@@ -49,6 +50,7 @@ function feedbackSectionSelected(e) {
 }
 
 function loadFeedbackData(data) {
+  $('#feedback-holder').css('display', 'block');
   var keywords = data.keywords;
   var tableBody = $('#keywords-table > tbody:last')
   var td = $('#keywords-table td:first');
@@ -56,6 +58,7 @@ function loadFeedbackData(data) {
   keywords.forEach(function(keyword) {
     td.append(keyword + ', ');
   });
+  td.text(td.text().slice(0, -1));
 
   var sentiment = data.sentiment;
   tableBody = $('#keywords-table > tbody:last')
