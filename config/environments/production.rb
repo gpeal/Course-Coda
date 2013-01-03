@@ -46,7 +46,7 @@ CaesarScraper::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( home/data.js home/feedback.js home/highcharts.js home/highscharts.js-more home/sidebar.js)
+  config.assets.precompile += %w( home/charts.js home/data.js home/feedback.js home/highcharts.js home/sidebar.js)
   config.assets.precompile += %w( courses/courses.js)
   config.assets.precompile += %w( professors/professors.js)
 
