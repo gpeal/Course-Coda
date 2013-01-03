@@ -116,7 +116,7 @@ body:after {
 
 .bokeh li:nth-child(4) {
     top: 50%;
-    left 0;
+    left: 0;
     margin: -.1em 0 0 0;
     background: #6A68A6;
     -webkit-transform-origin: 250% 50%;
