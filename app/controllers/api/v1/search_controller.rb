@@ -1,4 +1,5 @@
 class Api::V1::SearchController < ApplicationController
+  include Cache
   respond_to :json
 
   def search
@@ -20,7 +21,6 @@ class Api::V1::SearchController < ApplicationController
     end
 
     averages = Section.averages @sections
-
     render :json => {:sections => @sections, :xRange => {:firstQuarter => first_quarter, :firstYear => first_year}, :averages => averages}
   end
 end

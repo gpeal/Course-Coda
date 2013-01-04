@@ -21,8 +21,9 @@ class Feedback < ActiveRecord::Base
     result = REDIS.get(key)
     if result.nil?
       text = where(section_id: section_id).collect(&:feedback).join(' ')
+      return [] if text.empty?
       result = ALCHEMY.TextGetRankedKeywords(text, AlchemyAPI::OutputMode::JSON)
-      REDIS.set(key, result)
+      REDIS.set(key, result) if JSON.parse(result)['status'] == 'OK'
     end
     result = JSON.parse(result)
     keywords = result['keywords'].collect {|k| k['text']}
@@ -39,7 +40,8 @@ class Feedback < ActiveRecord::Base
     result = REDIS.get(key)
     if result.nil?
       text = where(section_id: section_id).collect(&:feedback).join(' ')
-      result = ALCHEMY.TextGetTextSentiment(text, AlchemyAPI::OutputMode::JSON)
+      return 0 if text.empty?
+      result = ALCHEMY.TextGetTextSentiment(text, AlchemyAPI::OutputMode::JSON) rescue binding.pry
       REDIS.set(key, result) if JSON.parse(result)['status'] == 'OK'
     end
     result = JSON.parse(result)

@@ -1,8 +1,11 @@
 development:
-  url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+  search_url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+  cache_url: redis://redistogo:87e5856320883406639d117305b55224@spadefish.redistogo.com:9875
 
 test:
-  url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+  search_url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+  cache_url: redis://redistogo:87e5856320883406639d117305b55224@spadefish.redistogo.com:9875
 
 production:
-  url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+  search_url: redis://redistogo:abbfaecfe1b9397a16ff1749f4df053c@spadefish.redistogo.com:9497
+  cache_url: redis://redistogo:87e5856320883406639d117305b55224@spadefish.redistogo.com:9875

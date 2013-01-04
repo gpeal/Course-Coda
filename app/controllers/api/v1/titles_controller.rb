@@ -1,4 +1,5 @@
 class Api::V1::TitlesController < ApplicationController
+  include Cache
   respond_to :json
 
   def search
