@@ -14,5 +14,7 @@ module Cache
     end
     yield
     CACHE.set(key, self.response_body[0])
+    # set the ttl to a year
+    CACHE.expire(key, 31557600)
   end
 end
