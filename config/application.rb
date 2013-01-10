@@ -61,6 +61,8 @@ module CaesarScraper
 
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
+    config.assets.initialize_on_precompile = false
   end
 end
 
