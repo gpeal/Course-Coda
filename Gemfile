@@ -30,6 +30,10 @@ group :development do
   gem 'pry-debugger'
 end
 
+group :production do
+  gem 'newrelic_rpm'
+end
 gem 'jquery-rails'
 
 gem 'ruby-progressbar', :group => :progressbar
+
