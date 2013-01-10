@@ -30,5 +30,5 @@ production:
   username: caesar
   password: password
   database: ctec_production
-  pool: 5
+  pool: 50
   timeout: 5000
