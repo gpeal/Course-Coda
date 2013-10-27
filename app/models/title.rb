@@ -38,6 +38,10 @@ class Title < ActiveRecord::Base
       Section.overview sections
   end
 
+  def responses
+    sections.sum {|s| s.instruction_responses}
+  end
+
   def self.search name
     keys = REDIS.keys("TITLE *#{name.split(' ').join('*')}*")
     ids = keys.collect {|key| key[-5..-1].to_i}

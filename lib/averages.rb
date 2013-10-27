@@ -61,4 +61,13 @@ module Averages
     end
     (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
   end
+
+  def average_sentiment
+    average = []
+
+    sections.each do |section|
+      average.push(Feedback.sentiment(section.id))
+    end
+    (average.inject{ |sum, el| sum + el }.to_f / average.size).round(2)
+  end
 end

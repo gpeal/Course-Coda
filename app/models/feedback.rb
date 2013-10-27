@@ -41,7 +41,7 @@ class Feedback < ActiveRecord::Base
     if result.nil?
       text = where(section_id: section_id).collect(&:feedback).join(' ')
       return 0 if text.empty?
-      result = ALCHEMY.TextGetTextSentiment(text, AlchemyAPI::OutputMode::JSON) rescue binding.pry
+      result = ALCHEMY.TextGetTextSentiment(text, AlchemyAPI::OutputMode::JSON)
       REDIS.set(key, result) if JSON.parse(result)['status'] == 'OK'
     end
     result = JSON.parse(result)
