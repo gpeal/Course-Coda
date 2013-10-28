@@ -11,6 +11,7 @@ development:
   database: ctec_development
   pool: 5
   timeout: 5000
+  template: template0
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,6 +24,7 @@ test:
   database: ctec_test
   pool: 5
   timeout: 5000
+  template: template0
 
 production:
   adapter: postgresql
@@ -32,3 +34,4 @@ production:
   database: ctec_production
   pool: 50
   timeout: 5000
+  template: template0
