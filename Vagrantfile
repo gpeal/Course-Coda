@@ -11,9 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Make box
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-  #ruby/rvm
-  config.vm.provision :shell, :path => "install-rvm.sh",  :args => "stable"
-  config.vm.provision :shell, :path => "install-ruby.sh", :args => "1.9.3"
   # Sync app folders
   config.vm.synced_folder "./", "/home/vagrant/Northwestern-CTECS/"
   # Ports
@@ -28,9 +25,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   # Bootstrap
   config.vm.provision :shell, :path => "bootstrap.sh"
-  $script = <<SCRIPT
-chmod u+x /vagrant/bootstrap-user.sh
-sudo -u vagrant /vagrant/bootstrap-user.sh
-SCRIPT
-  config.vm.provision :shell, :inline => $script
 end

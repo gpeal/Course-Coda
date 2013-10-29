@@ -1,4 +1,5 @@
 base:
   '*':
+    - rbenv
     - ruby
     - database
