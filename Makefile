@@ -5,15 +5,14 @@ bootstrap:
 
 system:
 	sudo salt-call state.highstate
+
+ctecs: app database
+
+app: FORCE
 	bundle install
 
-database:
+database: FORCE
 	rake db:create
 	rake db:migrate
 
-env: system database
-
-app:
-	bundle install
-	rake db:create
-	rake db:migrate
+FORCE:
