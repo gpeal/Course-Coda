@@ -1,3 +1,4 @@
 tmp/**
 ./sprockets*
 development.log
+/.vagrant/
