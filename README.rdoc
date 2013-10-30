@@ -1,3 +1,25 @@
-== Northwestern CTECs
+===Northwestern CTECS v2
+Northwestern CTECS v2 is a totally new way to browse CTECS. It can do everything Caesar can do plus so much more.
 
-A new frontend for Northwestern CTECs
+Check it out at http://www.nuctecs.com!
+
+===Development
+Northwestern CTECS v2 is 100% open source. Please feel free to contribute freely. To do so, submit a pull request and I'll review it asap. If you're interested in becoming a maintainer, let me know.
+
+==Development Setup
+No more crazy multi-step development setups! Getting the Northwestern CTECS v2 environment set up couldn't be easier. OS X and Linux currently supported although Windows should work with very little extra work.
+
+1. Download and install VirtualBox (https://www.virtualbox.org/wiki/Downloads)
+
+2. Download and install Vagrant (http://downloads.vagrantup.com/)
+
+3. Clone the repo (https://github.com/gpeal/Northwestern-CTECs.git)
+
+4. cd to the repo and run setup.sh. The script should work on OS X and Linux hosts. If you are running Windows, feel free to translate it to a .bat script (and submit a pull request) or just run the commands manually.
+
+===Support
+Submit issues here
+Send questions to [ctecs@gpeal.com](mailto:ctecs@gpeal.com)
+
+
+Follow me on Twitter at @gpeal8 (https://twitter.com/gpeal8)
