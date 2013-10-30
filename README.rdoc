@@ -30,7 +30,24 @@ Once you have completed the setup:
 
 4. Develop normally. Run "vagrant ssh" from the repo in any other terminal you want to develop from.
 
-5. Submit a pull request 
+5. Submit a pull request
+
+==Potential Features
+Some feature ideas I have that you're welcome to add are:
+
+- Adding current/upcoming course offerings
+
+- Knowing what courses fall under what requirements
+
+- Sharing schedules with friends
+
+- More search/filtering options
+
+- Fixes for different screen resolutions
+
+- Add a home page intro/instructions
+
+- Populate the search box with the current search results. Currently, if you search for something, the search box will be empty which makes it difficult to modify searches
 
 ==Support
 Submit issues here
