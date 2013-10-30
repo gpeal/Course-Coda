@@ -53,6 +53,19 @@
 <li><p>Download and install <a href="http://downloads.vagrantup.com/">Vagrant</a></p></li>
 <li><p>Clone the repo (<a href="https://github.com/gpeal/Northwestern-CTECs.git">https://github.com/gpeal/Northwestern-CTECs.git</a>)</p></li>
 <li><p>cd to the repo and run setup.sh. The script should work on OS X and Linux hosts. If you are running Windows, feel free to translate it to a .bat script (and submit a pull request) or just run the commands manually.</p></li>
+</ol><p>This will create a headless virtual machine that contains the entire development environment.</p>
+
+<h2>
+<a name="developing" class="anchor" href="#developing"><span class="octicon octicon-link"></span></a>Developing</h2>
+
+<p>Once you have completed the setup:</p>
+
+<ol>
+<li><p>cd to the repo</p></li>
+<li><p>Start a new git branch</p></li>
+<li><p>run <code>vagrant ssh</code>. This will start a headless virtual machine, forward the ssh and server ports (22 and 3000), and ssh into the virtual machine.</p></li>
+<li><p>Develop normally. Run <code>vagrant ssh</code> from the repo in any other terminal you want to develop from.</p></li>
+<li><p>Submit a pull request </p></li>
 </ol><h3>
 <a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h3>
 
