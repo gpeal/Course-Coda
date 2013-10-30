@@ -6,16 +6,31 @@ Check it out at http://www.nuctecs.com!
 ===Development
 Northwestern CTECS v2 is 100% open source. Please feel free to contribute freely. To do so, submit a pull request and I'll review it asap. If you're interested in becoming a maintainer, let me know.
 
-==Development Setup
+## Development Setup
 No more crazy multi-step development setups! Getting the Northwestern CTECS v2 environment set up couldn't be easier. OS X and Linux currently supported although Windows should work with very little extra work.
 
-1. Download and install VirtualBox (https://www.virtualbox.org/wiki/Downloads)
+1. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-2. Download and install Vagrant (http://downloads.vagrantup.com/)
+2. Download and install [Vagrant](http://downloads.vagrantup.com/)
 
 3. Clone the repo (https://github.com/gpeal/Northwestern-CTECs.git)
 
 4. cd to the repo and run setup.sh. The script should work on OS X and Linux hosts. If you are running Windows, feel free to translate it to a .bat script (and submit a pull request) or just run the commands manually.
+
+This will create a headless virtual machine that contains the entire development environment.
+
+=== Developing
+Once you have completed the setup:
+
+1. cd to the repo
+
+2. Start a new git branch
+
+3. run "vagrant ssh". This will start a headless virtual machine, forward the ssh and server ports (22 and 3000), and ssh into the virtual machine.
+
+4. Develop normally. Run "vagrant ssh" from the repo in any other terminal you want to develop from.
+
+5. Submit a pull request 
 
 ===Support
 Submit issues here
