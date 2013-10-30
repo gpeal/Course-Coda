@@ -4,3 +4,4 @@ base:
     - ruby
     - gems
     - database
+    - rails

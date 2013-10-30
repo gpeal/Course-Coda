@@ -2,5 +2,5 @@
 
 echo cd Northwestern-CTECS > .profile
 cd Northwestern-CTECS
-make system
+make salt
 exit
