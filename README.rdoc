@@ -16,6 +16,7 @@ No more crazy multi-step development setups! Getting the Northwestern CTECS v2 e
 3. Clone the repo (https://github.com/gpeal/Northwestern-CTECs.git)
 
 4. cd to the repo and run setup.sh. The script should work on OS X and Linux hosts. If you are running Windows, feel free to translate it to a .bat script (and submit a pull request) or just run the commands manually.
+NOTE: If it says 1 of 40 packages failed to install, it's not actually a problem. Salt is just misinterpreting some output during installation.
 
 This will create a headless virtual machine that contains the entire development environment.
 
@@ -27,6 +28,7 @@ Once you have completed the setup:
 2. Start a new git branch
 
 3. run "vagrant ssh". This will start a headless virtual machine, forward the ssh and server ports (22 and 3000), and ssh into the virtual machine.
+   
 
 4. Develop normally. Run "vagrant ssh" from the repo in any other terminal you want to develop from.
 
