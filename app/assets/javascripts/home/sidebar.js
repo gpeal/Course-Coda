@@ -41,7 +41,7 @@ function setupSelect2(id, url, placeholder, titleProperty, quietMillis) {
        formatResult: function(item) {
          return item[titleProperty];
        },
-       minimumInputLength: 2,
+       minimumInputLength: 3,
        multiple: true,
        placeholder: placeholder,
        ajax: {
