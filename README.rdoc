@@ -27,7 +27,9 @@ Once you have completed the setup:
 
 2. Start a new git branch
 
-3. run "vagrant ssh". This will start a headless virtual machine, forward the ssh and server ports (22 and 3000), and ssh into the virtual machine.
+3. run "./setup.sh" from the terminal.
+
+3. run "vagrant ssh" from the terminal. This will start a headless virtual machine, forward the ssh and server ports (22 and 3000), and ssh into the virtual machine.
    
 
 4. Develop normally. Run "vagrant ssh" from the repo in any other terminal you want to develop from.
