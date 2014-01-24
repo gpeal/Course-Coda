@@ -24,23 +24,38 @@ function requestData() {
 }
 
 function loadData(data) {
-  if(data['info'] && !(location.pathname === '/' && location.search === '')) {
-    bootstrap_alert.info(data['info']);
+  if(data['info']) {
+    if (isOnRootPage()) {
+      showWelcomeText();
+    } else {
+      bootstrap_alert.info(data['info']);
+    }
+    hideLoadingAnimation();
     return
-  }
-  else if(data['error']) {
+  } else if(data['error']) {
     bootstrap_alert.error(data['error']);
     return
+  } else {
+    hideLoadingAnimation();
+    addTabs();
+    loadOverviewData(data.averages);
+    loadChartData(data.sections, data.xRange, data.yRange);
   }
 
-  addTabs();
+}
 
-  loadOverviewData(data.averages);
-
-  loadChartData(data.sections, data.xRange, data.yRange);
+function hideLoadingAnimation() {
+    $('#loading').css('display', 'none');
 }
 
 function addTabs() {
-    $('#loading').css('display', 'none');
     $('#tab-container').css('display', 'block');
+}
+
+function showWelcomeText() {
+  $('#hero-main').text("Welcome to Northwestern CTECs. Use the search boxes on the left to begin.");
+}
+
+function isOnRootPage() {
+  return location.pathname === '/' && location.search === '';
 }
