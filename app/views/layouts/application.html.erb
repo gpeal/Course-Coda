@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= @title || "Northwestern CTECS" %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "//www.fuelcdn.com/fuelux/2.4.1/css/fuelux.min.css" %>
+  <%= stylesheet_link_tag  "//www.fuelcdn.com/fuelux/2.4.1/css/fuelux-responsive.css" %>
   <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" %>
+  <%= javascript_include_tag "http://www.fuelcdn.com/fuelux/2.4.1/loader.min.js" %>
   <%= javascript_include_tag "application" %>
   <%= yield :head %>
   <%= csrf_meta_tags %>

@@ -31,11 +31,11 @@ body {
 }
 
 .tabbable, .tab-pane {
-  height: 100%;
+  height: $hero-height - 3 * 20px;
 }
 
 .tab-content {
-  height: $hero-height - 85px;
+  height: 100%;
   /*overflow: scoll;*/
 }
 
