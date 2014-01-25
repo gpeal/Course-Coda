@@ -1,10 +1,9 @@
 class Api::V1::ProfessorsController < ApplicationController
-  include Cache
+  # include Cache
   respond_to :json
 
   def search
-    @professors = Professor.search(params[:q])
-    render :json => @professors
+    render :json => Professor.search(params[:q])
   end
 
   def show

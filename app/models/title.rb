@@ -43,8 +43,7 @@ class Title < ActiveRecord::Base
   end
 
   def self.search name
-    keys = REDIS.keys("TITLE *#{name.split(' ').join('*')}*")
-    ids = keys.collect {|key| key[-5..-1].to_i}
+    ids = ActiveRecord::Base.connection.exec_query("SELECT id FROM titles WHERE title ILIKE '%#{name}%'").rows.flatten
     find(ids)
   end
 end
