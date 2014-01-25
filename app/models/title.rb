@@ -31,7 +31,7 @@ class Title < ActiveRecord::Base
   end
 
   def subject_abbrev
-    subject.apprev
+    subject.abbrev
   end
 
   def overview
@@ -43,7 +43,8 @@ class Title < ActiveRecord::Base
   end
 
   def self.search name
-    ids = ActiveRecord::Base.connection.exec_query("SELECT id FROM titles WHERE title ILIKE '%#{name}%'").rows.flatten
-    find(ids)
+    rows = ActiveRecord::Base.connection.exec_query('SELECT "titles"."id", (string_to_array("subjects"."title", \' \'))[1] || \' \' || "titles"."title"  FROM "subjects" INNER JOIN "sections" ON "subjects"."id" = "sections"."subject_id" INNER JOIN "titles" ON "sections"."title_id" = "titles"."id"').rows
+    rows = rows.delete_if { |r| r[1].index(name).nil? }
+    find(rows.collect { |r| r[0] })
   end
 end

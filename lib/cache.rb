@@ -9,6 +9,7 @@ module Cache
     key = params.to_s
     json = CACHE.get(key)
     unless json.nil?
+      logger.info "Returning result from cache"
       render :json => json
       return
     end
