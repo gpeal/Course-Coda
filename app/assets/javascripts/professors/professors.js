@@ -24,13 +24,13 @@ function loadData(data) {
       sortable: true
     },
     {
-      property: 'average_instruction',
-      label: 'Instruction',
+      property: 'average_course',
+      label: 'Course',
       sortable: true
     },
     {
-      property: 'average_challenged',
-      label: 'Challenged',
+      property: 'average_instruction',
+      label: 'Instruction',
       sortable: true
     },
     {

@@ -19,13 +19,13 @@ function loadData(data) {
   var dataSource = new StaticDataSource({
     columns: [
     {
-      property: 'course_num_2',
-      label: 'Course Number',
+      property: 'to_s',
+      label: 'Title',
       sortable: true
     },
     {
-      property: 'to_s',
-      label: 'Course',
+      property: 'course_num_2',
+      label: 'Course Number',
       sortable: true
     },
     {
