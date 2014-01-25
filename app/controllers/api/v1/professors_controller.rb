@@ -1,5 +1,5 @@
 class Api::V1::ProfessorsController < ApplicationController
-  # include Cache
+  include Cache
   respond_to :json
 
   def search
