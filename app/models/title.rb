@@ -43,8 +43,8 @@ class Title < ActiveRecord::Base
   end
 
   def self.search name
-    rows = ActiveRecord::Base.connection.exec_query('SELECT "titles"."id", (string_to_array("subjects"."title", \' \'))[1] || \' \' || "titles"."title"  FROM "subjects" INNER JOIN "sections" ON "subjects"."id" = "sections"."subject_id" INNER JOIN "titles" ON "sections"."title_id" = "titles"."id"').rows
-    rows = rows.delete_if { |r| r[1].index(name).nil? }
-    find(rows.collect { |r| r[0] })
+    keys = REDIS.keys("TITLE *#{name.split(' ').join('*')}*")
+    ids = keys.collect {|key| key[-5..-1].to_i}
+    find(ids)
   end
 end
