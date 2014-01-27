@@ -12,7 +12,7 @@ class Api::V1::ProfessorsController < ApplicationController
       @title = "All Professors"
     else
       subject = Subject.find(params[:s])
-      @professors = subject.professors.uniq!
+      @professors = subject.professors.distinct
       @title = "#{subject.name} Professors"
     end
     render :json => @professors.to_json({:methods => [:title, :average_course, :average_instruction, :average_learned, :average_challenged, :average_stimulated, :average_hours, :enrollment_count]})

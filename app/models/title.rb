@@ -1,7 +1,7 @@
 class Title < ActiveRecord::Base
   include Averages
 
-  attr_accessible :title, :title_id
+  # attr_accessible :title, :title_id
 
   has_many :sections
   has_many :subjects, :through => :sections

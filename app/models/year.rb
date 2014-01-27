@@ -1,6 +1,6 @@
 class Year < ActiveRecord::Base
   include Comparable
-  attr_accessible :title
+  # attr_accessible :title
 
   def to_i
     title

@@ -13,7 +13,7 @@ class Api::V1::TitlesController < ApplicationController
       @titles.delete_if {|t| t.responses < 10}
     else
       subject = Subject.find(params[:s])
-      @titles = subject.titles.uniq!
+      @titles = subject.titles.distinct
     end
     render :json => @titles.to_json({:methods => [:course_num_2, :to_s, :average_course, :average_instruction, :average_learned, :average_challenged, :average_stimulated, :average_hours, :enrollment_count]})
   end

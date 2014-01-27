@@ -1,6 +1,6 @@
 class Quarter < ActiveRecord::Base
   include Comparable
-  attr_accessible :title
+  # attr_accessible :title
 
   def to_s
     title

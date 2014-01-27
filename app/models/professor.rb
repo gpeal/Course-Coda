@@ -1,6 +1,6 @@
 class Professor < ActiveRecord::Base
   include Averages
-  attr_accessible :title
+  # attr_accessible :title
   has_many :sections
 
   def to_s
