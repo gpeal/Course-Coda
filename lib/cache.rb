@@ -10,6 +10,7 @@ module Cache
       json = CACHE.get(params.to_s)
       if json.nil?
         yield
+        key = params.to_s
         CACHE.set(key, self.response_body[0])
         # set the ttl to a year
         CACHE.expire(key, 31557600)

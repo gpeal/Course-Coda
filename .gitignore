@@ -3,3 +3,5 @@ tmp/**
 development.log
 /.vagrant/
 /.idea/
+public/assets/**
+.profile
