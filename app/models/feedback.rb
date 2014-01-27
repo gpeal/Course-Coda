@@ -22,11 +22,16 @@ class Feedback < ActiveRecord::Base
     if result.nil?
       text = where(section_id: section_id).collect(&:feedback).join(' ')
       return [] if text.empty?
-      result = ALCHEMY.TextGetRankedKeywords(text, AlchemyAPI::OutputMode::JSON)
-      REDIS.set(key, result) if JSON.parse(result)['status'] == 'OK'
+      begin
+        result = ALCHEMY.TextGetRankedKeywords(text, AlchemyAPI::OutputMode::JSON)
+        result = JSON.parse(result)
+        REDIS.set(key, result) if result['status'] == 'OK'
+        keywords = result['keywords'].collect {|k| k['text']}
+      rescue => err
+        logger.error "Unable to get alchemy keywords (#{err})"
+        keywords = []
+      end
     end
-    result = JSON.parse(result)
-    keywords = result['keywords'].collect {|k| k['text']}
 
     professor_name = Section.find(section_id).professor.title rescue 'dummy name'
     (keywords - ['course', 'class', 'professor', 'teacher', 'time', 'things', 'students',
