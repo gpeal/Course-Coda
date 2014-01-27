@@ -4,5 +4,5 @@ bundler:
 
 rails:
   gem.installed:
-    - version: 3.2.8
+    - version: 4.0.2
     - runas: vagrant

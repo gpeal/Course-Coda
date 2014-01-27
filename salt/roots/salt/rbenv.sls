@@ -69,13 +69,6 @@ https://github.com/sstephenson/ruby-build.git:
 # ruby installation
 #
 
-# this is currently not working
-# ruby-{{ pillar['ruby']['version'] }}:
-#   rbenv.installed:
-#     - default: True
-#     - require:
-#       - git: https://github.com/sstephenson/ruby-build.git
-
 /home/vagrant/.rbenv/bin/rbenv install {{ pillar['ruby']['version'] }} -f:
   cmd.run:
   - user: vagrant
