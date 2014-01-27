@@ -25,4 +25,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   # Bootstrap
   config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vbguest.auto_update = true
 end
