@@ -14,7 +14,8 @@ gem 'redis'
 gem 'devise'
 
 # for alchemy
-gem 'xml-simple'
+gem 'alchemy-api-rb', :require => 'alchemy_api'
+
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'sass-rails'

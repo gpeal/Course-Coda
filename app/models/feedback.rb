@@ -18,19 +18,20 @@ class Feedback < ActiveRecord::Base
 
   def self.keywords section_id
     key = "FEEDBACK_KEYWORDS #{section_id}"
-    result = REDIS.get(key)
-    if result.nil?
+    keywords = CACHE.get(key)
+    if keywords.nil?
       text = where(section_id: section_id).collect(&:feedback).join(' ')
       return [] if text.empty?
       begin
-        result = ALCHEMY.TextGetRankedKeywords(text, AlchemyAPI::OutputMode::JSON)
-        result = JSON.parse(result)
-        REDIS.set(key, result) if result['status'] == 'OK'
-        keywords = result['keywords'].collect {|k| k['text']}
+        result = AlchemyAPI::KeywordExtraction.new.search(text: text)
+        keywords = result.collect {|k| k['text']}
+        CACHE.set(key, keywords)
       rescue => err
         logger.error "Unable to get alchemy keywords (#{err})"
         keywords = []
       end
+    else
+      logger.info "Returning Alchemy keywords from cache"
     end
 
     professor_name = Section.find(section_id).professor.title rescue 'dummy name'
