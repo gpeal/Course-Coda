@@ -28,11 +28,12 @@ class Feedback < ActiveRecord::Base
     result = JSON.parse(result)
     keywords = result['keywords'].collect {|k| k['text']}
 
-    professor_name = feedback.first.section.professor.title rescue 'dummy name'
-    keywords = (keywords - ['course', 'class', 'professor', 'teacher', 'time', 'things', 'students',
+    professor_name = Section.find(section_id).professor.title rescue 'dummy name'
+    (keywords - ['course', 'class', 'professor', 'teacher', 'time', 'things', 'students',
                             'lecture', 'lectures', 'book', 'books', 'material', 'materials', 'test', 'tests',
                             'time', 'times', 'questions', 'problem', 'problems',
-                            professor_name, professor_name.split(' ')[0].downcase, professor_name.split(' ')[1].downcase])[0..20]
+                            professor_name, professor_name.split(' ')[0], professor_name.split(' ')[1],
+                            professor_name.downcase, professor_name.split(' ')[0].downcase, professor_name.split(' ')[1].downcase])[0..20]
   end
 
   def self.sentiment section_id
