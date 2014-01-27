@@ -53,6 +53,13 @@ class Feedback < ActiveRecord::Base
     else
       logger.info "Returning alchemy sentiment from cache"
     end
-    result
+    case result
+    when "negative"
+      return 33
+    when "neutral"
+      return 66
+    when "positive"
+      return 100
+    end
   end
 end
