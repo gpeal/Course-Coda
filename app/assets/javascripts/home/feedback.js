@@ -64,7 +64,7 @@ function loadFeedbackData(data) {
   tableBody = $('#keywords-table > tbody:last')
   td = $('#keywords-table td:last');
   td.text('');
-  td.append(sentiment + '%');
+  td.append(sentiment);
 
 
   var feedback = data.feedback

@@ -44,19 +44,15 @@ class Feedback < ActiveRecord::Base
 
   def self.sentiment section_id
     key = "FEEDBACK_SENTIMENT #{section_id}"
-    result = REDIS.get(key)
+    result = CACHE.get(key)
     if result.nil?
       text = where(section_id: section_id).collect(&:feedback).join(' ')
       return 0 if text.empty?
-      result = ALCHEMY.TextGetTextSentiment(text, AlchemyAPI::OutputMode::JSON)
-      REDIS.set(key, result) if JSON.parse(result)['status'] == 'OK'
+      result = AlchemyAPI::SentimentAnalysis.new.search(text:  text)['type']
+      CACHE.set(key, result)
+    else
+      logger.info "Returning alchemy sentiment from cache"
     end
-    result = JSON.parse(result)
-    score = (result['docSentiment']['score'].to_f * 100).to_i
-    score += 25
-    score *= 2
-    score = 100 if score > 100
-    score = 0 if score < 0
-    score
+    result
   end
 end
