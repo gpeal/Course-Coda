@@ -76,14 +76,8 @@
             <li>
               <%= link_to "Register", new_user_registration_path %>
             </li>
-            <li class="dropdown">
-              <a role="button" class="dropdown-toggle" data-toggle="dropdown" href="#">
-                Sign in
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                Sign in form here
-              </ul>
+            <li>
+              <%= link_to "Sign In", new_user_session_path %>
             </li>
           <% end %>
         </ul>
@@ -96,6 +90,12 @@
   </div>
 
   <div class="container-fluid">
+    <% unless user_signed_in? %>
+      <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Northwestern CTEC is currently in a closed beta. Contact gabe@nuctec.com to find out more.
+      </div>
+    <% end %>
     <div class="row-fluid">
       <%= yield %>
     </div>

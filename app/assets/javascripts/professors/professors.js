@@ -8,12 +8,17 @@ function requestData() {
     dataType: 'json',
     type: 'POST',
     data: location.search.slice(1),
+    error: hideSpinner,
     success: loadData
   });
 }
 
-function loadData(data) {
+function hideSpinner() {
   $('#loading').css('display', 'none');
+}
+
+function loadData(data) {
+  hideSpinner();
   $('#professors-table').css('display', 'block');
 
   var dataSource = new StaticDataSource({

@@ -19,6 +19,7 @@ function requestData() {
     dataType: 'json',
     type: 'POST',
     data: location.search.slice(1),
+    error: hideLoadingAnimation,
     success: loadData
   });
 }
@@ -41,7 +42,6 @@ function loadData(data) {
     loadOverviewData(data.averages);
     loadChartData(data.sections, data.xRange, data.yRange);
   }
-
 }
 
 function hideLoadingAnimation() {
