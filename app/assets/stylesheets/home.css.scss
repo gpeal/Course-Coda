@@ -2,12 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$hero-height: 800px;
+$hero-height: 720px;
 
 body {
   padding-top: 60px;
   padding-bottom: 40px;
 }
+
 .sidebar-nav {
   padding: 9px 0;
 }
@@ -97,10 +98,17 @@ body {
 
 #feedback-holder {
   display: none;
+  height: $hero-height - 6 * 20px;
+  overflow: scroll;
 }
 
 .alert {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Fix a bug in fuelux after bootstrap 3 upgrade where table search box would be too small
+.fuelux .datagrid-header-right input[type="text"]{
+  height: 100%;
 }

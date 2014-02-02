@@ -31,6 +31,7 @@ class Feedback < ActiveRecord::Base
         keywords = []
       end
     else
+      keywords = JSON.parse(keywords)
       logger.info "Returning Alchemy keywords from cache"
     end
 

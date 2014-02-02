@@ -11,5 +11,4 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require_tree ./global
