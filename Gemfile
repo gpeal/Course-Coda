@@ -26,8 +26,6 @@ gem 'therubyracer', :platforms => :ruby
 
 gem 'uglifier'
 
-gem 'twitter-bootstrap-rails', :github => 'seyhunak/twitter-bootstrap-rails'
-
 group :development do
   gem 'pry'
   gem 'pry-debugger'

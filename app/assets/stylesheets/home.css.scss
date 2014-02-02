@@ -11,9 +11,12 @@ body {
 .sidebar-nav {
   padding: 9px 0;
 }
+#search-list {
+  margin-top: 15px;
+}
 
-#search-li {
-  margin-top: 10px;
+.search-li.select2-container {
+  margin-bottom: 20px;
 }
 
 #hero-main {
@@ -45,10 +48,6 @@ body {
 
 #flashes {
   width: 80%;
-}
-
-.search-li {
-  margin-bottom: 20px;
 }
 
 #overview-table th {
