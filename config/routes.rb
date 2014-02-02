@@ -1,5 +1,6 @@
 CaesarScraper::Application.routes.draw do
 
+  devise_for :users
   namespace :api do
     namespace :v1 do
       match 'search' => 'search#search', :via => :post, :format => :json

@@ -1,0 +1,26 @@
+development:
+  address: 'smtp.gmail.com'
+  port:  587
+  domain: 'nuctecs.com'
+  user_name: 'gabe@nuctecs.com'
+  password: 'r4sputin'
+  authentication: 'plain'
+  enable_starttls_auto:  true
+
+test:
+  address: 'smtp.gmail.com'
+  port:  587
+  domain: 'nuctecs.com'
+  user_name: 'gabe@nuctecs.com'
+  password: 'r4sputin'
+  authentication: 'plain'
+  enable_starttls_auto:  true
+
+production:
+  address: 'smtp.gmail.com'
+  port:  587
+  domain: 'nuctecs.com'
+  user_name: 'gabe@nuctecs.com'
+  password: 'r4sputin'
+  authentication: 'plain'
+  enable_starttls_auto:  true

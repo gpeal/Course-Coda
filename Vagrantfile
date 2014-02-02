@@ -15,6 +15,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "./", "/home/vagrant/Northwestern-CTECS/"
   # Ports
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 587, host: 587
+  config.vm.network :forwarded_port, guest: 1025, host: 1025
   config.ssh.forward_agent = true
   # Config management
   config.vm.synced_folder "salt/roots/", "/srv/"

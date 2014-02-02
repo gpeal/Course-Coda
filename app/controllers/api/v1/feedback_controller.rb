@@ -1,5 +1,7 @@
 class Api::V1::FeedbackController < ApplicationController
+  before_filter :authenticate_user!
   include Cache
+  respond_to :json
 
   def show
     feedback = Feedback.where(section_id: params[:id]).sort!

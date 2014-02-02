@@ -1,4 +1,5 @@
 class Api::V1::ProfessorsController < ApplicationController
+  before_filter :authenticate_user!
   include Cache
   respond_to :json
 

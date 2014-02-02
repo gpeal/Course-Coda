@@ -67,6 +67,26 @@
             </li>
           </ul>
         </div><!--/.nav-collapse -->
+        <ul class="nav navbar-nav pull-right">
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to current_user.email, root_path %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "Register", new_user_registration_path %>
+            </li>
+            <li class="dropdown">
+              <a role="button" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Sign in
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                Sign in form here
+              </ul>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>

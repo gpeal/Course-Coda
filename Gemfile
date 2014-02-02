@@ -11,6 +11,8 @@ gem 'pg'
 gem 'watir'
 gem 'redis'
 
+gem 'devise'
+
 # for alchemy
 gem 'xml-simple'
 # Gems used only for assets and not required

@@ -1,4 +1,5 @@
 class Api::V1::TitlesController < ApplicationController
+  before_filter :authenticate_user!
   include Cache
   respond_to :json
 
