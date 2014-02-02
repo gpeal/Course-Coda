@@ -93,7 +93,7 @@
     <% unless user_signed_in? %>
       <div class="alert alert-error">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
-        Northwestern CTEC is currently in a closed beta. Contact gabe@nuctec.com to find out more.
+        Northwestern CTEC is currently in a closed beta. Contact <%= mail_to "gabe@nuctecs.com" %> to find out more.
       </div>
     <% end %>
     <div class="row-fluid">
