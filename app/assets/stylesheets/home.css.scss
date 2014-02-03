@@ -36,7 +36,7 @@ body {
 }
 
 .tabbable, .tab-pane {
-  height: $hero-height - 20%;
+  height: $hero-height - 3 * 20px;
 }
 
 .tab-content {
@@ -99,7 +99,7 @@ body {
 
 #feedback-holder {
   display: none;
-  height: $hero-height - 20%;
+  height: $hero-height - 6 * 20px;
   overflow: scroll;
 }
 
