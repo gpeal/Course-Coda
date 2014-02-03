@@ -13,7 +13,7 @@ Devise.setup do |config|
   config.mailer_sender = 'gabe@nuctecs.com'
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'UserMailer'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and

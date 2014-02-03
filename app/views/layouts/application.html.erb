@@ -91,10 +91,22 @@
   </div>
 
   <div class="container-fluid">
-    <% unless user_signed_in? %>
+    <% unless user_signed_in? or flash[:notice] or flash[:alert]  %>
       <div class="alert alert-danger alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         Northwestern CTEC is currently in a closed beta. Contact <%= mail_to "gabe@nuctecs.com" %> to find out more.
+      </div>
+    <% end %>
+    <% if flash[:notice] %>
+       <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+       <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= flash[:alert] %>
       </div>
     <% end %>
     <div class="row-fluid">
