@@ -44,62 +44,59 @@ class Section < ActiveRecord::Base
     "#{subject.abbrev} #{title.to_s}"
   end
 
+  # Return an array of average values for each section
+  # Each element in the array represents a course
+  # The element is a hash that contains the following elements
+  #   responses: the total number of people who have taken the course
+  #   instruction: the weighted average value for instruction
+  #   course: the weighted average value for course
+  #   learned: the weighted average value for amount learned
+  #   stimulated: the weighted average value for amount stimulated
+  #   challenged: the weighted average value for amount challenged
+  #   hours: the weighted average value for how long people said they spent on the course each week
+  #   sentiment: the weighted average value for the alchemy sentiment for the feedback
   def self.averages sections
-    averages = {}
-    sections.each do |section|
-      key = "#{section.professor.to_s} #{section.to_s}"
-      averages[key] = {professor: section.professor.to_s,
-                       title: section.title.to_s,
-                       instruction: [],
-                       instruction_enroll_count: 0,
-                       course: [],
-                       course_enroll_count: 0,
-                       learned: [],
-                       learned_enroll_count: 0,
-                       stimulated: [],
-                       stimulated_enroll_count: 0,
-                       challenged: [],
-                       challenged_enroll_count: 0,
-                       sentiment: [],
-                       hours: []} if averages[key].nil?
+    values = {}
+    new_section = {
+      responses: 0,
+      instruction: 0,
+      course: 0,
+      learned: 0,
+      stimulated: 0,
+      challenged: 0,
+      hours: 0,
+      sentiment: 0
+    }
+    sections.each do |s|
+      key = "#{s.professor.to_s} #{s.to_s}".to_sym
+      if values[key].nil?
+        values[key] = new_section.dup
+        values[key][:professor] = s.professor.to_s
+        values[key][:title] = s.title.to_s
+      end
 
-      averages[key][:instruction].push(section.instruction * section.instruction_enroll_count)
-      averages[key][:instruction_enroll_count] += section.instruction_enroll_count
-
-      averages[key][:course].push(section.course * section.course_enroll_count)
-      averages[key][:course_enroll_count] += section.course_enroll_count
-
-      averages[key][:learned].push(section.learned * section.learned_enroll_count)
-      averages[key][:learned_enroll_count] += section.learned_enroll_count
-
-      averages[key][:stimulated].push(section.stimulated * section.stimulated_enroll_count)
-      averages[key][:stimulated_enroll_count] += section.stimulated_enroll_count
-
-      averages[key][:challenged].push(section.challenged * section.challenged_enroll_count)
-      averages[key][:challenged_enroll_count] += section.challenged_enroll_count
-
-      averages[key][:sentiment].push(Feedback.sentiment(section.id) * section.instruction_enroll_count)
-
-      averages[key][:hours].push(section.hours * section.instruction_enroll_count)
-
+      responses = s.instruction_enroll_count
+      values[key][:responses] += s.instruction_enroll_count
+      values[key][:instruction] += s.instruction * responses
+      values[key][:course] += s.course * responses
+      values[key][:learned] += s.learned * responses
+      values[key][:stimulated] += s.stimulated * responses
+      values[key][:challenged] += s.challenged * responses
+      values[key][:hours] += s.hours * responses
+      values[key][:sentiment] += Feedback.sentiment(s.id) * responses
     end
-
-    averages_arr = []
-    averages.keys.each do |key|
-      averages_arr.push({
-        professor: averages[key][:professor],
-        title: averages[key][:title],
-        instruction: (averages[key][:instruction].inject{ |sum, el| sum + el }.to_f / averages[key][:instruction_enroll_count]).round(2),
-        course: (averages[key][:course].inject{ |sum, el| sum + el }.to_f / averages[key][:course_enroll_count]).round(2),
-        learned: (averages[key][:learned].inject{ |sum, el| sum + el }.to_f / averages[key][:learned_enroll_count]).round(2),
-        stimulated: (averages[key][:stimulated].inject{ |sum, el| sum + el }.to_f / averages[key][:stimulated_enroll_count]).round(2),
-        challenged: (averages[key][:challenged].inject{ |sum, el| sum + el }.to_f / averages[key][:challenged_enroll_count]).round(2),
-        sentiment: (averages[key][:sentiment].inject{ |sum, el| sum + el }.to_f / averages[key][:instruction_enroll_count]).round(2),
-        hours: (averages[key][:hours].inject{ |sum, el| sum + el }.to_f / averages[key][:instruction_enroll_count]).round(2),
-        responses: averages[key][:instruction_enroll_count]
-      })
+    averages = []
+    values.keys.each do |key|
+      values[key][:instruction] = (values[key][:instruction] / values[key][:responses]).round(2)
+      values[key][:course] = (values[key][:course] / values[key][:responses]).round(2)
+      values[key][:learned] = (values[key][:learned] / values[key][:responses]).round(2)
+      values[key][:stimulated] = (values[key][:stimulated] / values[key][:responses]).round(2)
+      values[key][:challenged] = (values[key][:challenged] / values[key][:responses]).round(2)
+      values[key][:hours] = (values[key][:hours] / values[key][:responses]).round(2)
+      values[key][:sentiment] = (values[key][:sentiment] / values[key][:responses]).round(2)
+      averages.push(values[key])
     end
-    averages_arr
+    averages
   end
 
   def self.average type, sections
