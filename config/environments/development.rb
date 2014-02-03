@@ -40,4 +40,8 @@ CaesarScraper::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.raise_delivery_errors = true
+
+  if defined? BetterErrors
+  BetterErrors::Middleware.allow_ip! '10.0.2.2'
+end
 end

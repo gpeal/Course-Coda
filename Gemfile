@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.0"
 
 gem 'rails', '4.0.2'
 gem 'thin'
@@ -29,6 +29,8 @@ gem 'uglifier'
 group :development do
   gem 'pry'
   gem 'pry-debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do

@@ -1,26 +1,29 @@
 development:
-  address: 'smtp.gmail.com'
+  address: 'smtp.mandrillapp.com'
   port:  587
+  enable_starttls_auto: true
   domain: 'nuctecs.com'
   user_name: 'gabe@nuctecs.com'
-  password: 'r4sputin'
-  authentication: 'plain'
-  enable_starttls_auto:  true
+  password: 'ZNBSmqZbJLUrrDAj5knVKg'
+  authentication: login
+  domain: nuctecs.com
 
 test:
-  address: 'smtp.gmail.com'
+  address: 'smtp.mandrillapp.com'
   port:  587
+  enable_starttls_auto: true
   domain: 'nuctecs.com'
   user_name: 'gabe@nuctecs.com'
-  password: 'r4sputin'
-  authentication: 'plain'
-  enable_starttls_auto:  true
+  password: 'ZNBSmqZbJLUrrDAj5knVKg'
+  authentication: login
+  domain: nuctecs.com
 
 production:
-  address: 'smtp.gmail.com'
+  address: 'smtp.mandrillapp.com'
   port:  587
+  enable_starttls_auto: true
   domain: 'nuctecs.com'
   user_name: 'gabe@nuctecs.com'
-  password: 'r4sputin'
-  authentication: 'plain'
-  enable_starttls_auto:  true
+  password: 'ZNBSmqZbJLUrrDAj5knVKg'
+  authentication: login
+  domain: nuctecs.com
