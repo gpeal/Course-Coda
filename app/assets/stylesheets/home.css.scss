@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$hero-height: 720px;
+$hero-height: 900px;
 
 body {
   padding-top: 60px;
@@ -21,7 +21,7 @@ body {
 }
 
 #hero-main {
-  height: $hero-height;
+  min-height: $hero-height;
   padding: 20px;
   overflow: scroll;
 }
@@ -33,6 +33,7 @@ body {
 
 #tab-container {
   display: none;
+  // height: auto;
 }
 
 .tabbable, .tab-pane {
@@ -50,6 +51,11 @@ body {
 
 #flashes {
   width: 80%;
+}
+
+// make the content view for the overview table resize
+#tab1 {
+  height: auto;
 }
 
 #overview-table th {
