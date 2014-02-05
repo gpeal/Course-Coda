@@ -3,7 +3,6 @@ $(document).ready(function() {
   setupSelect2('search-title', '/api/v1/titles/search.json', 'Course Title', 'to_s', 1000);
 
    $('#search-button').bind('click', search);
-   console.log('sidebar.js')
 });
 
 
