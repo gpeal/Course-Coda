@@ -5,9 +5,7 @@
       <h2>Register</h2>
       <hr class="colorgraph">
       <% devise_error_messages!.each do |key, value| %>
-        <div class="alert alert-danger registration-alert">
-          <b><%= key %>: </b><%= value %>
-        </div>
+        <div class="alert alert-danger registration-alert"><b><%= key %>: </b><%= value %></div>
       <% end %>
       <div class="form-group">
         <%= f.email_field :email, :autofocus => true, :class => "form-control input-lg", placeholder: "Email Address"  %>
@@ -20,7 +18,7 @@
       </div>
       <hr class="colorgraph">
       <div>
-          <%= f.submit "Register", :class => "btn btn-lg btn-success btn-block" %>
+          <%= f.submit "Register", :id => "register-button", :class => "btn btn-lg btn-success btn-block" %>
       </div>
       <% end %>
     </div>

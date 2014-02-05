@@ -5,9 +5,7 @@
       <h2>Please Sign In</h2>
       <hr class="colorgraph">
       <% devise_error_messages!.each do |key, value| %>
-        <div class="alert alert-danger registration-alert">
-          <b><%= key %>: </b><%= value %>
-        </div>
+        <div class="alert alert-danger login-alert"><b><%= key %>: </b><%= value %></div>
       <% end %>
       <div class="form-group">
         <%= f.email_field :email, :autofocus => true, :class => "form-control input-lg", placeholder: "Email Address"  %>
@@ -27,7 +25,7 @@
           <%= f.submit "Sign in", :class => "btn btn-lg btn-success btn-block" %>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
-          <%= link_to "Register", new_user_registration_path, :class => "btn btn-lg btn-primary btn-block" %>
+          <%= link_to "Register", new_user_registration_path, :id => "login-button", :class => "btn btn-lg btn-primary btn-block" %>
         </div>
       </div>
       <% end %>

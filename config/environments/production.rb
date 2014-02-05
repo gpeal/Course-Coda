@@ -49,6 +49,7 @@ CaesarScraper::Application.configure do
   config.assets.precompile += %w( home/charts.js home/data.js home/feedback.js home/highcharts.js home/sidebar.js)
   config.assets.precompile += %w( courses/courses.js)
   config.assets.precompile += %w( professors/professors.js)
+  config.assets.precompile += %w( users/login.js users/register.js)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
