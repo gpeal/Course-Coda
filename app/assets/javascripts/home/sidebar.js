@@ -25,6 +25,7 @@ function logSearchEvent() {
   professors = $('#search-professor').select2('data').map(function(p) { return p.title}).toString()
   courses = $('#search-title').select2('data').map(function(p) { return p.to_s}).toString()
   ga('send', 'event', 'search', window.userEmail, [professors, courses].join(','))
+  console.log('Search')
 }
 
 function select2ToQueryParams(id, queryParamId) {
