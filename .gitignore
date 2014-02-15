@@ -5,3 +5,4 @@ development.log
 /.idea/
 public/assets/**
 .profile
+.DS_Store
