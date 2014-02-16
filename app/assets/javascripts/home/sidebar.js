@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  setupSelect2('search-professor', '/api/v1/professors/search.json', 'Professor', 'title', 100);
+  setupSelect2('search-professor', '/api/v1/professors/search.json', 'Professor', 'title', 1000);
   setupSelect2('search-title', '/api/v1/titles/search.json', 'Course Title', 'to_s', 1000);
 
    $('#search-button').bind('click', search);
@@ -7,7 +7,6 @@ $(document).ready(function() {
 
 
 function search() {
-  logSearchEvent()
   var queryString = '/?';
   pParams = select2ToQueryParams('search-professor', 'p');
   if(pParams != '')
@@ -19,13 +18,6 @@ function search() {
   queryString = queryString.slice(0, -1);
 
   window.location =  queryString;
-}
-
-function logSearchEvent() {
-  professors = $('#search-professor').select2('data').map(function(p) { return p.title}).toString()
-  courses = $('#search-title').select2('data').map(function(p) { return p.to_s}).toString()
-  ga('send', 'event', 'search', window.userEmail, [professors, courses].join(','))
-  ga('send', 'event', 'b', 'b', 'b')
 }
 
 function select2ToQueryParams(id, queryParamId) {
