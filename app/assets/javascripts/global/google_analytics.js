@@ -6,3 +6,4 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-47789870-1', 'auto');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
+ga('send', 'event', 'a', 'a', 'a')
