@@ -4,7 +4,7 @@ class Api::V1::ProfessorsController < ApplicationController
   respond_to :json
 
   def search
-    render :json => Professor.search(params[:q])
+    @professors = Professor.search(params[:q])
   end
 
   def show

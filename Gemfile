@@ -20,6 +20,7 @@ gem 'alchemy-api-rb', :require => 'alchemy_api'
 # in production environments by default.
 gem 'sass-rails'
 gem 'coffee-rails'
+gem 'jbuilder'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes.
 gem 'therubyracer', :platforms => :ruby

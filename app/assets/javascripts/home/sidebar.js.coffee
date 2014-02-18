@@ -21,13 +21,13 @@ select2ToString = (id) ->
   values.map((p) ->
     p.title
   ).toString()
-setupSelect2 = (id, url, placeholder, titleProperty, quietMillis) ->
+setupSelect2 = (id, url, placeholder, quietMillis) ->
   $("#" + id).select2
     formatSelection: (item) ->
-      item[titleProperty]
+      item['name']
 
     formatResult: (item) ->
-      item[titleProperty]
+      item['name']
 
     minimumInputLength: 3
     multiple: true
@@ -48,7 +48,7 @@ setupSelect2 = (id, url, placeholder, titleProperty, quietMillis) ->
 
   return
 $(document).ready ->
-  setupSelect2 "search-professor", "/api/v1/professors/search.json", "Professor", "title", 1000
-  setupSelect2 "search-title", "/api/v1/titles/search.json", "Course Title", "to_s", 1000
+  setupSelect2 "search-professor", "/api/v1/professors/search.json", "Professor", 1000
+  setupSelect2 "search-title", "/api/v1/titles/search.json", "Course Title", 1000
   $("#search-button").bind "click", search
   return
