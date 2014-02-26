@@ -19,6 +19,7 @@ CaesarScraper::Application.routes.draw do
 
   match 'courses' => 'titles#show', :via => :get
   match 'professors' => 'professors#show', :via => :get
+  match 'welcome' => 'home#welcome', :via => :get
 
   root :to => 'home#index'
 end

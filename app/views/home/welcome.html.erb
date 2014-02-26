@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Course Coda</title>
+    <meta name="description" content="Ultimate Responsive HTML5 Landing Page" />
+    <meta name="keywords" content="responsive html5 template, landing page, bootstrap 3.0, css, jquery" />
+    <meta name="author" content="8Guild" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!--Google Fonts-->
+    <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' %>
+    <!--Bootstrap 3.1.0-->
+    <%= stylesheet_link_tag 'landing/bootstrap.min.css' %>
+    <!--Icon Fonts-->
+    <%= stylesheet_link_tag 'landing/font-awesome.min.css' %>
+    <%= stylesheet_link_tag 'landing/icon-moon.css' %>
+    <!--Animations-->
+    <%= stylesheet_link_tag 'landing/animate.css' %>
+    <!--Theme Styles-->
+    <%= stylesheet_link_tag 'landing/theme-styles.css' %>
+    <%= stylesheet_link_tag 'landing/colors/color-4dbc84.css' %>
+    <!--Modernizr-->
+    <%= javascript_include_tag 'home/landing/libs/modernizr.custom.js' %>
+    <!--Adding Media Queries Support for IE8-->
+    <!--[if lt IE 9]>
+      <script src="js/plugins/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <!--Body-->
+  <body>
+
+    <!--Page Preloading-->
+    <div id="preloader"><div id="spinner"></div></div>
+
+    <!--Header (Hero Unit with Slider)-->
+    <header class="hero">
+      <div class="container">
+
+        <!--Top Navi-->
+        <div id="top-navi" class="row animated">
+          <div class="col-xs-6">
+              <img class="logo-image" src="assets/logo.png" width="208" height="71" alt="Ultima"/>
+          </div>
+          <div class="col-xs-6">
+            <nav class="top-navi pull-right">
+              <a href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-user"></i>Login</a>
+            </nav>
+          </div>
+        </div>
+
+        <!--Login Modal-->
+        <div class="light-skin modal fade" id="loginModal" tabindex="-1" role="form" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Login here</h4>
+              </div>
+              <div class="modal-body">
+                <form class="login-form" role="form">
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!--Hero Slider-->
+          <div class="row header-row slide first-slide">
+            <div class="col-lg-6 col-md-6 col-sm-6 animated">
+              <h1>Welcome to Course Coda</h1>
+              <br>
+              <h3>Course Coda is course evaluations done right.</h3>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 animated">
+              <img class="pull-right" src="assets/multi-device.png" width="689" height="659" alt="Multi Device"/>
+            </div>
+          </div>
+      </div>
+    </header><!--Close Header-->
+
+    <!--Features-->
+    <section class="page-block" id="features">
+      <div class="container">
+        <div class="row page-header">
+          <h1>Features</h1>
+        </div>
+        <div class="hero-slider" id="features-hero-slider">
+          <div class="slide">
+            <div class="col-lg-7 col-md-7 col-sm-7 animated fadeInUp">
+              <h2>Compare courses and professors.</h2>
+              <p>Want to know which classes to take or which professor to take a class with? Course coda can help with that!</p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 animated fadeInRight">
+              <img src="assets/macbook-graph.png" width="659" height="500" alt="Coming Soon Page"/>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="col-lg-7 col-md-7 col-sm-7 animated fadeInDown">
+              <h2>Find the best classes in your department.</h2>
+              <p>Get the most out of your major by finding the most interesting and highest rated classes in your department.</p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 animated fadeInRight">
+              <div>
+                <img src="assets/macbook-department.png" width="472" height="422" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="slide first-slide">
+            <div class="col-lg-7 col-md-7 col-sm-7 animated">
+              <h2>Responsive design</h2>
+              <p>Course Coda is fully optimized for desktops, laptops, and tablets so it works whenever you need it.</p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 animated">
+              <img class="pull-right" src="assets/multi-device.png" width="689" height="659" alt="Multi Device"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Testimonials-->
+    <section class="page-block color" id="testimonials">
+      <div class="container">
+        <div class="row page-header">
+          <h1 class="text-light">Testimonials</h1>
+          <span class="text-light">Subtext for header</span>
+        </div>
+        <div class="row">
+          <div id="testimonials-slider" class="testimonials-slider carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#testimonials-slider" data-slide-to="0" class="active"></li>
+              <li data-target="#testimonials-slider" data-slide-to="1"></li>
+              <li data-target="#testimonials-slider" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4">
+                      <img class="img-circle img-center" src="assets/testimonials/dirk.png" width="192" height="192" alt="Dexter Dirk"/>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-8">
+                      <blockquote>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="text-light">Dexter Dirk</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4">
+                      <img class="img-circle img-center" src="assets/testimonials/roe.png" width="192" height="192" alt="Richard Roe"/>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-8">
+                      <blockquote>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="text-light">Richard Roe</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4">
+                      <img class="img-circle img-center" src="assets/testimonials/doe.png" width="192" height="192" alt="Jonathan Doe"/>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-8">
+                      <blockquote>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="text-light">Jonathan Doe</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-block">
+
+          <!-- Begin MailChimp Signup Form -->
+          <form class="subscribe-form validate" action="http://8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=73d49e0d23" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+            <div class="form-group col-lg-7 col-md-8 col-sm-8 col-lg-offset-1">
+              <label class="sr-only" for="mce-EMAIL">Email address</label>
+              <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_73d49e0d23" value=""></div>
+            </div>
+            <div class="form-group col-lg-3 col-md-4 col-sm-4"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-block"></div>
+          </form>
+          <!-- Close MailChimp Signup Form -->
+
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="text-center text-light">Sign the petition!</h1>
+            <h2 class="text-light text-center">Let your university know that you want Course Coda.</h2>
+          </div>
+        </div>
+        <div class="row">
+
+          <!-- Begin MailChimp Signup Form -->
+          <form class="subscribe-form validate" action="http://8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=73d49e0d23" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+            <div class="form-group col-lg-7 col-md-8 col-sm-8 col-lg-offset-1">
+              <label class="sr-only" for="mce-EMAIL">Email address</label>
+              <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_73d49e0d23" value=""></div>
+            </div>
+            <div class="form-group col-lg-3 col-md-4 col-sm-4"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-block"></div>
+          </form>
+          <!-- Close MailChimp Signup Form -->
+
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="copyright">&copy; 2014 Course Coda. All Rights Reserved.</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Javascript (jQuery) Libraries and Plugins-->
+    <%= javascript_include_tag "home/landing/libs/jquery-1.10.2.min.js" %>
+    <%= javascript_include_tag "home/landing/libs/jquery.easing.1.3.js" %>
+    <%= javascript_include_tag "home/landing/plugins/bootstrap.min.js" %>
+    <%= javascript_include_tag "home/landing/plugins/jquery.touchSwipe.min.js" %>
+    <%= javascript_include_tag "home/landing/plugins/jquery.placeholder.js" %>
+    <%= javascript_include_tag "home/landing/plugins/icheck.min.js" %>
+    <%= javascript_include_tag "home/landing/plugins/jquery.validate.min.js" %>
+    <%= javascript_include_tag "home/landing/plugins/gallery.js" %>
+    <%= javascript_include_tag "home/landing/plugins/jquery.fitvids.js" %>
+    <%= javascript_include_tag "home/landing/plugins/jquery.bxslider.min.js" %>
+    <%= javascript_include_tag "home/landing/landing.js" %>
+
+  </body><!--Close Body-->
+</html>
