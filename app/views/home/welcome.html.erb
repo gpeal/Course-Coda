@@ -47,35 +47,17 @@
           </div>
           <div class="col-xs-6">
             <nav class="top-navi pull-right">
-              <a href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-user"></i>Login</a>
+              <%= link_to(new_user_registration_path) do %>
+                Register
+                <i class="icon-signup"></i>
+              <% end %>
+              <%= link_to(new_user_session_path) do %>
+                Sign In
+                <i class="icon-user"></i>
+              <% end %>
             </nav>
           </div>
         </div>
-
-        <!--Login Modal-->
-        <div class="light-skin modal fade" id="loginModal" tabindex="-1" role="form" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Login here</h4>
-              </div>
-              <div class="modal-body">
-                <form class="login-form" role="form">
-                  <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-              </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
 
         <!--Hero Slider-->
           <div class="row header-row slide first-slide">
@@ -135,67 +117,16 @@
       </div>
     </section>
 
-    <!--Testimonials-->
-    <section class="page-block color" id="testimonials">
+    <section class="page-block color">
       <div class="container">
         <div class="row page-header">
-          <h1 class="text-light">Testimonials</h1>
+          <h1>How can I access Course Coda at my university?</h1>
         </div>
-        <div class="row">
-          <div id="testimonials-slider" class="testimonials-slider carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#testimonials-slider" data-slide-to="0" class="active"></li>
-              <li data-target="#testimonials-slider" data-slide-to="1"></li>
-              <li data-target="#testimonials-slider" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-4">
-                      <img class="img-circle img-center" src="assets/testimonials/dirk.png" width="192" height="192" alt="Dexter Dirk"/>
-                    </div>
-                    <div class="col-lg-9 col-md-9 col-sm-8">
-                      <blockquote>
-                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="text-light">Dexter Dirk</footer>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-4">
-                      <img class="img-circle img-center" src="assets/testimonials/roe.png" width="192" height="192" alt="Richard Roe"/>
-                    </div>
-                    <div class="col-lg-9 col-md-9 col-sm-8">
-                      <blockquote>
-                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="text-light">Richard Roe</footer>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-4">
-                      <img class="img-circle img-center" src="assets/testimonials/doe.png" width="192" height="192" alt="Jonathan Doe"/>
-                    </div>
-                    <div class="col-lg-9 col-md-9 col-sm-8">
-                      <blockquote>
-                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="text-light">Jonathan Doe</footer>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="hero-slider" id="features-hero-slider">
+          <div class="slide">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 animated fadeInUp">
+              <p>There are a lot of Universities in the world. We will target the universities with the most interest first. Sign the petition below and encourage your friends to do the same.</p>
+              <p>Every signature counts!</p>
             </div>
           </div>
         </div>
@@ -205,17 +136,26 @@
     <section class="page-block">
       <div class="container">
         <div class="row page-header">
-          <h1>How can I access Course Coda at my university?</h1>
-        </div>
-        <div class="hero-slider" id="features-hero-slider">
-          <div class="slide">
-            <div class="col-lg-7 col-md-7 col-sm-7 animated fadeInUp">
-              <p>There are a lot of Universities in the world. We will target the universities with the most interest first. Sign the petition below and encourage your friends to do the same.</p>
-              <p>Every signature counts!</p>
+          <div class="row page-header">
+            <div class="col-lg-12">
+              <h1 class="text-center">Sign the petition!</h1>
+              <h2 class="text-center">Let your university know that you want Course Coda.</h2>
             </div>
-            <div class="col-lg-5 col-md-5 col-sm-5 animated fadeInRight">
-              <img src="assets/macbook-graph.png" width="659" height="500" alt="Coming Soon Page"/>
-            </div>
+          </div>
+          <div class="row">
+            <%= form_tag({controller: "home", action: "sign"}, method: "post", id: "sign-form", type: "email") do %>
+              <div class="form-group col-md-4">
+                <%= text_field_tag(:email, nil, class: "form-control", placeholder: "Email") %>
+              </div>
+              <div class="form-group col-md-4">
+                <%= text_field_tag(:university, nil, class: "form-control", placeholder: "University") %>
+              </div>
+              <div class="form-group col-md-4">
+                <%= button_tag("", class: "btn btn-primary btn-block", id: "sign-button", type: "submit") do %>
+                  Sign
+                <% end %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -224,34 +164,72 @@
     <!--Footer-->
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 class="text-center text-light">Sign the petition!</h1>
-            <h2 class="text-light text-center">Let your university know that you want Course Coda.</h2>
-          </div>
-        </div>
-        <div class="row">
-
-          <!-- Begin MailChimp Signup Form -->
-          <form class="subscribe-form validate" action="http://8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=73d49e0d23" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-            <div class="form-group col-md-4">
-              <label class="sr-only" for="mce-EMAIL">Email address</label>
-              <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email" required>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_73d49e0d23" value=""></div>
+          <!--Testimonials-->
+          <section class="page-block" id="testimonials">
+            <div class="container">
+              <div class="row page-header">
+                <h1 class="text-light">Testimonials</h1>
+              </div>
+              <div class="row">
+                <div id="testimonials-slider" class="testimonials-slider carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#testimonials-slider" data-slide-to="0" class="active"></li>
+<!--                     <li data-target="#testimonials-slider" data-slide-to="1"></li>
+                    <li data-target="#testimonials-slider" data-slide-to="2"></li> -->
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-4">
+                            <img class="img-circle img-center" src="assets/testimonial-gabe.jpg" width="192" height="192" alt="Gabriel Peal"/>
+                          </div>
+                          <div class="col-lg-9 col-md-9 col-sm-8">
+                            <blockquote>
+                              <p class="text-light">I know how much of a difference it can make to have a good professor. Course Coda helped me make the most of my education by ensuring that I always took the most interesting classes with the best professors.</p>
+                              <footer class="text-light">Gabriel Peal</footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+<!--                     <div class="item">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-4">
+                            <img class="img-circle img-center" src="assets/testimonials/roe.png" width="192" height="192" alt="Richard Roe"/>
+                          </div>
+                          <div class="col-lg-9 col-md-9 col-sm-8">
+                            <blockquote>
+                              <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                              <footer class="text-light">Richard Roe</footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-4">
+                            <img class="img-circle img-center" src="assets/testimonials/doe.png" width="192" height="192" alt="Jonathan Doe"/>
+                          </div>
+                          <div class="col-lg-9 col-md-9 col-sm-8">
+                            <blockquote>
+                              <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                              <footer class="text-light">Jonathan Doe</footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="form-group col-md-4">
-              <label class="sr-only" for="mce-University">University</label>
-              <input type="email" name="University" class="form-control" id="mce-University" placeholder="University" required>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_73d49e0d23" value=""></div>
-            </div>
-
-            <div class="form-group col-md-4">
-              <input type="submit" value="Subscribe" name="Sign" id="mc-embedded-subscribe" class="btn btn-primary btn-block">
-            </div>
-          </form>
-          <!-- Close MailChimp Signup Form -->
+          </section>
 
         </div>
         <div class="row">

@@ -1,6 +1,6 @@
 CaesarScraper::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations'}
   namespace :api do
     namespace :v1 do
       match 'search' => 'search#search', :via => :post, :format => :json
@@ -20,6 +20,7 @@ CaesarScraper::Application.routes.draw do
   match 'courses' => 'titles#show', :via => :get
   match 'professors' => 'professors#show', :via => :get
   match 'welcome' => 'home#welcome', :via => :get
+  match 'sign' => 'home#sign', :via => :post
 
   root :to => 'home#index'
 end

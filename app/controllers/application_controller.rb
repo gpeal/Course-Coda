@@ -10,8 +10,6 @@ class ApplicationController < ActionController::Base
 
   # Redirect the user to the landing page if they are not logged in
   def landing_redirect
-    unless user_signed_in?
-      redirect_to welcome_path
-    end
+    redirect_to welcome_path unless user_signed_in?
   end
 end
