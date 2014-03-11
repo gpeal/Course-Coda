@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= @title || "Course Coda" %></title>
+  <%= favicon_link_tag 'favicon.png' %>
+  <%= favicon_link_tag 'favicon.png', rel: 'apple-touch-icon', type: 'image/png' %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "//www.fuelcdn.com/fuelux/2.4.1/css/fuelux.min.css" %>
   <%= stylesheet_link_tag  "//www.fuelcdn.com/fuelux/2.4.1/css/fuelux-responsive.css" %>
