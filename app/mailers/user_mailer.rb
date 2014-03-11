@@ -3,7 +3,7 @@ class UserMailer < Devise::Mailer
 
   def confirmation_instructions(record, token, opts={})
       mail = super
-      mail.subject = "Registration Confirmation for Northwestern CTEC"
+      mail.subject = "Registration Confirmation for Course Coda"
       mail
     end
 

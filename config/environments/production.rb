@@ -72,5 +72,5 @@ CaesarScraper::Application.configure do
   config.eager_load = true
 
   # TODO: can the host be generated automatically?
-  config.action_mailer.default_url_options = { :host => 'http://www.nuctecs.com' }
+  config.action_mailer.default_url_options = { :host => 'http://www.coursecoda.com' }
 end

@@ -1,13 +1,12 @@
-==Northwestern CTECS v2
-Northwestern CTECS v2 is a totally new way to browse CTECS. It can do everything Caesar can do plus so much more.
+==Course Coda
+Course Coda is a totally new way to browse course evaluations.
 
-Check it out at http://www.nuctecs.com!
+Check it out at http://www.coursecoda.com!
 
 ==Development
-Northwestern CTECS v2 is 100% open source. Please feel free to contribute freely. To do so, submit a pull request and I'll review it asap. If you're interested in becoming a maintainer, let me know.
 
 ==Development Setup
-No more crazy multi-step development setups! Getting the Northwestern CTECS v2 environment set up couldn't be easier. OS X and Linux currently supported although Windows should work with very little extra work.
+No more crazy multi-step development setups! Getting the Course Coda environment set up couldn't be easier. OS X and Linux currently supported although Windows should work with very little extra work.
 
 1. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
@@ -30,7 +29,7 @@ Once you have completed the setup:
 3. run "./setup.sh" from the terminal.
 
 3. run "vagrant ssh" from the terminal. This will start a headless virtual machine, forward the ssh and server ports (22 and 3000), and ssh into the virtual machine.
-   
+
 
 4. Develop normally. Run "vagrant ssh" from the repo in any other terminal you want to develop from.
 
@@ -55,7 +54,7 @@ Some feature ideas I have that you're welcome to add are:
 
 ==Support
 Submit issues here
-Send questions to [ctecs@gpeal.com](mailto:ctecs@gpeal.com)
+Send questions to [gabe@coursecoda.com](mailto:gabe@coursecoda.com)
 
 
-===Follow me on Twitter at @gpeal8 (https://twitter.com/gpeal8)
+===Follow me on Twitter at @gpeal8 (https://twitter.com/coursecoda)

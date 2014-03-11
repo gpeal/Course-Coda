@@ -33,7 +33,7 @@ addTabs = ->
   $("#tab-container").css "display", "block"
   return
 showWelcomeText = ->
-  $("#hero-main").text "Welcome to Northwestern CTECs. Use the search boxes on the left to begin."
+  $("#hero-main").text "Welcome to Course Coda. Use the search boxes on the left to begin."
   return
 isOnRootPage = ->
   location.pathname is "/" and location.search is ""

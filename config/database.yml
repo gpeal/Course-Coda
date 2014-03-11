@@ -1,14 +1,9 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
 development:
   adapter: postgresql
   host: localhost
   username: caesar
   password: password
-  database: ctec_development
+  database: coursecoda_development
   pool: 5
   timeout: 5000
   template: template0
@@ -21,7 +16,7 @@ test:
   host: localhost
   username: caesar
   password: password
-  database: ctec_test
+  database: coursecoda_test
   pool: 5
   timeout: 5000
   template: template0
@@ -31,7 +26,7 @@ production:
   host: localhost
   username: caesar
   password: password
-  database: ctec_production
+  database: coursecoda_production
   pool: 50
   timeout: 5000
   template: template0

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo cd Northwestern-CTECS > .profile
-cd Northwestern-CTECS
+echo cd Course-Coda > .profile
+cd Course-Coda
 make salt
 exit
