@@ -18,6 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.forward_agent = true
   # Config management
   config.vm.synced_folder "salt/roots/", "/srv/"
+  # to rerun this, run "sudo salt-call state.highstate"
   config.vm.provision :salt do |salt|
       salt.minion_config = "salt/minion.conf"
       salt.verbose = true

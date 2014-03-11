@@ -12,7 +12,7 @@ No more crazy multi-step development setups! Getting the Course Coda environment
 
 2. Download and install [Vagrant](http://downloads.vagrantup.com/)
 
-3. Clone the repo (https://github.com/gpeal/Northwestern-CTECs.git)
+3. Clone the repo (https://github.com/gpeal/Course-Coda.git)
 
 4. cd to the repo and run setup.sh. The script should work on OS X and Linux hosts. If you are running Windows, feel free to translate it to a .bat script (and submit a pull request) or just run the commands manually.
 NOTE: If it says 1 of 40 packages failed to install, it's not actually a problem. Salt is just misinterpreting some output during installation.
