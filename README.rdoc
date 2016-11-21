@@ -8,11 +8,11 @@ Check it out at http://www.coursecoda.com!
 ==Development Setup
 No more crazy multi-step development setups! Getting the Course Coda environment set up couldn't be easier. OS X and Linux currently supported although Windows should work with very little extra work.
 
-1. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+1. Download and install VirtualBox[https://www.virtualbox.org/wiki/Downloads]
 
-2. Download and install [Vagrant](http://downloads.vagrantup.com/)
+2. Download and install Vagrant[http://downloads.vagrantup.com/]. DO NOT use 1.8.7. It has a bug[https://github.com/mitchellh/vagrant/commit/2219a4def0c84fe08f4a54ff86dafe7689d361f4] that will crash the salt provisioner.
 
-3. Clone the repo (https://github.com/gpeal/Course-Coda.git)
+3. Clone the repo[https://github.com/gpeal/Course-Coda.git]
 
 4. cd to the repo and run setup.sh. The script should work on OS X and Linux hosts. If you are running Windows, feel free to translate it to a .bat script (and submit a pull request) or just run the commands manually.
 NOTE: If it says 1 of 40 packages failed to install, it's not actually a problem. Salt is just misinterpreting some output during installation.
@@ -54,7 +54,6 @@ Some feature ideas I have that you're welcome to add are:
 
 ==Support
 Submit issues here
-Send questions to [gabe@coursecoda.com](mailto:gabe@coursecoda.com)
 
 
 ===Follow me on Twitter at @gpeal8 (https://twitter.com/coursecoda)
